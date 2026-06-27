@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpShapeSignals
 	{
-		public enum MutationFlagsEnum
+		public enum MutationFlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
 			MUTATION_AABB_CHANGED,

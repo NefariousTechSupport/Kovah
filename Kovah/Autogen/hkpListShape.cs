@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpListShape : hkpShapeCollection
 	{
-		public enum ListShapeFlags
+		public enum ListShapeFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			ALL_FLAGS_CLEAR,

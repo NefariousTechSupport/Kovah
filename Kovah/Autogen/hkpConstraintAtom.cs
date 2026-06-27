@@ -7,7 +7,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkpConstraintAtom
 	{
-		public enum AtomType
+		public enum AtomType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -228,7 +228,7 @@ namespace Kovah
 			TYPE_WHEEL_FRICTION,
 			
 		}
-		public enum CallbackRequest
+		public enum CallbackRequest : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -262,7 +262,7 @@ namespace Kovah
 			CALLBACK_REQUEST_CONTACT_POINT_CALLBACK,
 			
 		}
-		public enum SolvingMethod
+		public enum SolvingMethod : int
 		{
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]

@@ -6,7 +6,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkClassEnum
 	{
-		public enum FlagValues
+		[Flags]
+		public enum FlagValues : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]

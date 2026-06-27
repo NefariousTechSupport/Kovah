@@ -6,7 +6,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpWorldCinfo : hkReferencedObject
 	{
-		public enum BroadPhaseBorderBehaviour
+		public enum BroadPhaseBorderBehaviour : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -30,7 +30,7 @@ namespace Kovah
 			BROADPHASE_BORDER_DO_NOTHING,
 			
 		}
-		public enum TreeUpdateType
+		public enum TreeUpdateType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			REBUILD_ACTIVE,
@@ -38,7 +38,7 @@ namespace Kovah
 			REBUILD_ALL,
 			
 		}
-		public enum ContactPointGeneration
+		public enum ContactPointGeneration : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -57,7 +57,7 @@ namespace Kovah
 			CONTACT_POINT_REJECT_MANY,
 			
 		}
-		public enum SimulationType
+		public enum SimulationType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -81,7 +81,7 @@ namespace Kovah
 			SIMULATION_TYPE_MULTITHREADED,
 			
 		}
-		public enum SolverType
+		public enum SolverType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -140,7 +140,7 @@ namespace Kovah
 			SOLVER_TYPE_MAX_ID,
 			
 		}
-		public enum BroadPhaseType
+		public enum BroadPhaseType : int
 		{
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]

@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbGeneratorTransitionEffect : hkbTransitionEffect
 	{
-		public enum ToGeneratorState
+		public enum ToGeneratorState : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -20,7 +20,7 @@ namespace Kovah
 			STATE_ACTIVE,
 			
 		}
-		public enum Stage
+		public enum Stage : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -33,7 +33,7 @@ namespace Kovah
 			STAGE_BLENDING_OUT,
 			
 		}
-		public enum ChildState
+		public enum ChildState : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpBvCompressedMeshShape : hkpBvTreeShape
 	{
-		public enum PerPrimitiveDataMode
+		public enum PerPrimitiveDataMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			PER_PRIMITIVE_DATA_NONE,
@@ -15,7 +15,7 @@ namespace Kovah
 			PER_PRIMITIVE_DATA_STRING_PALETTE,
 			
 		}
-		public enum PrimitiveType
+		public enum PrimitiveType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			PRIMITIVE_TYPE_BOX,
@@ -29,7 +29,7 @@ namespace Kovah
 			PRIMITIVE_TYPE_CYLINDER,
 			
 		}
-		public enum Config
+		public enum Config : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 144)]
 			NUM_BYTES_FOR_TREE,

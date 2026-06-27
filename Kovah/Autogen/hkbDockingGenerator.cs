@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbDockingGenerator : hkbGenerator
 	{
-		public enum BlendType
+		public enum BlendType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -14,7 +14,8 @@ namespace Kovah
 			BLEND_TYPE_FULL_ON,
 			
 		}
-		public enum DockingFlagBits
+		[Flags]
+		public enum DockingFlagBits : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

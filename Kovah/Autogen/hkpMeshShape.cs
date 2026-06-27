@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.Havok_7_1_0_r1)]
 	public partial class hkpMeshShape : hkpShapeCollection
 	{
-		public enum MeshShapeIndexStridingType
+		public enum MeshShapeIndexStridingType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			INDICES_INVALID,
@@ -15,7 +15,7 @@ namespace Kovah
 			INDICES_MAX_ID,
 			
 		}
-		public enum MeshShapeMaterialIndexStridingType
+		public enum MeshShapeMaterialIndexStridingType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			MATERIAL_INDICES_INVALID,

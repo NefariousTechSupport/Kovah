@@ -6,7 +6,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpPhysicsSystem : hkReferencedObject
 	{
-		public enum CloneConstraintMode
+		public enum CloneConstraintMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
 			CLONE_SHALLOW_IF_NOT_CONSTRAINED_TO_WORLD,

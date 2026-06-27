@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbEventRangeData
 	{
-		public enum EventRangeMode
+		public enum EventRangeMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

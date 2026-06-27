@@ -20,6 +20,8 @@ class hkClassEnum:
 		self.items: dict[str, dict[str, int]] = {}
 		self.flags: dict[str, str] = {}
 
+		# determined by context
+		self.isFlags = False
 		self.clazz: hkClass = None
 
 class hkClassMember:
@@ -155,6 +157,9 @@ def readHkMember(version: str, clazz: hkClass, membernode: XmlTree.Element) -> h
 	member.subtype = hkClassMemberType[membernode.attrib["subtype"]]
 	member.cArraySize = int(membernode.attrib["arraysize"])
 	member.offset = int(membernode.attrib["offset"])
+
+	if member.type == hkClassMemberType.TYPE_FLAGS and member.enum != None:
+		member.enum.isFlags = True
 	return member
 
 def readHkEnum(version: str, clazz: hkClass, enumnode: XmlTree.Element) -> hkClassEnum:
@@ -213,7 +218,9 @@ def resolveParent(clazz: hkClass) -> hkClass:
 
 def outputEnum(cs: TextIO, indentNum: int, enum: hkClassEnum):
 	indent = '\t' * indentNum
-	cs.write(indent + "public enum " + enum.name.removeprefix("$loose.") + "\n")
+	if enum.isFlags:
+		cs.write(indent + "[Flags]\n")
+	cs.write(indent + "public enum " + enum.name.removeprefix("$loose.") + " : int\n")
 	cs.write(indent + "{\n")
 	for itemName, versionInfo in enum.items.items():
 		for version, value in versionInfo.items():

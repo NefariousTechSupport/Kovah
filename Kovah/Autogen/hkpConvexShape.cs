@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpConvexShape : hkpSphereRepShape
 	{
-		public enum WeldResult
+		public enum WeldResult : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]

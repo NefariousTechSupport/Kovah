@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbRoleAttribute
 	{
-		public enum Role
+		public enum Role : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -40,7 +40,8 @@ namespace Kovah
 			ROLE_BONE_ATTACHMENT,
 			
 		}
-		public enum RoleFlags
+		[Flags]
+		public enum RoleFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

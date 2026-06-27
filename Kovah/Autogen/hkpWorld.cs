@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpWorld : hkReferencedObject
 	{
-		public enum ReintegrationRecollideMode
+		public enum ReintegrationRecollideMode : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
@@ -20,7 +20,7 @@ namespace Kovah
 			RR_MODE_ALL,
 			
 		}
-		public enum MtAccessChecking
+		public enum MtAccessChecking : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
@@ -30,7 +30,7 @@ namespace Kovah
 			MT_ACCESS_CHECKING_DISABLED,
 			
 		}
-		public enum CachedAabbUpdate
+		public enum CachedAabbUpdate : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]

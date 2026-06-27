@@ -6,7 +6,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpCollisionFilter : hkReferencedObject
 	{
-		public enum hkpFilterType
+		public enum hkpFilterType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]

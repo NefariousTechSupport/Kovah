@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbAlignBoneModifier : hkbModifier
 	{
-		public enum AlignModeABAM
+		public enum AlignModeABAM : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -14,7 +14,7 @@ namespace Kovah
 			ALIGN_MODE_ANIMATION_SKELETON_BONE,
 			
 		}
-		public enum AlignTargetMode
+		public enum AlignTargetMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

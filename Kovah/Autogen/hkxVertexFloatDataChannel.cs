@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.Havok_7_1_0_r1)]
 	public partial class hkxVertexFloatDataChannel : hkReferencedObject
 	{
-		public enum VertexFloatDimensions
+		public enum VertexFloatDimensions : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			FLOAT,

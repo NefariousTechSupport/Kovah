@@ -7,7 +7,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkxMaterial : hkxAttributeHolder
 	{
-		public enum TextureType
+		public enum TextureType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -91,7 +91,7 @@ namespace Kovah
 			TEX_DOMINANTS,
 			
 		}
-		public enum PropertyKey
+		public enum PropertyKey : int
 		{
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
@@ -185,7 +185,7 @@ namespace Kovah
 			PROPERTY_MTL_UV_ID_STAGE_MAX,
 			
 		}
-		public enum UVMappingAlgorithm
+		public enum UVMappingAlgorithm : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
@@ -205,7 +205,7 @@ namespace Kovah
 			UVMA_MAYA_STYLE,
 			
 		}
-		public enum Transparency
+		public enum Transparency : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]

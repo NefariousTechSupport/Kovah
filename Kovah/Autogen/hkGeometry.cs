@@ -5,7 +5,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkGeometry : hkReferencedObject
 	{
-		public enum GeometryType
+		public enum GeometryType : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			GEOMETRY_STATIC,

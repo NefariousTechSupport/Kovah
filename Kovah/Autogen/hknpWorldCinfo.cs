@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpWorldCinfo
 	{
-		public enum SimulationType
+		public enum SimulationType : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			SIMULATION_TYPE_SINGLE_THREADED,
@@ -11,7 +11,7 @@ namespace Kovah
 			SIMULATION_TYPE_MULTI_THREADED,
 			
 		}
-		public enum LeavingBroadPhaseBehavior
+		public enum LeavingBroadPhaseBehavior : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			ON_LEAVING_BROAD_PHASE_DO_NOTHING,
@@ -21,7 +21,7 @@ namespace Kovah
 			ON_LEAVING_BROAD_PHASE_FREEZE_BODY,
 			
 		}
-		public enum SolverType
+		public enum SolverType : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			SOLVER_TYPE_INVALID,

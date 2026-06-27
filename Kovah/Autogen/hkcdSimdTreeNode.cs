@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkcdSimdTreeNode : hkcdFourAabb
 	{
-		public enum Flags
+		public enum Flags : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
 			HAS_INTERNALS,

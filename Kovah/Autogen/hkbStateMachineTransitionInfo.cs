@@ -4,7 +4,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbStateMachineTransitionInfo
 	{
-		public enum TransitionFlags
+		[Flags]
+		public enum TransitionFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
@@ -53,7 +54,7 @@ namespace Kovah
 			FLAG_ABUT_AT_END_OF_FROM_GENERATOR,
 			
 		}
-		public enum InternalFlagBits
+		public enum InternalFlagBits : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]

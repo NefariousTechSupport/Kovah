@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbCustomTestGeneratorComplexTypes : hkbCustomTestGeneratorSimpleTypes
 	{
-		public enum CustomEnum
+		public enum CustomEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			CUSTOM_ENUM_ALA,
@@ -13,7 +13,8 @@ namespace Kovah
 			CUSTOM_ENUM_FURIOUS,
 			
 		}
-		public enum CustomFlag
+		[Flags]
+		public enum CustomFlag : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			CUSTOM_FLAG_NONE,

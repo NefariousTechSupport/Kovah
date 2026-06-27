@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkbReachModifier : hkbModifier
 	{
-		public enum ReachMode
+		public enum ReachMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			REACH_MODE_TERRAIN,

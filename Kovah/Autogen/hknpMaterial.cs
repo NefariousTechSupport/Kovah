@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpMaterial
 	{
-		public enum TriggerType
+		public enum TriggerType : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			TRIGGER_TYPE_NONE,
@@ -15,7 +15,7 @@ namespace Kovah
 			TRIGGER_TYPE_CONTACT_SOLVER,
 			
 		}
-		public enum CombinePolicy
+		public enum CombinePolicy : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			COMBINE_AVG,
@@ -25,7 +25,7 @@ namespace Kovah
 			COMBINE_MAX,
 			
 		}
-		public enum MassChangerCategory
+		public enum MassChangerCategory : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			MASS_CHANGER_IGNORE,

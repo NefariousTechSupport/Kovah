@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkpLinearClearanceConstraintDataAtoms
 	{
-		public enum Axis
+		public enum Axis : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			AXIS_SHAFT,

@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbWorldEnums
 	{
-		public enum SimulationState
+		public enum SimulationState : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -20,7 +20,7 @@ namespace Kovah
 			SIMULATION_STATE_STOP,
 			
 		}
-		public enum AccumulateMotionState
+		public enum AccumulateMotionState : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

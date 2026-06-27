@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbCustomTestGenerator : hkbCustomTestGeneratorAnnotatedTypes
 	{
-		public enum Modes
+		public enum Modes : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			MODE_ALA,
@@ -14,7 +14,8 @@ namespace Kovah
 			MODE_FURIOUS,
 			
 		}
-		public enum StrangeFlags
+		[Flags]
+		public enum StrangeFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			FLAG_UNO,

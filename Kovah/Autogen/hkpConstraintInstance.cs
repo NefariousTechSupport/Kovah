@@ -6,7 +6,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpConstraintInstance : hkReferencedObject
 	{
-		public enum ConstraintPriority
+		public enum ConstraintPriority : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -44,7 +44,7 @@ namespace Kovah
 			NUM_PRIORITIES,
 			
 		}
-		public enum OnDestructionRemapInfo
+		public enum OnDestructionRemapInfo : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -63,7 +63,7 @@ namespace Kovah
 			ON_DESTRUCTION_RESET_REMOVE,
 			
 		}
-		public enum InstanceType
+		public enum InstanceType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -77,7 +77,7 @@ namespace Kovah
 			TYPE_CHAIN,
 			
 		}
-		public enum AddReferences
+		public enum AddReferences : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -91,7 +91,7 @@ namespace Kovah
 			DO_ADD_REFERENCES,
 			
 		}
-		public enum CloningMode
+		public enum CloningMode : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			CLONE_INSTANCES_ONLY,

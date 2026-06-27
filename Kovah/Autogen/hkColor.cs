@@ -5,7 +5,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkColor
 	{
-		public enum ExtendedColors
+		public enum ExtendedColors : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, -8388608)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, -8388608)]
@@ -438,7 +438,7 @@ namespace Kovah
 			GREY75,
 			
 		}
-		public enum ProductColors
+		public enum ProductColors : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, -19712)]
 			PHYSICS,

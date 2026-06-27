@@ -3,7 +3,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpMotionProperties
 	{
-		public enum FlagsEnum
+		[Flags]
+		public enum FlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
 			NEVER_REBUILD_MASS_PROPERTIES,
@@ -17,7 +18,7 @@ namespace Kovah
 			AUTO_FLAGS_MASK,
 			
 		}
-		public enum SolverStabilizationType
+		public enum SolverStabilizationType : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			SOLVER_STABILIZATION_OFF,
@@ -31,7 +32,7 @@ namespace Kovah
 			SOLVER_STABILIZATION_AGGRESSIVE,
 			
 		}
-		public enum DeactivationStrategy
+		public enum DeactivationStrategy : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 3)]
 			DEACTIVATION_STRATEGY_AGGRESSIVE,

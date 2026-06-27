@@ -5,7 +5,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkaPredictiveCompressedAnimation : hkaAnimation
 	{
-		public enum StorageClass
+		public enum StorageClass : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
@@ -25,7 +25,7 @@ namespace Kovah
 			STORAGE_DYNAMIC_FIXED,
 			
 		}
-		public enum IntArrayID
+		public enum IntArrayID : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
@@ -69,7 +69,7 @@ namespace Kovah
 			NUM_INT_ARRAYS,
 			
 		}
-		public enum FloatArrayID
+		public enum FloatArrayID : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]

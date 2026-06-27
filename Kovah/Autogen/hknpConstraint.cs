@@ -3,7 +3,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpConstraint
 	{
-		public enum FlagsEnum
+		[Flags]
+		public enum FlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			NO_FLAGS,

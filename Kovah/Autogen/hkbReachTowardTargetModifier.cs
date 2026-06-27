@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkbReachTowardTargetModifier : hkbModifier
 	{
-		public enum FadeState
+		public enum FadeState : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			FADE_IN,

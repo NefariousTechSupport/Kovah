@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbCharacter : hkReferencedObject
 	{
-		public enum CapabilityTypes
+		public enum CapabilityTypes : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
 			FULL_POSE,

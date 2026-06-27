@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpStaticCompoundShape : hkpBvTreeShape
 	{
-		public enum Config
+		public enum Config : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 48)]
 			NUM_BYTES_FOR_TREE,

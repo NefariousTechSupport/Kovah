@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbTwistModifier : hkbModifier
 	{
-		public enum SetAngleMethod
+		public enum SetAngleMethod : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -14,7 +14,7 @@ namespace Kovah
 			RAMPED,
 			
 		}
-		public enum RotationAxisCoordinates
+		public enum RotationAxisCoordinates : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

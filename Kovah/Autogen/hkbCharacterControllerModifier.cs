@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbCharacterControllerModifier : hkbModifier
 	{
-		public enum InitialVelocityCoordinates
+		public enum InitialVelocityCoordinates : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -14,7 +14,7 @@ namespace Kovah
 			INITIAL_VELOCITY_IN_MODEL_COORDINATES,
 			
 		}
-		public enum MotionMode
+		public enum MotionMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

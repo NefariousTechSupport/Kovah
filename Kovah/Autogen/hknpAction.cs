@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpAction : hkReferencedObject
 	{
-		public enum Result
+		public enum Result : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			RESULT_OK,

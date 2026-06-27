@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpSimulation : hkReferencedObject
 	{
-		public enum LastProcessingStep
+		public enum LastProcessingStep : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
@@ -14,7 +14,7 @@ namespace Kovah
 			COLLIDE,
 			
 		}
-		public enum FindContacts
+		public enum FindContacts : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
@@ -24,7 +24,7 @@ namespace Kovah
 			FIND_CONTACTS_EXTRA,
 			
 		}
-		public enum ResetCollisionInformation
+		public enum ResetCollisionInformation : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]

@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkcdPlanarSolid : hkcdPlanarEntity
 	{
-		public enum NodeTypes
+		public enum NodeTypes : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			NODE_TYPE_INTERNAL,

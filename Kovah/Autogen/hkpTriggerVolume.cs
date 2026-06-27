@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpTriggerVolume : hkReferencedObject
 	{
-		public enum EventType
+		public enum EventType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			ENTERED_EVENT,
@@ -15,7 +15,7 @@ namespace Kovah
 			TRIGGER_BODY_LEFT_EVENT,
 			
 		}
-		public enum Operation
+		public enum Operation : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			ADDED_OP,

@@ -6,7 +6,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkClassMember
 	{
-		public enum Type
+		public enum Type : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
@@ -189,7 +189,8 @@ namespace Kovah
 			TYPE_RELARRAY,
 			
 		}
-		public enum FlagValues
+		[Flags]
+		public enum FlagValues : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
@@ -226,7 +227,7 @@ namespace Kovah
 			ALIGN_REAL,
 			
 		}
-		public enum DeprecatedFlagValues
+		public enum DeprecatedFlagValues : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 8)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 8)]

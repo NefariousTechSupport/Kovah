@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbBlenderGenerator : hkbGenerator
 	{
-		public enum BlenderFlags
+		public enum BlenderFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]

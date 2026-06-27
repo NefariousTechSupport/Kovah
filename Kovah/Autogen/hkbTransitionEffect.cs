@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbTransitionEffect : hkbGenerator
 	{
-		public enum EventMode
+		public enum EventMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -20,7 +20,7 @@ namespace Kovah
 			EVENT_MODE_IGNORE_TO_GENERATOR,
 			
 		}
-		public enum SelfTransitionMode
+		public enum SelfTransitionMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

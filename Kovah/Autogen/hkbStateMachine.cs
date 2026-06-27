@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbStateMachine : hkbGenerator
 	{
-		public enum StartStateMode
+		public enum StartStateMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -20,7 +20,7 @@ namespace Kovah
 			START_STATE_MODE_CHOOSER,
 			
 		}
-		public enum StateMachineSelfTransitionMode
+		public enum StateMachineSelfTransitionMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

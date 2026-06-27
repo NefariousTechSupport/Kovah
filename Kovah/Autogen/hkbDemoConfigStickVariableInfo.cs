@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkbDemoConfigStickVariableInfo
 	{
-		public enum Stick
+		public enum Stick : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			STICK_0,

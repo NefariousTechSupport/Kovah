@@ -7,7 +7,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpWeldingUtility
 	{
-		public enum WeldingType
+		public enum WeldingType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -31,7 +31,7 @@ namespace Kovah
 			WELDING_TYPE_NONE,
 			
 		}
-		public enum SectorType
+		public enum SectorType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			ACCEPT_0,
@@ -45,7 +45,7 @@ namespace Kovah
 			ACCEPT_1,
 			
 		}
-		public enum NumAngles
+		public enum NumAngles : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 31)]
 			NUM_ANGLES,

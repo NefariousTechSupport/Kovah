@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkbConstrainRigidBodyModifier : hkbModifier
 	{
-		public enum PivotPlacement
+		public enum PivotPlacement : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			PIVOT_MIDWAY_BETWEEN_CENTROIDS,
@@ -13,7 +13,7 @@ namespace Kovah
 			PIVOT_MIDWAY_BETWEEN_TARGET_SHAPE_CENTROID_AND_BODY_TO_CONSTRAIN_CENTROID,
 			
 		}
-		public enum BoneToConstrainPlacement
+		public enum BoneToConstrainPlacement : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			BTCP_AT_CURRENT_POSITION,

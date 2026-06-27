@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbCompiledExpressionSetToken
 	{
-		public enum TokenType
+		public enum TokenType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -32,7 +32,7 @@ namespace Kovah
 			TOKEN_TYPE_CHARACTER_PROPERTY_INDEX,
 			
 		}
-		public enum Operator
+		public enum Operator : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

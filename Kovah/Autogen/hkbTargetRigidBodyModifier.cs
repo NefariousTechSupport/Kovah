@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkbTargetRigidBodyModifier : hkbModifier
 	{
-		public enum TargetMode
+		public enum TargetMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			TARGET_MODE_CONE_AROUND_CHARACTER_FORWARD,
@@ -17,7 +17,7 @@ namespace Kovah
 			TARGET_MODE_ANY_DIRECTION,
 			
 		}
-		public enum ComputeTargetAngleMode
+		public enum ComputeTargetAngleMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			COMPUTE_ANGLE_USING_TARGET_COM,
@@ -25,7 +25,7 @@ namespace Kovah
 			COMPUTE_ANGLE_USING_TARGET_CONTACT_POINT,
 			
 		}
-		public enum ComputeTargetDistanceMode
+		public enum ComputeTargetDistanceMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			COMPUTE_DISTANCE_USING_TARGET_POSITION,
@@ -33,7 +33,7 @@ namespace Kovah
 			COMPUTE_DISTANCE_USING_TARGET_CONTACT_POINT,
 			
 		}
-		public enum EventModeTRBAM
+		public enum EventModeTRBAM : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			EVENT_MODE_DO_NOT_SEND,

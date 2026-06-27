@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkUiAttribute
 	{
-		public enum HideInModeler
+		public enum HideInModeler : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			NONE,
@@ -14,7 +14,7 @@ namespace Kovah
 			MAYA,
 			
 		}
-		public enum HideCriteria
+		public enum HideCriteria : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			NONE,

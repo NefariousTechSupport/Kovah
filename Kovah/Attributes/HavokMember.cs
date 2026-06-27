@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = true)]
+	[AttributeUsage(AttributeTargets.Field, Inherited = false, AllowMultiple = true)]
 	public sealed class HavokMemberAttribute : Attribute
 	{
 		private EVersion version;

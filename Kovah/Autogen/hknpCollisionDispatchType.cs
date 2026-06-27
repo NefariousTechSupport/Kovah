@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpCollisionDispatchType
 	{
-		public enum Enum
+		public enum Enum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			NONE,

@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpFirstPersonGun : hkReferencedObject
 	{
-		public enum KeyboardKey
+		public enum KeyboardKey : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 112)]
 			KEY_F1,
@@ -31,7 +31,7 @@ namespace Kovah
 			KEY_F12,
 			
 		}
-		public enum Type
+		public enum Type : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			WEAPON_TYPE_INVALID,

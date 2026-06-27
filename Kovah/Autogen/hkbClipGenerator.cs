@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbClipGenerator : hkbGenerator
 	{
-		public enum PlaybackMode
+		public enum PlaybackMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -23,7 +23,7 @@ namespace Kovah
 			MODE_COUNT,
 			
 		}
-		public enum ClipFlags
+		public enum ClipFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]

@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkcdStaticMeshTreehkcdStaticMeshTreeCommonConfigunsignedintunsignedlonglong1121hknpCompressedMeshShapeTreeDataRun : hkcdStaticMeshTreeBase
 	{
-		public enum TriangleMaterial
+		public enum TriangleMaterial : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			TM_SET_FROM_TRIANGLE_DATA_TYPE,

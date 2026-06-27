@@ -7,7 +7,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkxVertexDescription
 	{
-		public enum DataType
+		public enum DataType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -47,7 +47,7 @@ namespace Kovah
 			HKX_DT_FLOAT4,
 			
 		}
-		public enum DataUsage
+		public enum DataUsage : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -111,7 +111,7 @@ namespace Kovah
 			HKX_DU_USERDATA,
 			
 		}
-		public enum DataHint
+		public enum DataHint : int
 		{
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
 			HKX_DH_NONE,

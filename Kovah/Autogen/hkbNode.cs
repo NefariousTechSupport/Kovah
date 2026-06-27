@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbNode : hkbBindable
 	{
-		public enum GetChildrenFlagBits
+		public enum GetChildrenFlagBits : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
@@ -17,7 +17,7 @@ namespace Kovah
 			FLAG_IGNORE_REFERENCED_BEHAVIORS,
 			
 		}
-		public enum CloneState
+		public enum CloneState : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -30,7 +30,7 @@ namespace Kovah
 			CLONE_STATE_CLONE,
 			
 		}
-		public enum TemplateOrClone
+		public enum TemplateOrClone : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

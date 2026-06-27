@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkbMoveBoneTowardTargetModifier : hkbModifier
 	{
-		public enum TargetModeMBTT
+		public enum TargetModeMBTT : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			TARGET_POSITION,
@@ -15,7 +15,7 @@ namespace Kovah
 			TARGET_SHAPE_CENTROID,
 			
 		}
-		public enum AlignModeBits
+		public enum AlignModeBits : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			ALIGN_AXES,

@@ -4,7 +4,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbBlendingTransitionEffect : hkbTransitionEffect
 	{
-		public enum FlagBits
+		[Flags]
+		public enum FlagBits : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -23,7 +24,7 @@ namespace Kovah
 			FLAG_IGNORE_TO_WORLD_FROM_MODEL_ROTATION,
 			
 		}
-		public enum EndMode
+		public enum EndMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

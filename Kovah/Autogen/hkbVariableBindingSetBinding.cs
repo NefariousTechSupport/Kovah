@@ -4,7 +4,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkbVariableBindingSetBinding
 	{
-		public enum BindingType
+		public enum BindingType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
@@ -14,7 +14,7 @@ namespace Kovah
 			BINDING_TYPE_CHARACTER_PROPERTY,
 			
 		}
-		public enum InternalBindingFlags
+		public enum InternalBindingFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]

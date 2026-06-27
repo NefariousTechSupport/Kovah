@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkxSpline : hkReferencedObject
 	{
-		public enum ControlType
+		public enum ControlType : int
 		{
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
 			BEZIER_SMOOTH,

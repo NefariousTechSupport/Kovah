@@ -6,7 +6,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpWorldObject : hkReferencedObject
 	{
-		public enum MtChecks
+		public enum MtChecks : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -20,7 +20,7 @@ namespace Kovah
 			MULTI_THREADING_CHECKS_IGNORE,
 			
 		}
-		public enum BroadPhaseType
+		public enum BroadPhaseType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]

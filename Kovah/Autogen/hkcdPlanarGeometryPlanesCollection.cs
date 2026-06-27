@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkcdPlanarGeometryPlanesCollection : hkReferencedObject
 	{
-		public enum Bounds
+		public enum Bounds : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			BOUND_POS_X,

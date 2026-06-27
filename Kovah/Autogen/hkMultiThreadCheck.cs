@@ -7,7 +7,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkMultiThreadCheck
 	{
-		public enum AccessType
+		public enum AccessType : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]
@@ -29,7 +29,7 @@ namespace Kovah
 			HK_ACCESS_RW,
 			
 		}
-		public enum ReadMode
+		public enum ReadMode : int
 		{
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2011_2_0_r1, 0)]

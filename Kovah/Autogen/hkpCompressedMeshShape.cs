@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpCompressedMeshShape : hkpShapeCollection
 	{
-		public enum MaterialType
+		public enum MaterialType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			MATERIAL_NONE,

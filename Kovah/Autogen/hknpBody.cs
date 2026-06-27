@@ -3,13 +3,14 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpBody
 	{
-		public enum SpuFlagsEnum
+		[Flags]
+		public enum SpuFlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
 			FORCE_NARROW_PHASE_PPU,
 			
 		}
-		public enum Flags
+		public enum Flags : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
 			IS_STATIC,

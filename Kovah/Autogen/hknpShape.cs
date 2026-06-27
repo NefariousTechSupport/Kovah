@@ -3,7 +3,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hknpShape : hkReferencedObject
 	{
-		public enum FlagsEnum
+		[Flags]
+		public enum FlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
 			IS_CONVEX_SHAPE,
@@ -33,7 +34,7 @@ namespace Kovah
 			IS_QUAD_SHAPE,
 			
 		}
-		public enum ScaleMode
+		public enum ScaleMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			SCALE_SURFACE,
@@ -41,7 +42,7 @@ namespace Kovah
 			SCALE_VERTICES,
 			
 		}
-		public enum ConvexRadiusDisplayMode
+		public enum ConvexRadiusDisplayMode : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
 			CONVEX_RADIUS_DISPLAY_NONE,

@@ -3,7 +3,7 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2012_1_0_r1)]
 	public partial class hkpSerializedAgentNnEntry : hkReferencedObject
 	{
-		public enum SerializedAgentType
+		public enum SerializedAgentType : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			INVALID_AGENT_TYPE,
