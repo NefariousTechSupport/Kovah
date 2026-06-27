@@ -13,9 +13,9 @@ namespace Kovah
 			ANGLE,
 			
 		}
-		[HavokMember(EVersion.Havok_7_1_0_r1, 8, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_REAL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 8, null, null, Type.TYPE_ARRAY, Type.TYPE_REAL, 0, FlagValues.FLAGS_NONE)]
 		private float[]? perVertexFloats;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 20, null, typeof(hkxVertexFloatDataChannel.VertexFloatDimensions), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 20, null, typeof(hkxVertexFloatDataChannel.VertexFloatDimensions), Type.TYPE_ENUM, Type.TYPE_UINT8, 0, FlagValues.FLAGS_NONE)]
 		private hkxVertexFloatDataChannel.VertexFloatDimensions dimensions;
 	}
 }

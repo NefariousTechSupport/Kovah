@@ -18,40 +18,40 @@ namespace Kovah
 			CLONE_DEFAULT,
 			
 		}
-		[HavokMember(EVersion.Havok_7_1_0_r1, 8, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 8, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 8, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 8, typeof(hkpRigidBody), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 8, typeof(hkpRigidBody), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkpRigidBody), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 8, typeof(hkpRigidBody), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
 		private object? /* void */[]? rigidBodies;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkpConstraintInstance), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 20, typeof(hkpConstraintInstance), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpConstraintInstance), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 20, typeof(hkpConstraintInstance), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkpConstraintInstance), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 20, typeof(hkpConstraintInstance), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpConstraintInstance), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 20, typeof(hkpConstraintInstance), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
 		private object? /* void */[]? constraints;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 32, typeof(hkpAction), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 32, typeof(hkpAction), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpAction), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 32, typeof(hkpAction), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 32, typeof(hkpAction), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 32, typeof(hkpAction), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpAction), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 32, typeof(hkpAction), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
 		private object? /* void */[]? actions;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 44, typeof(hkpPhantom), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 44, typeof(hkpPhantom), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkpPhantom), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 44, typeof(hkpPhantom), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 44, typeof(hkpPhantom), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 44, typeof(hkpPhantom), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkpPhantom), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 44, typeof(hkpPhantom), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
 		private object? /* void */[]? phantoms;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 56, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 56, null, null, Type.TYPE_STRINGPTR, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 56, null, null, Type.TYPE_STRINGPTR, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 56, null, null, Type.TYPE_STRINGPTR, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 56, null, null, Type.TYPE_STRINGPTR, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
 		private string? name;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 60, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 60, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 60, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 60, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 60, null, null, Type.TYPE_ULONG, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 60, null, null, Type.TYPE_ULONG, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 60, null, null, Type.TYPE_ULONG, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 60, null, null, Type.TYPE_ULONG, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
 		private ulong userData;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 64, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 64, null, null, Type.TYPE_BOOL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 64, null, null, Type.TYPE_BOOL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 64, null, null, Type.TYPE_BOOL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 64, null, null, Type.TYPE_BOOL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
 		private bool active;
 	}
 }

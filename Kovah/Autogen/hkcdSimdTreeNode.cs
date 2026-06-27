@@ -13,7 +13,7 @@ namespace Kovah
 			HAS_NULLS,
 			
 		}
-		[HavokMember(EVersion.hk_2014_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 96, null, null, Type.TYPE_UINT32, Type.TYPE_VOID, 4, FlagValues.FLAGS_NONE)]
 		private uint data;
 	}
 }

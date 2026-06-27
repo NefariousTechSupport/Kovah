@@ -14,8 +14,8 @@ namespace Kovah
 			TYPE_SCREW,
 			
 		}
-		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpRackAndPinionConstraintDataAtoms), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkpRackAndPinionConstraintDataAtoms), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpRackAndPinionConstraintDataAtoms), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.ALIGN_16)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkpRackAndPinionConstraintDataAtoms), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.ALIGN_16)]
 		private hkpRackAndPinionConstraintDataAtoms? atoms;
 	}
 }

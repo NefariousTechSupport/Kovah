@@ -27,13 +27,13 @@ namespace Kovah
 			TOI_OP,
 			
 		}
-		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpRigidBody), null, Type.TYPE_ARRAY, Type.TYPE_POINTER, 0, FlagValues.FLAGS_NONE)]
 		private object? /* void */[]? overlappingBodies;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpTriggerVolumeEventInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpTriggerVolumeEventInfo), null, Type.TYPE_ARRAY, Type.TYPE_STRUCT, 0, FlagValues.FLAGS_NONE)]
 		private hkpTriggerVolumeEventInfo?[]? eventQueue;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkpRigidBody), null, Type.TYPE_POINTER, Type.TYPE_STRUCT, 0, FlagValues.FLAGS_NONE)]
 		private hkpRigidBody? triggerBody;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 48, null, null, Type.TYPE_UINT32, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
 		private uint sequenceNumber;
 	}
 }

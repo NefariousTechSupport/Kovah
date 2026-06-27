@@ -11,9 +11,9 @@ namespace Kovah
 			REBUILD_REFIT_ONLY,
 			
 		}
-		[HavokMember(EVersion.hk_2014_1_0_r1, 80, typeof(hknpExternMeshShapeGeometry), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.ALIGN_16)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 80, typeof(hknpExternMeshShapeGeometry), null, Type.TYPE_POINTER, Type.TYPE_STRUCT, 0, FlagValues.ALIGN_16)]
 		private hknpExternMeshShapeGeometry? geometry;
-		[HavokMember(EVersion.hk_2014_1_0_r1, 84, typeof(hknpExternMeshShapeData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 84, typeof(hknpExternMeshShapeData), null, Type.TYPE_POINTER, Type.TYPE_STRUCT, 0, FlagValues.FLAGS_NONE)]
 		private hknpExternMeshShapeData? boundingVolumeData;
 	}
 }

@@ -14,8 +14,8 @@ namespace Kovah
 			FLAG_SYNC_POINT,
 			
 		}
-		[HavokMember(EVersion.hk_2012_1_0_r1, 0, null, typeof(hkbEventInfo.Flags), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, typeof(hkbEventInfo.Flags), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 0, null, typeof(hkbEventInfo.Flags), Type.TYPE_FLAGS, Type.TYPE_UINT32, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, typeof(hkbEventInfo.Flags), Type.TYPE_FLAGS, Type.TYPE_UINT32, 0, FlagValues.FLAGS_NONE)]
 		private hkbEventInfo.Flags flags;
 	}
 }
