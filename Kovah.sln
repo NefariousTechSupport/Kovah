@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kovah", "Kovah\Kovah.csproj", "{F41BD17A-3B17-4F83-8F57-05574CB10B43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sapphire", "Sapphire\Sapphire.csproj", "{02BC30CC-3ECB-4DD0-A686-45513B6240B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{F41BD17A-3B17-4F83-8F57-05574CB10B43}.Release|x64.Build.0 = Release|Any CPU
 		{F41BD17A-3B17-4F83-8F57-05574CB10B43}.Release|x86.ActiveCfg = Release|Any CPU
 		{F41BD17A-3B17-4F83-8F57-05574CB10B43}.Release|x86.Build.0 = Release|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Debug|x64.Build.0 = Debug|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Debug|x86.Build.0 = Debug|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x64.ActiveCfg = Release|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x64.Build.0 = Release|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x86.ActiveCfg = Release|Any CPU
+		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
