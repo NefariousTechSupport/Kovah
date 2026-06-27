@@ -1,0 +1,6 @@
+# ramdumps
+metadata/*.bin
+metadata/__pycache__
+
+bin
+obj

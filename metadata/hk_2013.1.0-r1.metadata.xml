@@ -1,0 +1,1473 @@
+<metadata>
+	<hkclasses>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkRootLevelContainer">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="0" name="namedVariants" class="hkRootLevelContainerNamedVariant" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="1" numImplementedInterfaces="0" name="hkRootLevelContainerNamedVariant">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="4" name="className" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="variant" class="hkReferencedObject" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkReferencedObject" parent="hkBaseObject">
+			<members>
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="4" name="memSizeAndFlags" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="6" name="referenceCount" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="4" describedVersion="0" numImplementedInterfaces="1" name="hkBaseObject" />
+		<hkclass objectSize="68" describedVersion="1" numImplementedInterfaces="0" name="hkaAnimationContainer" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="8" name="skeletons" class="hkaSkeleton" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="20" name="animations" class="hkaAnimation" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="32" name="bindings" class="hkaAnimationBinding" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="44" name="attachments" class="hkaBoneAttachment" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="56" name="skins" class="hkaMeshBinding" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="96" describedVersion="5" numImplementedInterfaces="0" name="hkaSkeleton" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="8" name="name" />
+				<member type="TYPE_ARRAY" subtype="TYPE_INT16" arraysize="0" offset="12" name="parentIndices" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="bones" class="hkaBone" />
+				<member type="TYPE_ARRAY" subtype="TYPE_QSTRANSFORM" arraysize="0" offset="36" name="referencePose" />
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="48" name="referenceFloats" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRINGPTR" arraysize="0" offset="60" name="floatSlots" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="72" name="localFrames" class="hkaSkeletonLocalFrameOnBone" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="84" name="partitions" class="hkaSkeletonPartition" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkaBone">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="4" name="lockTranslation" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkaSkeletonLocalFrameOnBone">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="0" name="localFrame" class="hkLocalFrame" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="4" name="boneIndex" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkLocalFrame" parent="hkReferencedObject" />
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkaSkeletonPartition">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="4" name="startBoneIndex" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="6" name="numBones" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="40" describedVersion="3" numImplementedInterfaces="0" name="hkaAnimation" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_INT32" arraysize="0" offset="8" name="type" enum="hkaAnimation.AnimationType" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="12" name="duration" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="16" name="numberOfTransformTracks" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="20" name="numberOfFloatTracks" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="extractedMotion" class="hkaAnimatedReferenceFrame" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="28" name="annotationTracks" class="hkaAnnotationTrack" />
+			</members>
+			<enums>
+				<enum name="AnimationType">
+					<item value="0" name="HK_UNKNOWN_ANIMATION" />
+					<item value="1" name="HK_INTERLEAVED_ANIMATION" />
+					<item value="2" name="HK_MIRRORED_ANIMATION" />
+					<item value="3" name="HK_SPLINE_COMPRESSED_ANIMATION" />
+					<item value="4" name="HK_QUANTIZED_COMPRESSED_ANIMATION" />
+					<item value="5" name="HK_PREDICTIVE_COMPRESSED_ANIMATION" />
+					<item value="6" name="HK_REFERENCE_POSE_ANIMATION" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkaAnimatedReferenceFrame" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="8" name="frameType" flags="SERIALIZE_IGNORED" />
+			</members>
+			<enums>
+				<enum name="hkaReferenceFrameTypeEnum">
+					<item value="0" name="REFERENCE_FRAME_UNKNOWN" />
+					<item value="1" name="REFERENCE_FRAME_DEFAULT" />
+					<item value="2" name="REFERENCE_FRAME_PARAMETRIC" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="0" numImplementedInterfaces="0" name="hkaAnnotationTrack">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="trackName" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="annotations" class="hkaAnnotationTrackAnnotation" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkaAnnotationTrackAnnotation">
+			<members>
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="0" name="time" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="4" name="text" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="56" describedVersion="3" numImplementedInterfaces="0" name="hkaAnimationBinding" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="8" name="originalSkeletonName" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="12" name="animation" class="hkaAnimation" />
+				<member type="TYPE_ARRAY" subtype="TYPE_INT16" arraysize="0" offset="16" name="transformTrackToBoneIndices" />
+				<member type="TYPE_ARRAY" subtype="TYPE_INT16" arraysize="0" offset="28" name="floatTrackToFloatSlotIndices" />
+				<member type="TYPE_ARRAY" subtype="TYPE_INT16" arraysize="0" offset="40" name="partitionIndices" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="52" name="blendHint" default="0" enum="hkaAnimationBinding.BlendHint" />
+			</members>
+			<enums>
+				<enum name="BlendHint">
+					<item value="0" name="NORMAL" />
+					<item value="1" name="ADDITIVE" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="96" describedVersion="2" numImplementedInterfaces="0" name="hkaBoneAttachment" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="8" name="originalSkeletonName" />
+				<member type="TYPE_MATRIX4" subtype="TYPE_VOID" arraysize="0" offset="16" name="boneFromAttachment" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="80" name="attachment" class="hkReferencedObject" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="84" name="name" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="88" name="boneIndex" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="48" describedVersion="3" numImplementedInterfaces="0" name="hkaMeshBinding" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="mesh" class="hkxMesh" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="12" name="originalSkeletonName" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="16" name="name" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="20" name="skeleton" class="hkaSkeleton" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="mappings" class="hkaMeshBindingMapping" />
+				<member type="TYPE_ARRAY" subtype="TYPE_TRANSFORM" arraysize="0" offset="36" name="boneFromSkinMeshTransforms" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="32" describedVersion="1" numImplementedInterfaces="0" name="hkxMesh" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="8" name="sections" class="hkxMeshSection" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="20" name="userChannelInfos" class="hkxMeshUserChannelInfo" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="64" describedVersion="4" numImplementedInterfaces="0" name="hkxMeshSection" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="vertexBuffer" class="hkxVertexBuffer" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="12" name="indexBuffers" class="hkxIndexBuffer" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="material" class="hkxMaterial" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="28" name="userChannels" class="hkReferencedObject" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="40" name="vertexAnimations" class="hkxVertexAnimation" />
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="52" name="linearKeyFrameHints" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="104" describedVersion="1" numImplementedInterfaces="0" name="hkxVertexBuffer" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="8" name="data" class="hkxVertexBufferVertexData" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="92" name="desc" class="hkxVertexDescription" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="84" describedVersion="1" numImplementedInterfaces="0" name="hkxVertexBufferVertexData">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="0" name="vectorData" />
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="12" name="floatData" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT32" arraysize="0" offset="24" name="uint32Data" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT16" arraysize="0" offset="36" name="uint16Data" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="48" name="uint8Data" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="60" name="numVerts" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="64" name="vectorStride" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="68" name="floatStride" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="72" name="uint32Stride" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="76" name="uint16Stride" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="80" name="uint8Stride" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="1" numImplementedInterfaces="0" name="hkxVertexDescription">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="0" name="decls" class="hkxVertexDescriptionElementDecl" />
+			</members>
+			<enums>
+				<enum name="DataType">
+					<item value="0" name="HKX_DT_NONE" />
+					<item value="1" name="HKX_DT_UINT8" />
+					<item value="2" name="HKX_DT_INT16" />
+					<item value="3" name="HKX_DT_UINT32" />
+					<item value="4" name="HKX_DT_FLOAT" />
+				</enum>
+				<enum name="DataUsage">
+					<item value="0" name="HKX_DU_NONE" />
+					<item value="1" name="HKX_DU_POSITION" />
+					<item value="2" name="HKX_DU_COLOR" />
+					<item value="4" name="HKX_DU_NORMAL" />
+					<item value="8" name="HKX_DU_TANGENT" />
+					<item value="16" name="HKX_DU_BINORMAL" />
+					<item value="32" name="HKX_DU_TEXCOORD" />
+					<item value="64" name="HKX_DU_BLENDWEIGHTS" />
+					<item value="128" name="HKX_DU_BLENDINDICES" />
+					<item value="256" name="HKX_DU_USERDATA" />
+				</enum>
+				<enum name="DataHint">
+					<item value="0" name="HKX_DH_NONE" />
+					<item value="1" name="HKX_DH_LIGHTMAP" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="3" numImplementedInterfaces="0" name="hkxVertexDescriptionElementDecl">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="byteOffset" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT16" arraysize="0" offset="4" name="type" enum="hkxVertexDescription.DataType" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT16" arraysize="0" offset="6" name="usage" enum="hkxVertexDescription.DataUsage" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="8" name="byteStride" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="12" name="numElements" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT16" arraysize="0" offset="14" name="hint" enum="hkxVertexDescription.DataHint" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="44" describedVersion="1" numImplementedInterfaces="0" name="hkxIndexBuffer" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="8" name="indexType" enum="hkxIndexBuffer.IndexType" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT16" arraysize="0" offset="12" name="indices16" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT32" arraysize="0" offset="24" name="indices32" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="36" name="vertexBaseOffset" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="40" name="length" />
+			</members>
+			<enums>
+				<enum name="IndexType">
+					<item value="0" name="INDEX_TYPE_INVALID" />
+					<item value="1" name="INDEX_TYPE_TRI_LIST" />
+					<item value="2" name="INDEX_TYPE_TRI_STRIP" />
+					<item value="3" name="INDEX_TYPE_TRI_FAN" />
+					<item value="4" name="INDEX_TYPE_MAX_ID" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="176" describedVersion="4" numImplementedInterfaces="0" name="hkxMaterial" parent="hkxAttributeHolder">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="20" name="name" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="stages" class="hkxMaterialTextureStage" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="48" name="diffuseColor" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="64" name="ambientColor" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="80" name="specularColor" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="96" name="emissiveColor" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="112" name="subMaterials" class="hkxMaterial" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="124" name="extraData" class="hkReferencedObject" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="2" offset="128" name="uvMapScale" default="1.0" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="2" offset="136" name="uvMapOffset" default="0.0" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="144" name="uvMapRotation" default="0.0" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT32" arraysize="0" offset="148" name="uvMapAlgorithm" default="2" enum="hkxMaterial.UVMappingAlgorithm" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="152" name="specularMultiplier" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="156" name="specularExponent" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="160" name="transparency" enum="hkxMaterial.Transparency" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="164" name="properties" class="hkxMaterialProperty" />
+			</members>
+			<enums>
+				<enum name="TextureType">
+					<item value="0" name="TEX_UNKNOWN" />
+					<item value="1" name="TEX_DIFFUSE" />
+					<item value="2" name="TEX_REFLECTION" />
+					<item value="3" name="TEX_BUMP" />
+					<item value="4" name="TEX_NORMAL" />
+					<item value="5" name="TEX_DISPLACEMENT" />
+					<item value="6" name="TEX_SPECULAR" />
+					<item value="7" name="TEX_SPECULARANDGLOSS" />
+					<item value="8" name="TEX_OPACITY" />
+					<item value="9" name="TEX_EMISSIVE" />
+					<item value="10" name="TEX_REFRACTION" />
+					<item value="11" name="TEX_GLOSS" />
+					<item value="12" name="TEX_NOTEXPORTED" />
+				</enum>
+				<enum name="PropertyKey">
+					<item value="1" name="PROPERTY_MTL_TYPE_BLEND" />
+					<item value="256" name="PROPERTY_MTL_UV_ID_STAGE0" />
+					<item value="257" name="PROPERTY_MTL_UV_ID_STAGE1" />
+					<item value="258" name="PROPERTY_MTL_UV_ID_STAGE2" />
+					<item value="259" name="PROPERTY_MTL_UV_ID_STAGE3" />
+					<item value="260" name="PROPERTY_MTL_UV_ID_STAGE4" />
+					<item value="261" name="PROPERTY_MTL_UV_ID_STAGE5" />
+					<item value="262" name="PROPERTY_MTL_UV_ID_STAGE6" />
+					<item value="263" name="PROPERTY_MTL_UV_ID_STAGE7" />
+					<item value="264" name="PROPERTY_MTL_UV_ID_STAGE8" />
+					<item value="265" name="PROPERTY_MTL_UV_ID_STAGE9" />
+					<item value="266" name="PROPERTY_MTL_UV_ID_STAGE10" />
+					<item value="267" name="PROPERTY_MTL_UV_ID_STAGE11" />
+					<item value="268" name="PROPERTY_MTL_UV_ID_STAGE12" />
+					<item value="269" name="PROPERTY_MTL_UV_ID_STAGE13" />
+					<item value="270" name="PROPERTY_MTL_UV_ID_STAGE14" />
+					<item value="271" name="PROPERTY_MTL_UV_ID_STAGE15" />
+					<item value="272" name="PROPERTY_MTL_UV_ID_STAGE_MAX" />
+				</enum>
+				<enum name="UVMappingAlgorithm">
+					<item value="0" name="UVMA_SRT" />
+					<item value="1" name="UVMA_TRS" />
+					<item value="2" name="UVMA_3DSMAX_STYLE" />
+					<item value="3" name="UVMA_MAYA_STYLE" />
+				</enum>
+				<enum name="Transparency">
+					<item value="0" name="transp_none" />
+					<item value="2" name="transp_alpha" />
+					<item value="3" name="transp_additive" />
+					<item value="4" name="transp_colorkey" />
+					<item value="9" name="transp_subtractive" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="20" describedVersion="2" numImplementedInterfaces="0" name="hkxAttributeHolder" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="attributeGroups" class="hkxAttributeGroup" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="0" numImplementedInterfaces="0" name="hkxAttributeGroup">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="attributes" class="hkxAttribute" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkxAttribute">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="value" class="hkReferencedObject" />
+			</members>
+			<enums>
+				<enum name="Hint">
+					<item value="0" name="HINT_NONE" />
+					<item value="1" name="HINT_IGNORE" />
+					<item value="2" name="HINT_TRANSFORM" />
+					<item value="4" name="HINT_SCALE" />
+					<item value="6" name="HINT_TRANSFORM_AND_SCALE" />
+					<item value="8" name="HINT_FLIP" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="1" numImplementedInterfaces="0" name="hkxMaterialTextureStage">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="0" name="texture" class="hkReferencedObject" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT32" arraysize="0" offset="4" name="usageHint" enum="hkxMaterial.TextureType" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="8" name="tcoordChannel" default="-1" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkxMaterialProperty">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="key" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="4" name="value" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="140" describedVersion="0" numImplementedInterfaces="0" name="hkxVertexAnimation" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="8" name="time" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="12" name="vertData" class="hkxVertexBuffer" />
+				<member type="TYPE_ARRAY" subtype="TYPE_INT32" arraysize="0" offset="116" name="vertexIndexMap" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="128" name="componentMap" class="hkxVertexAnimationUsageMap" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="4" describedVersion="0" numImplementedInterfaces="0" name="hkxVertexAnimationUsageMap">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_UINT16" arraysize="0" offset="0" name="use" enum="hkxVertexDescription.DataUsage" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="2" name="useIndexOrig" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="3" name="useIndexLocal" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="28" describedVersion="0" numImplementedInterfaces="0" name="hkxMeshUserChannelInfo" parent="hkxAttributeHolder">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="20" name="name" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="24" name="className" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkaMeshBindingMapping">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_INT16" arraysize="0" offset="0" name="mapping" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="20" describedVersion="1" numImplementedInterfaces="0" name="hkxEnvironment" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="variables" class="hkxEnvironmentVariable" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkxEnvironmentVariable">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="4" name="value" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="192" describedVersion="2" numImplementedInterfaces="0" name="hkxScene" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="8" name="modeller" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="12" name="asset" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="16" name="sceneLength" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="20" name="numFrames" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="rootNode" class="hkxNode" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="28" name="selectionSets" class="hkxNodeSelectionSet" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="40" name="cameras" class="hkxCamera" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="52" name="lights" class="hkxLight" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="64" name="meshes" class="hkxMesh" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="76" name="materials" class="hkxMaterial" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="88" name="inplaceTextures" class="hkxTextureInplace" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="100" name="externalTextures" class="hkxTextureFile" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="112" name="skinBindings" class="hkxSkinBinding" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="124" name="splines" class="hkxSpline" />
+				<member type="TYPE_MATRIX3" subtype="TYPE_VOID" arraysize="0" offset="144" name="appliedTransform" default="1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="84" describedVersion="4" numImplementedInterfaces="0" name="hkxNode" parent="hkxAttributeHolder">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="20" name="name" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="object" class="hkReferencedObject" />
+				<member type="TYPE_ARRAY" subtype="TYPE_MATRIX4" arraysize="0" offset="28" name="keyFrames" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="40" name="children" class="hkxNode" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="52" name="annotations" class="hkxNodeAnnotationData" />
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="64" name="linearKeyFrameHints" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="76" name="userProperties" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="80" name="selected" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="81" name="bone" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkxNodeAnnotationData">
+			<members>
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="0" name="time" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="4" name="description" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="36" describedVersion="0" numImplementedInterfaces="0" name="hkxNodeSelectionSet" parent="hkxAttributeHolder">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="20" name="selectedNodes" class="hkxNode" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="32" name="name" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="80" describedVersion="1" numImplementedInterfaces="0" name="hkxCamera" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="16" name="from" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="32" name="focus" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="48" name="up" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="64" name="fov" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="68" name="far" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="72" name="near" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="76" name="leftHanded" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="80" describedVersion="3" numImplementedInterfaces="0" name="hkxLight" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="8" name="type" enum="hkxLight.LightType" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="16" name="position" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="32" name="direction" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="48" name="color" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="52" name="angle" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="56" name="range" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="60" name="fadeStart" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="64" name="fadeEnd" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="68" name="decayRate" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="72" name="intensity" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="76" name="shadowCaster" />
+			</members>
+			<enums>
+				<enum name="LightType">
+					<item value="0" name="POINT_LIGHT" />
+					<item value="1" name="DIRECTIONAL_LIGHT" />
+					<item value="2" name="SPOT_LIGHT" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="32" describedVersion="1" numImplementedInterfaces="0" name="hkxTextureInplace" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_CHAR" subtype="TYPE_VOID" arraysize="4" offset="8" name="fileType" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="12" name="data" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="24" name="name" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="28" name="originalFilename" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="20" describedVersion="1" numImplementedInterfaces="0" name="hkxTextureFile" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="8" name="filename" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="12" name="name" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="16" name="originalFilename" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="112" describedVersion="2" numImplementedInterfaces="0" name="hkxSkinBinding" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="mesh" class="hkxMesh" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRINGPTR" arraysize="0" offset="12" name="nodeNames" />
+				<member type="TYPE_ARRAY" subtype="TYPE_MATRIX4" arraysize="0" offset="24" name="bindPose" />
+				<member type="TYPE_MATRIX4" subtype="TYPE_VOID" arraysize="0" offset="48" name="initSkinTransform" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="24" describedVersion="0" numImplementedInterfaces="0" name="hkxSpline" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="controlPoints" class="hkxSplineControlPoint" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="20" name="isClosed" />
+			</members>
+			<enums>
+				<enum name="ControlType">
+					<item value="0" name="BEZIER_SMOOTH" />
+					<item value="1" name="BEZIER_CORNER" />
+					<item value="2" name="LINEAR" />
+					<item value="3" name="CUSTOM" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="64" describedVersion="0" numImplementedInterfaces="0" name="hkxSplineControlPoint">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="0" name="position" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="16" name="tangentIn" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="32" name="tangentOut" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="48" name="inType" enum="hkxSpline.ControlType" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="49" name="outType" enum="hkxSpline.ControlType" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="24" describedVersion="0" numImplementedInterfaces="0" name="hkpPhysicsData" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="worldCinfo" class="hkpWorldCinfo" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="12" name="systems" class="hkpPhysicsSystem" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="240" describedVersion="18" numImplementedInterfaces="0" name="hkpWorldCinfo" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="16" name="gravity" default="0.0,-9.800000190734863,0.0,0.0" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="32" name="broadPhaseQuerySize" default="1024" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="36" name="contactRestingVelocity" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="40" name="broadPhaseType" enum="hkpWorldCinfo.BroadPhaseType" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="41" name="broadPhaseBorderBehaviour" enum="hkpWorldCinfo.BroadPhaseBorderBehaviour" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="42" name="mtPostponeAndSortBroadPhaseBorderCallbacks" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="48" name="broadPhaseWorldAabb" class="hkAabb" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="80" name="collisionTolerance" default="0.10000000149011612" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="84" name="collisionFilter" class="hkpCollisionFilter" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="88" name="convexListFilter" class="hkpConvexListFilter" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="92" name="expectedMaxLinearVelocity" default="200.0" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="96" name="sizeOfToiEventQueue" default="250" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="100" name="expectedMinPsiDeltaTime" default="0.03333333507180214" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="104" name="memoryWatchDog" class="hkWorldMemoryAvailableWatchDog" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="108" name="broadPhaseNumMarkers" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="112" name="contactPointGeneration" enum="hkpWorldCinfo.ContactPointGeneration" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="113" name="allowToSkipConfirmedCallbacks" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="116" name="solverTau" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="120" name="solverDamp" default="0.6000000238418579" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="124" name="solverIterations" default="4" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="128" name="solverMicrosteps" default="1" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="132" name="maxConstraintViolation" default="1.8446726481523507e+19" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="136" name="forceCoherentConstraintOrderingInSolver" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="140" name="snapCollisionToConvexEdgeThreshold" default="0.5239999890327454" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="144" name="snapCollisionToConcaveEdgeThreshold" default="0.6980000138282776" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="148" name="enableToiWeldRejection" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="149" name="enableDeprecatedWelding" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="152" name="iterativeLinearCastEarlyOutDistance" default="0.009999999776482582" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="156" name="iterativeLinearCastMaxIterations" default="20" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="160" name="deactivationNumInactiveFramesSelectFlag0" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="161" name="deactivationNumInactiveFramesSelectFlag1" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="162" name="deactivationIntegrateCounter" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="163" name="shouldActivateOnRigidBodyTransformChange" default="True" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="164" name="deactivationReferenceDistance" default="0.019999999552965164" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="168" name="toiCollisionResponseRotateNormal" default="0.20000000298023224" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="172" name="useCompoundSpuElf" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="176" name="maxSectorsPerMidphaseCollideTask" default="2" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="180" name="maxSectorsPerNarrowphaseCollideTask" default="4" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="184" name="processToisMultithreaded" default="True" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="188" name="maxEntriesPerToiMidphaseCollideTask" default="-1" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="192" name="maxEntriesPerToiNarrowphaseCollideTask" default="-1" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="196" name="maxNumToiCollisionPairsSinglethreaded" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="200" name="numToisTillAllowedPenetrationSimplifiedToi" default="3.0" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="204" name="numToisTillAllowedPenetrationToi" default="3.0" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="208" name="numToisTillAllowedPenetrationToiHigher" default="4.0" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="212" name="numToisTillAllowedPenetrationToiForced" default="20.0" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="216" name="enableDeactivation" default="True" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="217" name="simulationType" enum="hkpWorldCinfo.SimulationType" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="218" name="enableSimulationIslands" default="True" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="220" name="minDesiredIslandSize" default="64" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="224" name="processActionsInSingleThread" default="True" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="225" name="allowIntegrationOfIslandsWithoutConstraintsInASeparateJob" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="228" name="frameMarkerPsiSnap" default="9.999999747378752e-05" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="232" name="fireCollisionCallbacks" />
+			</members>
+			<enums>
+				<enum name="SolverType">
+					<item value="0" name="SOLVER_TYPE_INVALID" />
+					<item value="1" name="SOLVER_TYPE_2ITERS_SOFT" />
+					<item value="2" name="SOLVER_TYPE_2ITERS_MEDIUM" />
+					<item value="3" name="SOLVER_TYPE_2ITERS_HARD" />
+					<item value="4" name="SOLVER_TYPE_4ITERS_SOFT" />
+					<item value="5" name="SOLVER_TYPE_4ITERS_MEDIUM" />
+					<item value="6" name="SOLVER_TYPE_4ITERS_HARD" />
+					<item value="7" name="SOLVER_TYPE_8ITERS_SOFT" />
+					<item value="8" name="SOLVER_TYPE_8ITERS_MEDIUM" />
+					<item value="9" name="SOLVER_TYPE_8ITERS_HARD" />
+					<item value="10" name="SOLVER_TYPE_MAX_ID" />
+				</enum>
+				<enum name="SimulationType">
+					<item value="0" name="SIMULATION_TYPE_INVALID" />
+					<item value="1" name="SIMULATION_TYPE_DISCRETE" />
+					<item value="2" name="SIMULATION_TYPE_CONTINUOUS" />
+					<item value="3" name="SIMULATION_TYPE_MULTITHREADED" />
+				</enum>
+				<enum name="ContactPointGeneration">
+					<item value="0" name="CONTACT_POINT_ACCEPT_ALWAYS" />
+					<item value="1" name="CONTACT_POINT_REJECT_DUBIOUS" />
+					<item value="2" name="CONTACT_POINT_REJECT_MANY" />
+				</enum>
+				<enum name="BroadPhaseType">
+					<item value="0" name="BROADPHASE_TYPE_SAP" />
+					<item value="1" name="BROADPHASE_TYPE_TREE" />
+					<item value="2" name="BROADPHASE_TYPE_HYBRID" />
+				</enum>
+				<enum name="BroadPhaseBorderBehaviour">
+					<item value="0" name="BROADPHASE_BORDER_ASSERT" />
+					<item value="1" name="BROADPHASE_BORDER_FIX_ENTITY" />
+					<item value="2" name="BROADPHASE_BORDER_REMOVE_ENTITY" />
+					<item value="3" name="BROADPHASE_BORDER_DO_NOTHING" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="32" describedVersion="0" numImplementedInterfaces="0" name="hkAabb">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="0" name="min" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="16" name="max" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="48" describedVersion="0" numImplementedInterfaces="4" name="hkpCollisionFilter" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="2" offset="24" name="prepad" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT32" arraysize="0" offset="32" name="type" enum="hkpCollisionFilter.hkpFilterType" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="3" offset="36" name="postpad" />
+			</members>
+			<enums>
+				<enum name="hkpFilterType">
+					<item value="0" name="HK_FILTER_UNKNOWN" />
+					<item value="1" name="HK_FILTER_NULL" />
+					<item value="2" name="HK_FILTER_GROUP" />
+					<item value="3" name="HK_FILTER_LIST" />
+					<item value="4" name="HK_FILTER_CUSTOM" />
+					<item value="5" name="HK_FILTER_PAIR" />
+					<item value="6" name="HK_FILTER_CONSTRAINT" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkpConvexListFilter" parent="hkReferencedObject">
+			<enums>
+				<enum name="ConvexListCollisionType">
+					<item value="0" name="TREAT_CONVEX_LIST_AS_NORMAL" />
+					<item value="1" name="TREAT_CONVEX_LIST_AS_LIST" />
+					<item value="2" name="TREAT_CONVEX_LIST_AS_CONVEX" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkWorldMemoryAvailableWatchDog" parent="hkReferencedObject" />
+		<hkclass objectSize="68" describedVersion="0" numImplementedInterfaces="0" name="hkpPhysicsSystem" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="8" name="rigidBodies" class="hkpRigidBody" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="20" name="constraints" class="hkpConstraintInstance" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="32" name="actions" class="hkpAction" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="44" name="phantoms" class="hkpPhantom" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="56" name="name" />
+				<member type="TYPE_ULONG" subtype="TYPE_VOID" arraysize="0" offset="60" name="userData" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="64" name="active" default="True" />
+			</members>
+			<enums>
+				<enum name="CloneConstraintMode">
+					<item value="0" name="CLONE_SHALLOW_IF_NOT_CONSTRAINED_TO_WORLD" />
+					<item value="1" name="CLONE_DEEP_WITH_MOTORS" />
+					<item value="2" name="CLONE_FORCE_SHALLOW" />
+					<item value="0" name="CLONE_DEFAULT" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="544" describedVersion="0" numImplementedInterfaces="0" name="hkpRigidBody" parent="hkpEntity" />
+		<hkclass objectSize="544" describedVersion="3" numImplementedInterfaces="0" name="hkpEntity" parent="hkpWorldObject">
+			<members>
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="136" name="material" class="hkpMaterial" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="148" name="limitContactImpulseUtilAndFlag" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="152" name="damageMultiplier" default="1.0" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="156" name="breakableBody" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="160" name="solverData" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="164" name="storageIndex" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="166" name="contactPointCallbackDelay" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="168" name="constraintsMaster" flags="SERIALIZE_IGNORED" class="hkpEntitySmallArraySerializeOverrideType" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="176" name="constraintsSlave" flags="NOT_OWNED|SERIALIZE_IGNORED" class="hkpConstraintInstance" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="188" name="constraintRuntime" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="200" name="simulationIsland" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_INT8" subtype="TYPE_VOID" arraysize="0" offset="204" name="autoRemoveLevel" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="205" name="numShapeKeysInContactPointProperties" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="206" name="responseModifierFlags" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="208" name="uid" default="4294967295" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="212" name="spuCollisionCallback" class="hkpEntitySpuCollisionCallback" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="224" name="motion" class="hkpMaxSizeMotion" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="512" name="contactListeners" flags="SERIALIZE_IGNORED" class="hkpEntitySmallArraySerializeOverrideType" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="520" name="actions" flags="SERIALIZE_IGNORED" class="hkpEntitySmallArraySerializeOverrideType" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="528" name="localFrame" class="hkLocalFrame" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="532" name="extendedListeners" flags="SERIALIZE_IGNORED" class="hkpEntityExtendedListeners" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="536" name="npData" />
+			</members>
+			<enums>
+				<enum name="SpuCollisionCallbackEventFilter">
+					<item value="0" name="SPU_SEND_NONE" />
+					<item value="1" name="SPU_SEND_CONTACT_POINT_ADDED" />
+					<item value="2" name="SPU_SEND_CONTACT_POINT_PROCESS" />
+					<item value="4" name="SPU_SEND_CONTACT_POINT_REMOVED" />
+					<item value="3" name="SPU_SEND_CONTACT_POINT_ADDED_OR_PROCESS" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="136" describedVersion="0" numImplementedInterfaces="0" name="hkpWorldObject" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="8" name="world" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_ULONG" subtype="TYPE_VOID" arraysize="0" offset="12" name="userData" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="16" name="collidable" class="hkpLinkedCollidable" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="108" name="multiThreadCheck" class="hkMultiThreadCheck" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="120" name="name" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="124" name="properties" class="hkSimpleProperty" />
+			</members>
+			<enums>
+				<enum name="MtChecks">
+					<item value="0" name="MULTI_THREADING_CHECKS_ENABLE" />
+					<item value="1" name="MULTI_THREADING_CHECKS_IGNORE" />
+				</enum>
+				<enum name="BroadPhaseType">
+					<item value="0" name="BROAD_PHASE_INVALID" />
+					<item value="1" name="BROAD_PHASE_ENTITY" />
+					<item value="2" name="BROAD_PHASE_PHANTOM" />
+					<item value="3" name="BROAD_PHASE_BORDER" />
+					<item value="4" name="BROAD_PHASE_MAX_ID" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="92" describedVersion="0" numImplementedInterfaces="0" name="hkpLinkedCollidable" parent="hkpCollidable">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_VOID" arraysize="0" offset="80" name="collisionEntries" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="80" describedVersion="0" numImplementedInterfaces="0" name="hkpCollidable" parent="hkpCdBody">
+			<members>
+				<member type="TYPE_INT8" subtype="TYPE_VOID" arraysize="0" offset="16" name="ownerOffset" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="17" name="forceCollideOntoPpu" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="18" name="shapeSizeOnSpu" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="20" name="broadPhaseHandle" class="hkpTypedBroadPhaseHandle" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="32" name="boundingVolumeData" flags="SERIALIZE_IGNORED" class="hkpCollidableBoundingVolumeData" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="76" name="allowedPenetrationDepth" />
+			</members>
+			<enums>
+				<enum name="ForceCollideOntoPpuReasons">
+					<item value="1" name="FORCE_PPU_USER_REQUEST" />
+					<item value="2" name="FORCE_PPU_SHAPE_REQUEST" />
+					<item value="4" name="FORCE_PPU_MODIFIER_REQUEST" />
+					<item value="8" name="FORCE_PPU_SHAPE_UNCHECKED" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="1" numImplementedInterfaces="0" name="hkpCdBody">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="0" name="shape" class="hkpShape" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="4" name="shapeKey" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="8" name="motion" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="12" name="parent" flags="SERIALIZE_IGNORED" class="hkpCdBody" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="1" numImplementedInterfaces="0" name="hkpShape" parent="hkpShapeBase">
+			<members>
+				<member type="TYPE_ULONG" subtype="TYPE_VOID" arraysize="0" offset="12" name="userData" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkpShapeBase" parent="hkcdShape" />
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkcdShape" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="8" name="type" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="9" name="dispatchType" enum="hkcdShapeDispatchType.ShapeDispatchTypeEnum" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="10" name="bitsPerKey" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="11" name="shapeInfoCodecType" enum="hkcdShapeInfoCodecType.ShapeInfoCodecTypeEnum" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkpTypedBroadPhaseHandle" parent="hkpBroadPhaseHandle">
+			<members>
+				<member type="TYPE_INT8" subtype="TYPE_VOID" arraysize="0" offset="4" name="type" />
+				<member type="TYPE_INT8" subtype="TYPE_VOID" arraysize="0" offset="5" name="ownerOffset" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_INT8" subtype="TYPE_VOID" arraysize="0" offset="6" name="objectQualityType" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="8" name="collisionFilterInfo" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="4" describedVersion="0" numImplementedInterfaces="0" name="hkpBroadPhaseHandle">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="id" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="44" describedVersion="1" numImplementedInterfaces="0" name="hkpCollidableBoundingVolumeData">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="3" offset="0" name="min" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="3" offset="12" name="expansionMin" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="15" name="expansionShift" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="3" offset="16" name="max" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="3" offset="28" name="expansionMax" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="31" name="padding" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="32" name="numChildShapeAabbs" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="34" name="capacityChildShapeAabbs" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="36" name="childShapeAabbs" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="40" name="childShapeKeys" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkMultiThreadCheck">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="threadId" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="4" name="stackTraceId" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="8" name="markCount" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="10" name="markBitStack" flags="SERIALIZE_IGNORED" />
+			</members>
+			<enums>
+				<enum name="AccessType">
+					<item value="0" name="HK_ACCESS_IGNORE" />
+					<item value="1" name="HK_ACCESS_RO" />
+					<item value="2" name="HK_ACCESS_RW" />
+				</enum>
+				<enum name="ReadMode">
+					<item value="0" name="THIS_OBJECT_ONLY" />
+					<item value="1" name="RECURSIVE" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="2" numImplementedInterfaces="0" name="hkSimpleProperty">
+			<members>
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="key" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="4" name="alignmentPadding" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="8" name="value" class="hkSimplePropertyValue" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkSimplePropertyValue">
+			<members>
+				<member type="TYPE_UINT64" subtype="TYPE_VOID" arraysize="0" offset="0" name="data" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="2" numImplementedInterfaces="0" name="hkpMaterial">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="0" name="responseType" enum="hkpMaterial.ResponseType" />
+				<member type="TYPE_HALF" subtype="TYPE_VOID" arraysize="0" offset="2" name="rollingFrictionMultiplier" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="4" name="friction" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="8" name="restitution" />
+			</members>
+			<enums>
+				<enum name="ResponseType">
+					<item value="0" name="RESPONSE_INVALID" />
+					<item value="1" name="RESPONSE_SIMPLE_CONTACT" />
+					<item value="2" name="RESPONSE_REPORTING" />
+					<item value="3" name="RESPONSE_NONE" />
+					<item value="4" name="RESPONSE_MAX_ID" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkpEntitySmallArraySerializeOverrideType">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="0" name="data" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="4" name="size" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="6" name="capacityAndFlags" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="56" describedVersion="1" numImplementedInterfaces="0" name="hkpConstraintInstance" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="8" name="owner" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="12" name="data" class="hkpConstraintData" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="16" name="constraintModifiers" class="hkpModifierConstraintAtom" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="2" offset="20" name="entities" class="hkpEntity" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="28" name="priority" enum="hkpConstraintInstance.ConstraintPriority" />
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="29" name="wantRuntime" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="30" name="destructionRemapInfo" enum="hkpConstraintInstance.OnDestructionRemapInfo" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="32" name="listeners" flags="SERIALIZE_IGNORED" class="hkpConstraintInstanceSmallArraySerializeOverrideType" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="40" name="name" />
+				<member type="TYPE_ULONG" subtype="TYPE_VOID" arraysize="0" offset="44" name="userData" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="48" name="internal" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="52" name="uid" flags="SERIALIZE_IGNORED" />
+			</members>
+			<enums>
+				<enum name="ConstraintPriority">
+					<item value="0" name="PRIORITY_INVALID" />
+					<item value="1" name="PRIORITY_PSI" />
+					<item value="2" name="PRIORITY_SIMPLIFIED_TOI_UNUSED" />
+					<item value="3" name="PRIORITY_TOI" />
+					<item value="4" name="PRIORITY_TOI_HIGHER" />
+					<item value="5" name="PRIORITY_TOI_FORCED" />
+					<item value="6" name="NUM_PRIORITIES" />
+				</enum>
+				<enum name="InstanceType">
+					<item value="0" name="TYPE_NORMAL" />
+					<item value="1" name="TYPE_CHAIN" />
+				</enum>
+				<enum name="AddReferences">
+					<item value="0" name="DO_NOT_ADD_REFERENCES" />
+					<item value="1" name="DO_ADD_REFERENCES" />
+				</enum>
+				<enum name="CloningMode">
+					<item value="0" name="CLONE_SHALLOW_IF_NOT_CONSTRAINED_TO_WORLD" />
+					<item value="1" name="CLONE_DATAS_WITH_MOTORS" />
+					<item value="2" name="CLONE_FORCE_SHALLOW" />
+				</enum>
+				<enum name="OnDestructionRemapInfo">
+					<item value="0" name="ON_DESTRUCTION_REMAP" />
+					<item value="1" name="ON_DESTRUCTION_REMOVE" />
+					<item value="2" name="ON_DESTRUCTION_RESET_REMOVE" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkpConstraintData" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ULONG" subtype="TYPE_VOID" arraysize="0" offset="8" name="userData" />
+			</members>
+			<enums>
+				<enum name="ConstraintType">
+					<item value="0" name="CONSTRAINT_TYPE_BALLANDSOCKET" />
+					<item value="1" name="CONSTRAINT_TYPE_HINGE" />
+					<item value="2" name="CONSTRAINT_TYPE_LIMITEDHINGE" />
+					<item value="3" name="CONSTRAINT_TYPE_POINTTOPATH" />
+					<item value="6" name="CONSTRAINT_TYPE_PRISMATIC" />
+					<item value="7" name="CONSTRAINT_TYPE_RAGDOLL" />
+					<item value="8" name="CONSTRAINT_TYPE_STIFFSPRING" />
+					<item value="9" name="CONSTRAINT_TYPE_WHEEL" />
+					<item value="10" name="CONSTRAINT_TYPE_GENERIC" />
+					<item value="11" name="CONSTRAINT_TYPE_CONTACT" />
+					<item value="12" name="CONSTRAINT_TYPE_BREAKABLE" />
+					<item value="13" name="CONSTRAINT_TYPE_MALLEABLE" />
+					<item value="14" name="CONSTRAINT_TYPE_POINTTOPLANE" />
+					<item value="15" name="CONSTRAINT_TYPE_PULLEY" />
+					<item value="16" name="CONSTRAINT_TYPE_ROTATIONAL" />
+					<item value="18" name="CONSTRAINT_TYPE_HINGE_LIMITS" />
+					<item value="19" name="CONSTRAINT_TYPE_RAGDOLL_LIMITS" />
+					<item value="20" name="CONSTRAINT_TYPE_CUSTOM" />
+					<item value="21" name="CONSTRAINT_TYPE_RACK_AND_PINION" />
+					<item value="22" name="CONSTRAINT_TYPE_COG_WHEEL" />
+					<item value="23" name="CONSTRAINT_TYPE_FIXED" />
+					<item value="24" name="CONSTRAINT_TYPE_DEFORMABLE_FIXED" />
+					<item value="25" name="CONSTRAINT_TYPE_LINEAR_SLACK" />
+					<item value="100" name="BEGIN_CONSTRAINT_CHAIN_TYPES" />
+					<item value="100" name="CONSTRAINT_TYPE_STIFF_SPRING_CHAIN" />
+					<item value="101" name="CONSTRAINT_TYPE_BALL_SOCKET_CHAIN" />
+					<item value="102" name="CONSTRAINT_TYPE_POWERED_CHAIN" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="32" describedVersion="1" numImplementedInterfaces="0" name="hkpModifierConstraintAtom" parent="hkpConstraintAtom">
+			<members>
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="16" name="modifierAtomSize" flags="ALIGN_16" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="18" name="childSize" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="20" name="child" class="hkpConstraintAtom" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="2" offset="24" name="pad" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="2" describedVersion="0" numImplementedInterfaces="0" name="hkpConstraintAtom">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_UINT16" arraysize="0" offset="0" name="type" enum="hkpConstraintAtom.AtomType" />
+			</members>
+			<enums>
+				<enum name="AtomType">
+					<item value="0" name="TYPE_INVALID" />
+					<item value="1" name="TYPE_BRIDGE" />
+					<item value="2" name="TYPE_SET_LOCAL_TRANSFORMS" />
+					<item value="3" name="TYPE_SET_LOCAL_TRANSLATIONS" />
+					<item value="4" name="TYPE_SET_LOCAL_ROTATIONS" />
+					<item value="5" name="TYPE_BALL_SOCKET" />
+					<item value="6" name="TYPE_STIFF_SPRING" />
+					<item value="7" name="TYPE_LIN" />
+					<item value="8" name="TYPE_LIN_SOFT" />
+					<item value="9" name="TYPE_LIN_LIMIT" />
+					<item value="10" name="TYPE_LIN_FRICTION" />
+					<item value="11" name="TYPE_LIN_MOTOR" />
+					<item value="12" name="TYPE_2D_ANG" />
+					<item value="13" name="TYPE_ANG" />
+					<item value="14" name="TYPE_ANG_LIMIT" />
+					<item value="15" name="TYPE_TWIST_LIMIT" />
+					<item value="16" name="TYPE_CONE_LIMIT" />
+					<item value="17" name="TYPE_ANG_FRICTION" />
+					<item value="18" name="TYPE_ANG_MOTOR" />
+					<item value="19" name="TYPE_RAGDOLL_MOTOR" />
+					<item value="20" name="TYPE_PULLEY" />
+					<item value="21" name="TYPE_RACK_AND_PINION" />
+					<item value="22" name="TYPE_COG_WHEEL" />
+					<item value="23" name="TYPE_SETUP_STABILIZATION" />
+					<item value="24" name="TYPE_3D_ANG" />
+					<item value="25" name="TYPE_DEFORMABLE_3D_LIN" />
+					<item value="26" name="TYPE_DEFORMABLE_3D_ANG" />
+					<item value="27" name="TYPE_OVERWRITE_PIVOT" />
+					<item value="28" name="TYPE_CONTACT" />
+					<item value="29" name="FIRST_MODIFIER_TYPE" />
+					<item value="29" name="TYPE_MODIFIER_SOFT_CONTACT" />
+					<item value="30" name="TYPE_MODIFIER_MASS_CHANGER" />
+					<item value="31" name="TYPE_MODIFIER_VISCOUS_SURFACE" />
+					<item value="32" name="TYPE_MODIFIER_MOVING_SURFACE" />
+					<item value="33" name="TYPE_MODIFIER_IGNORE_CONSTRAINT" />
+					<item value="34" name="TYPE_MODIFIER_CENTER_OF_MASS_CHANGER" />
+					<item value="34" name="LAST_MODIFIER_TYPE" />
+					<item value="35" name="TYPE_MAX" />
+				</enum>
+				<enum name="CallbackRequest">
+					<item value="0" name="CALLBACK_REQUEST_NONE" />
+					<item value="1" name="CALLBACK_REQUEST_NEW_CONTACT_POINT" />
+					<item value="2" name="CALLBACK_REQUEST_SETUP_PPU_ONLY" />
+					<item value="4" name="CALLBACK_REQUEST_SETUP_CALLBACK" />
+					<item value="8" name="CALLBACK_REQUEST_CONTACT_POINT_CALLBACK" />
+				</enum>
+				<enum name="SolvingMethod">
+					<item value="0" name="METHOD_STABILIZED" />
+					<item value="1" name="METHOD_OLD" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkpConstraintInstanceSmallArraySerializeOverrideType">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="0" name="data" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="4" name="size" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="6" name="capacityAndFlags" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkpEntitySpuCollisionCallback">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="0" name="util" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="4" name="capacity" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="6" name="eventFilter" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="7" name="userFilter" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="288" describedVersion="0" numImplementedInterfaces="0" name="hkpMaxSizeMotion" parent="hkpKeyframedRigidMotion" />
+		<hkclass objectSize="288" describedVersion="0" numImplementedInterfaces="0" name="hkpKeyframedRigidMotion" parent="hkpMotion" />
+		<hkclass objectSize="288" describedVersion="3" numImplementedInterfaces="0" name="hkpMotion" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="8" name="type" enum="hkpMotion.MotionType" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="9" name="deactivationIntegrateCounter" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="2" offset="10" name="deactivationNumInactiveFrames" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="16" name="motionState" class="hkMotionState" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="192" name="inertiaAndMassInv" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="208" name="linearVelocity" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="224" name="angularVelocity" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="2" offset="240" name="deactivationRefPosition" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="2" offset="272" name="deactivationRefOrientation" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="280" name="savedMotion" class="hkpMaxSizeMotion" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="284" name="savedQualityTypeIndex" />
+				<member type="TYPE_HALF" subtype="TYPE_VOID" arraysize="0" offset="286" name="gravityFactor" />
+			</members>
+			<enums>
+				<enum name="MotionType">
+					<item value="0" name="MOTION_INVALID" />
+					<item value="1" name="MOTION_DYNAMIC" />
+					<item value="2" name="MOTION_SPHERE_INERTIA" />
+					<item value="3" name="MOTION_BOX_INERTIA" />
+					<item value="4" name="MOTION_KEYFRAMED" />
+					<item value="5" name="MOTION_FIXED" />
+					<item value="6" name="MOTION_THIN_BOX_INERTIA" />
+					<item value="7" name="MOTION_CHARACTER" />
+					<item value="8" name="MOTION_MAX_ID" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="176" describedVersion="2" numImplementedInterfaces="0" name="hkMotionState">
+			<members>
+				<member type="TYPE_TRANSFORM" subtype="TYPE_VOID" arraysize="0" offset="0" name="transform" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="64" name="sweptTransform" class="hkSweptTransformf" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="144" name="deltaAngle" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="160" name="objectRadius" />
+				<member type="TYPE_HALF" subtype="TYPE_VOID" arraysize="0" offset="164" name="linearDamping" />
+				<member type="TYPE_HALF" subtype="TYPE_VOID" arraysize="0" offset="166" name="angularDamping" />
+				<member type="TYPE_HALF" subtype="TYPE_VOID" arraysize="0" offset="168" name="timeFactor" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="170" name="maxLinearVelocity" class="hkUFloat8" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="171" name="maxAngularVelocity" class="hkUFloat8" />
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="172" name="deactivationClass" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="80" describedVersion="0" numImplementedInterfaces="0" name="hkSweptTransformf">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="0" name="centerOfMass0" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="16" name="centerOfMass1" />
+				<member type="TYPE_QUATERNION" subtype="TYPE_VOID" arraysize="0" offset="32" name="rotation0" />
+				<member type="TYPE_QUATERNION" subtype="TYPE_VOID" arraysize="0" offset="48" name="rotation1" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="64" name="centerOfMassLocal" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="1" describedVersion="0" numImplementedInterfaces="0" name="hkUFloat8">
+			<members>
+				<member type="TYPE_UINT8" subtype="TYPE_VOID" arraysize="0" offset="0" name="value" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="4" describedVersion="0" numImplementedInterfaces="0" name="hkDataObjectTypeAttribute">
+			<members>
+				<member type="TYPE_CSTRING" subtype="TYPE_VOID" arraysize="0" offset="0" name="typeName" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="0" numImplementedInterfaces="0" name="hkpEntityExtendedListeners">
+			<members>
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="0" name="activationListeners" flags="SERIALIZE_IGNORED" class="hkpEntitySmallArraySerializeOverrideType" />
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="8" name="entityListeners" flags="SERIALIZE_IGNORED" class="hkpEntitySmallArraySerializeOverrideType" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="24" describedVersion="0" numImplementedInterfaces="0" name="hkpAction" parent="hkReferencedObject">
+			<attribute name="hk.ModelerNodeType" type="hkModelerNodeTypeAttribute">
+				<value name="type" value="1" />
+			</attribute>
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="8" name="world" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="12" name="island" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_ULONG" subtype="TYPE_VOID" arraysize="0" offset="16" name="userData" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="20" name="name" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="1" describedVersion="0" numImplementedInterfaces="0" name="hkModelerNodeTypeAttribute">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="0" name="type" enum="hkModelerNodeTypeAttribute.ModelerType" />
+			</members>
+			<enums>
+				<enum name="ModelerType">
+					<item value="0" name="DEFAULT" />
+					<item value="1" name="LOCATOR" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="160" describedVersion="0" numImplementedInterfaces="0" name="hkpPhantom" parent="hkpWorldObject">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="136" name="overlapListeners" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="148" name="phantomListeners" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="68" describedVersion="0" numImplementedInterfaces="1" name="hkpConstraintCollisionFilter" parent="hkpPairCollisionFilter" />
+		<hkclass objectSize="64" describedVersion="0" numImplementedInterfaces="0" name="hkpPairCollisionFilter" parent="hkpCollisionFilter">
+			<members>
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="48" name="disabledPairs" flags="SERIALIZE_IGNORED" class="hkpPairCollisionFilterMapPairFilterKeyOverrideType" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="60" name="childFilter" class="hkpCollisionFilter" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkpPairCollisionFilterMapPairFilterKeyOverrideType">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="0" name="elem" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="4" name="numElems" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="8" name="hashMod" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="48" describedVersion="0" numImplementedInterfaces="0" name="hkpMoppCode" parent="hkReferencedObject">
+			<members>
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="16" name="info" class="hkpMoppCodeCodeInfo" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="32" name="data" />
+				<member type="TYPE_ENUM" subtype="TYPE_INT8" arraysize="0" offset="44" name="buildType" default="1" enum="hkpMoppCode.BuildType" />
+			</members>
+			<enums>
+				<enum name="BuildType">
+					<item value="0" name="BUILT_WITH_CHUNK_SUBDIVISION" />
+					<item value="1" name="BUILT_WITHOUT_CHUNK_SUBDIVISION" />
+					<item value="2" name="BUILD_NOT_SET" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="0" numImplementedInterfaces="0" name="hkpMoppCodeCodeInfo">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="0" name="offset" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="112" describedVersion="0" numImplementedInterfaces="0" name="tfbTriangleCollisionQuery" parent="hkpMoppBvTreeShape">
+			<members>
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="64" name="p0" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="80" name="p1" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="96" name="faceHint" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="100" name="useHint" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="104" name="skipTraversal" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="108" name="calledFromSetPositionAndLinearCast" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="64" describedVersion="0" numImplementedInterfaces="0" name="hkpMoppBvTreeShape" parent="hkMoppBvTreeShapeBase">
+			<members>
+				<member type="TYPE_STRUCT" subtype="TYPE_VOID" arraysize="0" offset="48" name="child" class="hkpSingleShapeContainer" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="56" name="childSize" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="48" describedVersion="0" numImplementedInterfaces="0" name="hkMoppBvTreeShapeBase" parent="hkpBvTreeShape">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="20" name="code" class="hkpMoppCode" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="24" name="moppData" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_UINT32" subtype="TYPE_VOID" arraysize="0" offset="28" name="moppDataSize" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_VECTOR4" subtype="TYPE_VOID" arraysize="0" offset="32" name="codeInfoCopy" flags="SERIALIZE_IGNORED" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="20" describedVersion="1" numImplementedInterfaces="0" name="hkpBvTreeShape" parent="hkpShape">
+			<members>
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="16" name="bvTreeType" default="4" enum="hkpBvTreeShape.BvTreeType" />
+			</members>
+			<enums>
+				<enum name="BvTreeType">
+					<item value="0" name="BVTREE_MOPP" />
+					<item value="1" name="BVTREE_TRISAMPLED_HEIGHTFIELD" />
+					<item value="2" name="BVTREE_STATIC_COMPOUND" />
+					<item value="3" name="BVTREE_COMPRESSED_MESH" />
+					<item value="4" name="BVTREE_USER" />
+					<item value="5" name="BVTREE_MAX" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkpSingleShapeContainer" parent="hkpShapeContainer">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="childShape" class="hkpShape" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="4" describedVersion="0" numImplementedInterfaces="1" name="hkpShapeContainer" />
+		<hkclass objectSize="104" describedVersion="0" numImplementedInterfaces="0" name="tfbSimpleMeshShape" parent="hkpSimpleMeshShape">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="68" name="vertexArray" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT16" arraysize="0" offset="80" name="indexArray" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="92" name="tfbProperties" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="68" describedVersion="0" numImplementedInterfaces="0" name="hkpSimpleMeshShape" parent="hkpShapeCollection">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_VECTOR4" arraysize="0" offset="24" name="vertices" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="36" name="triangles" class="hkpSimpleMeshShapeTriangle" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="48" name="materialIndices" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="60" name="radius" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="64" name="weldingType" default="6" enum="hkpWeldingUtility.WeldingType" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="24" describedVersion="0" numImplementedInterfaces="1" name="hkpShapeCollection" parent="hkpShape">
+			<members>
+				<member type="TYPE_BOOL" subtype="TYPE_VOID" arraysize="0" offset="20" name="disableWelding" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="21" name="collectionType" default="3" enum="hkpShapeCollection.CollectionType" />
+			</members>
+			<enums>
+				<enum name="CollectionType">
+					<item value="0" name="COLLECTION_LIST" />
+					<item value="1" name="COLLECTION_EXTENDED_MESH" />
+					<item value="2" name="COLLECTION_TRISAMPLED_HEIGHTFIELD" />
+					<item value="3" name="COLLECTION_USER" />
+					<item value="4" name="COLLECTION_SIMPLE_MESH" />
+					<item value="5" name="COLLECTION_MESH_SHAPE" />
+					<item value="6" name="COLLECTION_COMPRESSED_MESH" />
+					<item value="7" name="COLLECTION_MAX" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="16" describedVersion="0" numImplementedInterfaces="0" name="hkpSimpleMeshShapeTriangle">
+			<members>
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="a" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="4" name="b" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="8" name="c" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="12" name="weldingInfo" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="1" describedVersion="0" numImplementedInterfaces="0" name="hkpWeldingUtility">
+			<enums>
+				<enum name="WeldingType">
+					<item value="0" name="WELDING_TYPE_ANTICLOCKWISE" />
+					<item value="4" name="WELDING_TYPE_CLOCKWISE" />
+					<item value="5" name="WELDING_TYPE_TWO_SIDED" />
+					<item value="6" name="WELDING_TYPE_NONE" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="40" describedVersion="1" numImplementedInterfaces="0" name="hkMemoryResourceContainer" parent="hkResourceContainer">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="8" name="name" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="12" name="parent" flags="SERIALIZE_IGNORED" class="hkMemoryResourceContainer" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="16" name="resourceHandles" class="hkMemoryResourceHandle" />
+				<member type="TYPE_ARRAY" subtype="TYPE_POINTER" arraysize="0" offset="28" name="children" class="hkMemoryResourceContainer" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkResourceContainer" parent="hkResourceBase" />
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkResourceBase" parent="hkReferencedObject">
+			<enums>
+				<enum name="Type">
+					<item value="0" name="TYPE_RESOURCE" />
+					<item value="1" name="TYPE_CONTAINER" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="28" describedVersion="3" numImplementedInterfaces="0" name="hkMemoryResourceHandle" parent="hkResourceHandle">
+			<members>
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="variant" class="hkReferencedObject" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="12" name="name" />
+				<member type="TYPE_ARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="16" name="references" class="hkMemoryResourceHandleExternalLink" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkResourceHandle" parent="hkResourceBase" />
+		<hkclass objectSize="8" describedVersion="1" numImplementedInterfaces="0" name="hkMemoryResourceHandleExternalLink">
+			<members>
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="0" name="memberName" />
+				<member type="TYPE_STRINGPTR" subtype="TYPE_VOID" arraysize="0" offset="4" name="externalId" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="132" describedVersion="0" numImplementedInterfaces="0" name="hkaSplineCompressedAnimation" parent="hkaAnimation">
+			<members>
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="40" name="numFrames" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="44" name="numBlocks" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="48" name="maxFramesPerBlock" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="52" name="maskAndQuantizationSize" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="56" name="blockDuration" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="60" name="blockInverseDuration" />
+				<member type="TYPE_REAL" subtype="TYPE_VOID" arraysize="0" offset="64" name="frameDuration" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT32" arraysize="0" offset="68" name="blockOffsets" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT32" arraysize="0" offset="80" name="floatBlockOffsets" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT32" arraysize="0" offset="92" name="transformOffsets" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT32" arraysize="0" offset="104" name="floatOffsets" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="116" name="data" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="128" name="endian" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="148" describedVersion="1" numImplementedInterfaces="0" name="hkaPredictiveCompressedAnimation" parent="hkaAnimation">
+			<members>
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT8" arraysize="0" offset="40" name="compressedData" />
+				<member type="TYPE_ARRAY" subtype="TYPE_UINT16" arraysize="0" offset="52" name="intData" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="9" offset="64" name="intArrayOffsets" />
+				<member type="TYPE_ARRAY" subtype="TYPE_REAL" arraysize="0" offset="100" name="floatData" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="3" offset="112" name="floatArrayOffsets" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="124" name="numBones" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="128" name="numFloatSlots" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="132" name="numFrames" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="136" name="firstFloatBlockScaleAndOffsetIndex" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="140" name="skeleton" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="144" name="maxCompressedBytesPerFrame" flags="SERIALIZE_IGNORED" />
+			</members>
+			<enums>
+				<enum name="StorageClass">
+					<item value="0" name="STORAGE_STATIC" />
+					<item value="1" name="STORAGE_REFERENCE" />
+					<item value="2" name="STORAGE_DYNAMIC_RANGE" />
+					<item value="3" name="STORAGE_DYNAMIC_FIXED" />
+				</enum>
+				<enum name="IntArrayID">
+					<item value="0" name="BLOCK_OFFSETS" />
+					<item value="1" name="FIRST_FLOAT_BLOCK_OFFSETS" />
+					<item value="2" name="IS_ANIMATED_BITMAP" />
+					<item value="3" name="IS_FIXED_RANGE_BITMAP" />
+					<item value="4" name="DYNAMIC_BONE_TRACK_INDEX" />
+					<item value="5" name="DYNAMIC_FLOAT_TRACK_INDEX" />
+					<item value="6" name="STATIC_BONE_TRACK_INDEX" />
+					<item value="7" name="STATIC_FLOAT_TRACK_INDEX" />
+					<item value="8" name="RENORM_QUATERNION_INDEX" />
+					<item value="9" name="NUM_INT_ARRAYS" />
+				</enum>
+				<enum name="FloatArrayID">
+					<item value="0" name="STATIC_VALUES" />
+					<item value="1" name="DYNAMIC_SCALES" />
+					<item value="2" name="DYNAMIC_OFFSETS" />
+					<item value="3" name="NUM_FLOAT_ARRAYS" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="48" describedVersion="1" numImplementedInterfaces="0" name="hkClass">
+			<members>
+				<member type="TYPE_CSTRING" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="parent" class="hkClass" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="8" name="objectSize" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="12" name="numImplementedInterfaces" />
+				<member type="TYPE_SIMPLEARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="16" name="declaredEnums" class="hkClassEnum" />
+				<member type="TYPE_SIMPLEARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="24" name="declaredMembers" class="hkClassMember" />
+				<member type="TYPE_POINTER" subtype="TYPE_VOID" arraysize="0" offset="32" name="defaults" flags="SERIALIZE_IGNORED" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="36" name="attributes" flags="SERIALIZE_IGNORED" class="hkCustomAttributes" />
+				<member type="TYPE_FLAGS" subtype="TYPE_UINT32" arraysize="0" offset="40" name="flags" enum="hkClass.FlagValues" />
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="44" name="describedVersion" />
+			</members>
+			<enums>
+				<enum name="SignatureFlags">
+					<item value="1" name="SIGNATURE_LOCAL" />
+				</enum>
+				<enum name="FlagValues">
+					<item value="0" name="FLAGS_NONE" />
+					<item value="1" name="FLAGS_NOT_SERIALIZABLE" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="20" describedVersion="0" numImplementedInterfaces="0" name="hkClassEnum">
+			<members>
+				<member type="TYPE_CSTRING" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_SIMPLEARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="items" class="hkClassEnumItem" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="12" name="attributes" flags="SERIALIZE_IGNORED" class="hkCustomAttributes" />
+				<member type="TYPE_FLAGS" subtype="TYPE_UINT32" arraysize="0" offset="16" name="flags" enum="hkClassEnum.FlagValues" />
+			</members>
+			<enums>
+				<enum name="FlagValues">
+					<item value="0" name="FLAGS_NONE" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkClassEnumItem">
+			<members>
+				<member type="TYPE_INT32" subtype="TYPE_VOID" arraysize="0" offset="0" name="value" />
+				<member type="TYPE_CSTRING" subtype="TYPE_VOID" arraysize="0" offset="4" name="name" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="8" describedVersion="0" numImplementedInterfaces="0" name="hkCustomAttributes">
+			<members>
+				<member type="TYPE_SIMPLEARRAY" subtype="TYPE_STRUCT" arraysize="0" offset="0" name="attributes" class="hkCustomAttributesAttribute" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="12" describedVersion="0" numImplementedInterfaces="0" name="hkCustomAttributesAttribute">
+			<members>
+				<member type="TYPE_CSTRING" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_VARIANT" subtype="TYPE_VOID" arraysize="0" offset="4" name="value" />
+			</members>
+		</hkclass>
+		<hkclass objectSize="24" describedVersion="0" numImplementedInterfaces="0" name="hkClassMember">
+			<members>
+				<member type="TYPE_CSTRING" subtype="TYPE_VOID" arraysize="0" offset="0" name="name" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="4" name="class" class="hkClass" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="8" name="enum" class="hkClassEnum" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="12" name="type" enum="hkClassMember.Type" />
+				<member type="TYPE_ENUM" subtype="TYPE_UINT8" arraysize="0" offset="13" name="subtype" enum="hkClassMember.Type" />
+				<member type="TYPE_INT16" subtype="TYPE_VOID" arraysize="0" offset="14" name="cArraySize" />
+				<member type="TYPE_FLAGS" subtype="TYPE_UINT16" arraysize="0" offset="16" name="flags" enum="hkClassMember.FlagValues" />
+				<member type="TYPE_UINT16" subtype="TYPE_VOID" arraysize="0" offset="18" name="offset" />
+				<member type="TYPE_POINTER" subtype="TYPE_STRUCT" arraysize="0" offset="20" name="attributes" flags="SERIALIZE_IGNORED" class="hkCustomAttributes" />
+			</members>
+			<enums>
+				<enum name="Type">
+					<item value="0" name="TYPE_VOID" />
+					<item value="1" name="TYPE_BOOL" />
+					<item value="2" name="TYPE_CHAR" />
+					<item value="3" name="TYPE_INT8" />
+					<item value="4" name="TYPE_UINT8" />
+					<item value="5" name="TYPE_INT16" />
+					<item value="6" name="TYPE_UINT16" />
+					<item value="7" name="TYPE_INT32" />
+					<item value="8" name="TYPE_UINT32" />
+					<item value="9" name="TYPE_INT64" />
+					<item value="10" name="TYPE_UINT64" />
+					<item value="11" name="TYPE_REAL" />
+					<item value="12" name="TYPE_VECTOR4" />
+					<item value="13" name="TYPE_QUATERNION" />
+					<item value="14" name="TYPE_MATRIX3" />
+					<item value="15" name="TYPE_ROTATION" />
+					<item value="16" name="TYPE_QSTRANSFORM" />
+					<item value="17" name="TYPE_MATRIX4" />
+					<item value="18" name="TYPE_TRANSFORM" />
+					<item value="19" name="TYPE_ZERO" />
+					<item value="20" name="TYPE_POINTER" />
+					<item value="21" name="TYPE_FUNCTIONPOINTER" />
+					<item value="22" name="TYPE_ARRAY" />
+					<item value="23" name="TYPE_INPLACEARRAY" />
+					<item value="24" name="TYPE_ENUM" />
+					<item value="25" name="TYPE_STRUCT" />
+					<item value="26" name="TYPE_SIMPLEARRAY" />
+					<item value="27" name="TYPE_HOMOGENEOUSARRAY" />
+					<item value="28" name="TYPE_VARIANT" />
+					<item value="29" name="TYPE_CSTRING" />
+					<item value="30" name="TYPE_ULONG" />
+					<item value="31" name="TYPE_FLAGS" />
+					<item value="32" name="TYPE_HALF" />
+					<item value="33" name="TYPE_STRINGPTR" />
+					<item value="34" name="TYPE_RELARRAY" />
+					<item value="35" name="TYPE_MAX" />
+				</enum>
+				<enum name="FlagValues">
+					<item value="0" name="FLAGS_NONE" />
+					<item value="128" name="ALIGN_8" />
+					<item value="256" name="ALIGN_16" />
+					<item value="512" name="NOT_OWNED" />
+					<item value="1024" name="SERIALIZE_IGNORED" />
+					<item value="2048" name="ALIGN_32" />
+					<item value="256" name="ALIGN_REAL" />
+				</enum>
+				<enum name="DeprecatedFlagValues">
+					<item value="8" name="DEPRECATED_SIZE_8" />
+					<item value="8" name="DEPRECATED_ENUM_8" />
+					<item value="16" name="DEPRECATED_SIZE_16" />
+					<item value="16" name="DEPRECATED_ENUM_16" />
+					<item value="32" name="DEPRECATED_SIZE_32" />
+					<item value="32" name="DEPRECATED_ENUM_32" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="1" describedVersion="0" numImplementedInterfaces="0" name="hkcdShapeDispatchType">
+			<enums>
+				<enum name="ShapeDispatchTypeEnum">
+					<item value="0" name="CONVEX_IMPLICIT" />
+					<item value="1" name="CONVEX" />
+					<item value="2" name="HEIGHT_FIELD" />
+					<item value="3" name="COMPOSITE" />
+					<item value="4" name="USER" />
+					<item value="5" name="NUM_DISPATCH_TYPES" />
+				</enum>
+			</enums>
+		</hkclass>
+		<hkclass objectSize="1" describedVersion="0" numImplementedInterfaces="0" name="hkcdShapeInfoCodecType">
+			<enums>
+				<enum name="ShapeInfoCodecTypeEnum">
+					<item value="0" name="NULL_CODEC" />
+					<item value="1" name="UFM358" />
+					<item value="16" name="MAX_NUM_CODECS" />
+				</enum>
+			</enums>
+		</hkclass>
+	</hkclasses>
+	<hkenums/>
+</metadata>
