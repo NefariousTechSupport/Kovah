@@ -36,22 +36,22 @@ namespace Kovah
 			SELF_TRANSITION_MODE_BLEND,
 			
 		}
-		[HavokMember(EVersion.hk_2012_1_0_r1, 92, null, typeof(hkbTransitionEffect.SelfTransitionMode), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 92, null, typeof(hkbTransitionEffect.SelfTransitionMode), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 92, null, typeof(hkbTransitionEffect.SelfTransitionMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 92, null, typeof(hkbTransitionEffect.SelfTransitionMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbTransitionEffect.SelfTransitionMode selfTransitionMode;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 93, null, typeof(hkbTransitionEffect.EventMode), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 93, null, typeof(hkbTransitionEffect.EventMode), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 93, null, typeof(hkbTransitionEffect.EventMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 93, null, typeof(hkbTransitionEffect.EventMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbTransitionEffect.EventMode eventMode;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 94, null, null, Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 94, null, null, Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 94, null, null, hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 94, null, null, hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte defaultEventMode;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 95, null, null, Type.TYPE_INT8, Type.TYPE_VOID, 4, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 95, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte pad;
-		[HavokMember(EVersion.hk_2014_1_0_r1, 96, null, null, Type.TYPE_POINTER, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void */ patchedBindingInfo;
-		[HavokMember(EVersion.hk_2014_1_0_r1, 100, null, null, Type.TYPE_POINTER, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void */ fromGenerator;
-		[HavokMember(EVersion.hk_2014_1_0_r1, 104, null, null, Type.TYPE_POINTER, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 104, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void */ toGenerator;
 	}
 }

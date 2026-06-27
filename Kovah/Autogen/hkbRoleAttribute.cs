@@ -67,11 +67,11 @@ namespace Kovah
 			FLAG_CHAIN,
 			
 		}
-		[HavokMember(EVersion.hk_2012_1_0_r1, 0, null, typeof(hkbRoleAttribute.Role), Type.TYPE_ENUM, Type.TYPE_INT16, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, typeof(hkbRoleAttribute.Role), Type.TYPE_ENUM, Type.TYPE_INT16, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 0, null, typeof(hkbRoleAttribute.Role), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, typeof(hkbRoleAttribute.Role), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbRoleAttribute.Role role;
-		[HavokMember(EVersion.hk_2012_1_0_r1, 2, null, typeof(hkbRoleAttribute.RoleFlags), Type.TYPE_FLAGS, Type.TYPE_INT16, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 2, null, typeof(hkbRoleAttribute.RoleFlags), Type.TYPE_FLAGS, Type.TYPE_INT16, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 2, null, typeof(hkbRoleAttribute.RoleFlags), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_INT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 2, null, typeof(hkbRoleAttribute.RoleFlags), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_INT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbRoleAttribute.RoleFlags flags;
 	}
 }

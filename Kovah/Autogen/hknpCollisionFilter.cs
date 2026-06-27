@@ -17,7 +17,7 @@ namespace Kovah
 			TYPE_USER,
 			
 		}
-		[HavokMember(EVersion.hk_2014_1_0_r1, 8, null, typeof(hknpCollisionFilter.Type), Type.TYPE_ENUM, Type.TYPE_UINT8, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 8, null, typeof(hknpCollisionFilter.Type), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpCollisionFilter.Type type;
 	}
 }

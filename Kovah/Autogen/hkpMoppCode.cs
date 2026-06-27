@@ -25,20 +25,20 @@ namespace Kovah
 			BUILD_NOT_SET,
 			
 		}
-		[HavokMember(EVersion.Havok_7_1_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 16, typeof(hkpMoppCodeCodeInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpMoppCodeCodeInfo? info;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 32, null, null, Type.TYPE_ARRAY, Type.TYPE_UINT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 32, null, null, Type.TYPE_ARRAY, Type.TYPE_UINT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, Type.TYPE_ARRAY, Type.TYPE_UINT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 32, null, null, Type.TYPE_ARRAY, Type.TYPE_UINT8, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte[]? data;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 44, null, typeof(hkpMoppCode.BuildType), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), Type.TYPE_ENUM, Type.TYPE_INT8, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 44, null, typeof(hkpMoppCode.BuildType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpMoppCode.BuildType buildType;
 	}
 }

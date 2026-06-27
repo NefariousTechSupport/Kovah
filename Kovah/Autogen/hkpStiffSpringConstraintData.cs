@@ -4,8 +4,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkpStiffSpringConstraintData : hkpConstraintData
 	{
-		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpStiffSpringConstraintDataAtoms), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.ALIGN_16)]
-		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkpStiffSpringConstraintDataAtoms), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.ALIGN_16)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpStiffSpringConstraintDataAtoms), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
+		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkpStiffSpringConstraintDataAtoms), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
 		private hkpStiffSpringConstraintDataAtoms? atoms;
 	}
 }

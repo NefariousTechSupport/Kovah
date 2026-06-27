@@ -15,9 +15,9 @@ namespace Kovah
 			CUSTOM,
 			
 		}
-		[HavokMember(EVersion.hk_2013_1_0_r1, 8, typeof(hkxSplineControlPoint), null, Type.TYPE_ARRAY, Type.TYPE_STRUCT, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 8, typeof(hkxSplineControlPoint), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkxSplineControlPoint?[]? controlPoints;
-		[HavokMember(EVersion.hk_2013_1_0_r1, 20, null, null, Type.TYPE_BOOL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 20, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool isClosed;
 	}
 }

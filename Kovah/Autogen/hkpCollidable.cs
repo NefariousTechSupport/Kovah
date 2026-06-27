@@ -29,35 +29,35 @@ namespace Kovah
 			FORCE_PPU_SHAPE_UNCHECKED,
 			
 		}
-		[HavokMember(EVersion.Havok_7_1_0_r1, 16, null, null, Type.TYPE_INT8, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 16, null, null, Type.TYPE_INT8, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, null, Type.TYPE_INT8, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 16, null, null, Type.TYPE_INT8, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 16, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte ownerOffset;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 17, null, null, Type.TYPE_UINT8, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 17, null, null, Type.TYPE_UINT8, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 17, null, null, Type.TYPE_UINT8, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 17, null, null, Type.TYPE_UINT8, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 17, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 17, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 17, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 17, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte forceCollideOntoPpu;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 18, null, null, Type.TYPE_UINT16, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 18, null, null, Type.TYPE_UINT16, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 18, null, null, Type.TYPE_UINT16, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 18, null, null, Type.TYPE_UINT16, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 18, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 18, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 18, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 18, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private ushort shapeSizeOnSpu;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpTypedBroadPhaseHandle? broadPhaseHandle;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, Type.TYPE_STRUCT, Type.TYPE_VOID, 0, FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private hkpCollidableBoundingVolumeData? boundingVolumeData;
-		[HavokMember(EVersion.Havok_7_1_0_r1, 76, null, null, Type.TYPE_REAL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2011_2_0_r1, 76, null, null, Type.TYPE_REAL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2012_1_0_r1, 76, null, null, Type.TYPE_REAL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
-		[HavokMember(EVersion.hk_2013_1_0_r1, 76, null, null, Type.TYPE_REAL, Type.TYPE_VOID, 0, FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.Havok_7_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2011_2_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2012_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
+		[HavokMember(EVersion.hk_2013_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float allowedPenetrationDepth;
 	}
 }
