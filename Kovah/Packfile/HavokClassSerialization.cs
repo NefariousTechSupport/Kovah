@@ -104,7 +104,7 @@ namespace Kovah
 				members[m] = member;
 			}
 
-			objectSize = Math.Max(1, head);
+			objectSize = StreamHelper.Align(Math.Max(1, head), workingAlignment);
 			alignment = Math.Max(1, workingAlignment);
 		}
 	}
