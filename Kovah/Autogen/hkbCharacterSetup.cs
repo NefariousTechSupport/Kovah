@@ -9,19 +9,19 @@ namespace Kovah
 		private hkaSkeletonMapper?[]? retargetingSkeletonMappers;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkaSkeleton), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, typeof(hkaSkeleton), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkaSkeleton animationSkeleton;
+		private hkaSkeleton? animationSkeleton;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 24, typeof(hkaSkeletonMapper), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 24, typeof(hkaSkeletonMapper), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkaSkeletonMapper ragdollToAnimationSkeletonMapper;
+		private hkaSkeletonMapper? ragdollToAnimationSkeletonMapper;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 28, typeof(hkaSkeletonMapper), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 28, typeof(hkaSkeletonMapper), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkaSkeletonMapper animationToRagdollSkeletonMapper;
+		private hkaSkeletonMapper? animationToRagdollSkeletonMapper;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ animationBindingSet;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 36, typeof(hkbCharacterData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, typeof(hkbCharacterData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCharacterData data;
+		private hkbCharacterData? data;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ unscaledAnimationSkeleton;

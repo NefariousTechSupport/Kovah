@@ -48,12 +48,12 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 60, null, typeof(hkbCustomTestGenerator.StrangeFlags), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbCustomTestGenerator.StrangeFlags flags_hkUint32;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 64, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator generator1;
+		private hkbGenerator? generator1;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 68, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator generator2;
+		private hkbGenerator? generator2;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 72, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier modifier1;
+		private hkbModifier? modifier1;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 76, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier modifier2;
+		private hkbModifier? modifier2;
 	}
 }

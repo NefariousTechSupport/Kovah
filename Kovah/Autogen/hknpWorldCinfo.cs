@@ -62,11 +62,11 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 24, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ persistentStreamAllocator;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 28, typeof(hknpMaterialLibrary), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpMaterialLibrary materialLibrary;
+		private hknpMaterialLibrary? materialLibrary;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, typeof(hknpMotionPropertiesLibrary), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpMotionPropertiesLibrary motionPropertiesLibrary;
+		private hknpMotionPropertiesLibrary? motionPropertiesLibrary;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, typeof(hknpBodyQualityLibrary), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpBodyQualityLibrary qualityLibrary;
+		private hknpBodyQualityLibrary? qualityLibrary;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 40, null, typeof(hknpWorldCinfo.SimulationType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpWorldCinfo.SimulationType simulationType;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 44, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -80,13 +80,13 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 66, null, typeof(hknpWorldCinfo.LeavingBroadPhaseBehavior), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpWorldCinfo.LeavingBroadPhaseBehavior leavingBroadPhaseBehavior;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 80, typeof(hkAabb), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkAabb broadPhaseAabb;
+		private hkAabb? broadPhaseAabb;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 112, typeof(hknpBroadPhaseConfig), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpBroadPhaseConfig broadPhaseConfig;
+		private hknpBroadPhaseConfig? broadPhaseConfig;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 116, typeof(hknpCollisionFilter), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpCollisionFilter collisionFilter;
+		private hknpCollisionFilter? collisionFilter;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 120, typeof(hknpShapeTagCodec), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpShapeTagCodec shapeTagCodec;
+		private hknpShapeTagCodec? shapeTagCodec;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 124, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float collisionTolerance;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 128, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

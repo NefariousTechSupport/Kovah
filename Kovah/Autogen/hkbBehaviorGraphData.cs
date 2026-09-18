@@ -9,21 +9,21 @@ namespace Kovah
 		private float[]? attributeDefaults;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkbVariableInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, typeof(hkbVariableInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbVariableInfo[]? variableInfos;
+		private hkbVariableInfo?[]? variableInfos;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkbVariableInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, typeof(hkbVariableInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbVariableInfo[]? characterPropertyInfos;
+		private hkbVariableInfo?[]? characterPropertyInfos;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkbEventInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 44, typeof(hkbEventInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbEventInfo[]? eventInfos;
+		private hkbEventInfo?[]? eventInfos;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 56, typeof(hkbVariableBounds), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 56, typeof(hkbVariableBounds), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbVariableBounds[]? variableBounds;
+		private hkbVariableBounds?[]? variableBounds;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 68, typeof(hkbVariableValueSet), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 68, typeof(hkbVariableValueSet), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbVariableValueSet variableInitialValues;
+		private hkbVariableValueSet? variableInitialValues;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 72, typeof(hkbBehaviorGraphStringData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 72, typeof(hkbBehaviorGraphStringData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbBehaviorGraphStringData stringData;
+		private hkbBehaviorGraphStringData? stringData;
 	}
 }

@@ -19,13 +19,13 @@ namespace Kovah
 		private uint firstPackedVertex;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 76, typeof(hkcdStaticMeshTreeBaseSectionSharedVertices), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 76, typeof(hkcdStaticMeshTreeBaseSectionSharedVertices), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkcdStaticMeshTreeBaseSectionSharedVertices sharedVertices;
+		private hkcdStaticMeshTreeBaseSectionSharedVertices? sharedVertices;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 80, typeof(hkcdStaticMeshTreeBaseSectionPrimitives), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 80, typeof(hkcdStaticMeshTreeBaseSectionPrimitives), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkcdStaticMeshTreeBaseSectionPrimitives primitives;
+		private hkcdStaticMeshTreeBaseSectionPrimitives? primitives;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 84, typeof(hkcdStaticMeshTreeBaseSectionDataRuns), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 84, typeof(hkcdStaticMeshTreeBaseSectionDataRuns), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkcdStaticMeshTreeBaseSectionDataRuns dataRuns;
+		private hkcdStaticMeshTreeBaseSectionDataRuns? dataRuns;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte numPackedVertices;

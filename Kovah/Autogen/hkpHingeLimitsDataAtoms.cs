@@ -19,12 +19,12 @@ namespace Kovah
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 0, typeof(hkpSetLocalRotationsConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hkpSetLocalRotationsConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpSetLocalRotationsConstraintAtom rotations;
+		private hkpSetLocalRotationsConstraintAtom? rotations;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 112, typeof(hkpAngLimitConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 112, typeof(hkpAngLimitConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpAngLimitConstraintAtom angLimit;
+		private hkpAngLimitConstraintAtom? angLimit;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 128, typeof(hkp2dAngConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 128, typeof(hkp2dAngConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkp2dAngConstraintAtom _2dAng;
+		private hkp2dAngConstraintAtom? _2dAng;
 	}
 }

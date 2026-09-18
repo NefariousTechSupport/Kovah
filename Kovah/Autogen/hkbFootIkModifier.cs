@@ -16,10 +16,10 @@ namespace Kovah
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, typeof(hkbFootIkGains), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 48, typeof(hkbFootIkGains), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbFootIkGains gains;
+		private hkbFootIkGains? gains;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 88, typeof(hkbFootIkModifierLeg), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 88, typeof(hkbFootIkModifierLeg), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbFootIkModifierLeg[]? legs;
+		private hkbFootIkModifierLeg?[]? legs;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float raycastDistanceUp;
@@ -61,7 +61,7 @@ namespace Kovah
 		private hkbFootIkModifier.AlignMode alignMode;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 140, typeof(hkbFootIkModifierInternalLegData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 144, typeof(hkbFootIkModifierInternalLegData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private hkbFootIkModifierInternalLegData[]? internalLegData;
+		private hkbFootIkModifierInternalLegData?[]? internalLegData;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 152, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 156, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private float prevIsFootIkEnabled;

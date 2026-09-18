@@ -52,7 +52,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 144, null, null, hkClassMember.Type.TYPE_QUATERNION, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Quaternion hkQuaternion;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 160, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpRigidBody hkRigidBody;
+		private hkpRigidBody? hkRigidBody;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 164, null, typeof(hkbCustomTestGenerator.Modes), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbCustomTestGenerator.Modes mode_hkInt8;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 166, null, typeof(hkbCustomTestGenerator.Modes), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -80,13 +80,13 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 196, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int myInt;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 200, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator generator1;
+		private hkbGenerator? generator1;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 204, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator generator2;
+		private hkbGenerator? generator2;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 208, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier modifier1;
+		private hkbModifier? modifier1;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 212, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier modifier2;
+		private hkbModifier? modifier2;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 216, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_BOOL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool[]? array_hkBool;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 228, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_INT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -110,9 +110,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 336, typeof(hkbModifier), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbModifier?[]? array_hkbModifier;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 348, typeof(hkbCustomTestGeneratorStruck), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomTestGeneratorStruck Struck;
+		private hkbCustomTestGeneratorStruck? Struck;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 428, typeof(hkbCustomTestGeneratorStruck), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomTestGeneratorStruck[]? array_Struck;
+		private hkbCustomTestGeneratorStruck?[]? array_Struck;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1269, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool protectedHiddenMember;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1270, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

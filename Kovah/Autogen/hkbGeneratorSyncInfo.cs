@@ -6,7 +6,7 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 0, typeof(hkbGeneratorSyncInfoSyncPoint), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 16, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hkbGeneratorSyncInfoSyncPoint), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 16, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGeneratorSyncInfoSyncPoint syncPoints;
+		private hkbGeneratorSyncInfoSyncPoint? syncPoints;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 128, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 128, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float duration;
@@ -30,6 +30,6 @@ namespace Kovah
 		private bool isAdditive;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 144, typeof(hkbGeneratorSyncInfoActiveInterval), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 144, typeof(hkbGeneratorSyncInfoActiveInterval), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGeneratorSyncInfoActiveInterval activeInterval;
+		private hkbGeneratorSyncInfoActiveInterval? activeInterval;
 	}
 }

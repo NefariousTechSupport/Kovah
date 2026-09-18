@@ -42,15 +42,15 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VECTOR4, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Vector4[]? bigVertices;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 108, typeof(hkpCompressedMeshShapeBigTriangle), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpCompressedMeshShapeBigTriangle[]? bigTriangles;
+		private hkpCompressedMeshShapeBigTriangle?[]? bigTriangles;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 120, typeof(hkpCompressedMeshShapeChunk), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpCompressedMeshShapeChunk[]? chunks;
+		private hkpCompressedMeshShapeChunk?[]? chunks;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 132, typeof(hkpCompressedMeshShapeConvexPiece), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpCompressedMeshShapeConvexPiece[]? convexPieces;
+		private hkpCompressedMeshShapeConvexPiece?[]? convexPieces;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 144, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float error;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 160, typeof(hkAabb), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkAabb bounds;
+		private hkAabb? bounds;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 192, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private uint defaultCollisionFilterInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 196, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
@@ -60,6 +60,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 202, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ushort numMaterials;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 204, typeof(hkpNamedMeshMaterial), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpNamedMeshMaterial[]? namedMaterials;
+		private hkpNamedMeshMaterial?[]? namedMaterials;
 	}
 }

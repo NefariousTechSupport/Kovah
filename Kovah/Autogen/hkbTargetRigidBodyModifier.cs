@@ -44,7 +44,7 @@ namespace Kovah
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, typeof(hkbTarget), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbTarget targetOut;
+		private hkbTarget? targetOut;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 52, null, typeof(hkbTargetRigidBodyModifier.TargetMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbTargetRigidBodyModifier.TargetMode targetMode;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -86,11 +86,11 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 152, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool sensorInWS;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 156, typeof(hkbEventProperty), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbEventProperty eventToSend;
+		private hkbEventProperty? eventToSend;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 164, typeof(hkbEventProperty), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbEventProperty eventToSendToTarget;
+		private hkbEventProperty? eventToSendToTarget;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 172, typeof(hkbEventProperty), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbEventProperty closeToTargetEvent;
+		private hkbEventProperty? closeToTargetEvent;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 180, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool useVelocityPrediction;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 181, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

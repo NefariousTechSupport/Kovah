@@ -9,16 +9,16 @@ namespace Kovah
 		private hkbStateListener?[]? listeners;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 40, typeof(hkbStateMachineEventPropertyArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 40, typeof(hkbStateMachineEventPropertyArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineEventPropertyArray enterNotifyEvents;
+		private hkbStateMachineEventPropertyArray? enterNotifyEvents;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkbStateMachineEventPropertyArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 44, typeof(hkbStateMachineEventPropertyArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineEventPropertyArray exitNotifyEvents;
+		private hkbStateMachineEventPropertyArray? exitNotifyEvents;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, typeof(hkbStateMachineTransitionInfoArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 48, typeof(hkbStateMachineTransitionInfoArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineTransitionInfoArray transitions;
+		private hkbStateMachineTransitionInfoArray? transitions;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 52, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 52, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator generator;
+		private hkbGenerator? generator;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private string? name;

@@ -32,7 +32,7 @@ namespace Kovah
 		[HavokMember(EVersion.Havok_7_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int numBitsForSubpartIndex;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 52, typeof(hkpMeshShapeSubpart), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpMeshShapeSubpart[]? subparts;
+		private hkpMeshShapeSubpart?[]? subparts;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ushort[]? weldingInfo;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 76, null, typeof(hkpWeldingUtility.WeldingType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]

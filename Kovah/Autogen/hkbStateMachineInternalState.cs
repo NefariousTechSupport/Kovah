@@ -6,7 +6,7 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkbStateMachineActiveTransitionInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 8, typeof(hkbStateMachineActiveTransitionInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineActiveTransitionInfo[]? activeTransitions;
+		private hkbStateMachineActiveTransitionInfo?[]? activeTransitions;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte[]? transitionFlags;
@@ -15,7 +15,7 @@ namespace Kovah
 		private byte[]? wildcardTransitionFlags;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkbStateMachineDelayedTransitionInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 44, typeof(hkbStateMachineDelayedTransitionInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineDelayedTransitionInfo[]? delayedTransitions;
+		private hkbStateMachineDelayedTransitionInfo?[]? delayedTransitions;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float timeInState;

@@ -16,6 +16,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 108, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT64, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ulong[]? sharedVertices;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 120, typeof(hknpCompressedMeshShapeTreeDataRun), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpCompressedMeshShapeTreeDataRun[]? primitiveDataRuns;
+		private hknpCompressedMeshShapeTreeDataRun?[]? primitiveDataRuns;
 	}
 }

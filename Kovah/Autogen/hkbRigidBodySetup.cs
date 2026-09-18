@@ -20,6 +20,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 4, null, typeof(hkbRigidBodySetup.Type), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbRigidBodySetup.Type type;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 8, typeof(hkbShapeSetup), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbShapeSetup shapeSetup;
+		private hkbShapeSetup? shapeSetup;
 	}
 }

@@ -4,17 +4,17 @@ namespace Kovah
 	public partial class hkbCustomTestGeneratorNestedTypesBase : hkbCustomTestGeneratorComplexTypes
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 308, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator nestedTypeHkbGeneratorPtr;
+		private hkbGenerator? nestedTypeHkbGeneratorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 312, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator nestedTypeHkbGeneratorRefPtr;
+		private hkbGenerator? nestedTypeHkbGeneratorRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 316, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier nestedTypeHkbModifierPtr;
+		private hkbModifier? nestedTypeHkbModifierPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 320, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier nestedTypeHkbModifierRefPtr;
+		private hkbModifier? nestedTypeHkbModifierRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 324, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomIdSelector nestedTypeHkbCustomIdSelectorPtr;
+		private hkbCustomIdSelector? nestedTypeHkbCustomIdSelectorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 328, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomIdSelector nestedTypeHkbCustomIdSelectorRefPtr;
+		private hkbCustomIdSelector? nestedTypeHkbCustomIdSelectorRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 332, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_BOOL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool[]? nestedTypeArrayBool;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 344, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_BOOL, 0, hkClassMember.FlagValues.FLAGS_NONE)]

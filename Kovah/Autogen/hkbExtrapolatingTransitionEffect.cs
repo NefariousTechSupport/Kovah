@@ -6,10 +6,10 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 256, typeof(hkbGeneratorSyncInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 248, typeof(hkbGeneratorSyncInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private hkbGeneratorSyncInfo fromGeneratorSyncInfo;
+		private hkbGeneratorSyncInfo? fromGeneratorSyncInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 420, typeof(hkbGeneratorPartitionInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 412, typeof(hkbGeneratorPartitionInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private hkbGeneratorPartitionInfo fromGeneratorPartitionInfo;
+		private hkbGeneratorPartitionInfo? fromGeneratorPartitionInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 464, null, null, hkClassMember.Type.TYPE_QSTRANSFORM, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 464, null, null, hkClassMember.Type.TYPE_QSTRANSFORM, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private Matrix3x4 worldFromModel;

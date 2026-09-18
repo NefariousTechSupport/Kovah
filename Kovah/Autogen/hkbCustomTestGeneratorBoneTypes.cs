@@ -28,8 +28,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1122, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool boneHiddenTypeCopyEnd;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1124, typeof(hkbBoneWeightArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbBoneWeightArray boneWeightArray;
+		private hkbBoneWeightArray? boneWeightArray;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1128, typeof(hkbBoneIndexArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbBoneIndexArray boneIndexArray;
+		private hkbBoneIndexArray? boneIndexArray;
 	}
 }

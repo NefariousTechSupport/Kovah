@@ -25,12 +25,12 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 4, typeof(hkClassEnumItem), null, hkClassMember.Type.TYPE_SIMPLEARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 4, typeof(hkClassEnumItem), null, hkClassMember.Type.TYPE_SIMPLEARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 4, typeof(hkClassEnumItem), null, hkClassMember.Type.TYPE_SIMPLEARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkClassEnumItem[]? items;
+		private hkClassEnumItem?[]? items;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 12, typeof(hkCustomAttributes), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, typeof(hkCustomAttributes), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 12, typeof(hkCustomAttributes), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 12, typeof(hkCustomAttributes), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private hkCustomAttributes attributes;
+		private hkCustomAttributes? attributes;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 16, null, typeof(hkClassEnum.FlagValues), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, typeof(hkClassEnum.FlagValues), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 16, null, typeof(hkClassEnum.FlagValues), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]

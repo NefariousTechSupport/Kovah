@@ -35,9 +35,9 @@ namespace Kovah
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, typeof(hkbEvent), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 92, typeof(hkbEvent), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbEvent eventToSendWhenStateOrTransitionChanges;
+		private hkbEvent? eventToSendWhenStateOrTransitionChanges;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 104, typeof(hkbStateChooser), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateChooser startStateChooser;
+		private hkbStateChooser? startStateChooser;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 108, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 108, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int startStateId;
@@ -79,7 +79,7 @@ namespace Kovah
 		private hkbStateMachineStateInfo?[]? states;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 156, typeof(hkbStateMachineTransitionInfoArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 156, typeof(hkbStateMachineTransitionInfoArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineTransitionInfoArray wildcardTransitions;
+		private hkbStateMachineTransitionInfoArray? wildcardTransitions;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 160, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 160, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ stateIdToIndexMap;
@@ -117,6 +117,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 230, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private bool hasEventlessWildcardTransitions;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 104, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomIdSelector startStateIdSelector;
+		private hkbCustomIdSelector? startStateIdSelector;
 	}
 }

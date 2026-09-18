@@ -31,10 +31,10 @@ namespace Kovah
 		private uint maxKeyValue;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 60, typeof(hkcdStaticMeshTreeBaseSection), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 60, typeof(hkcdStaticMeshTreeBaseSection), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkcdStaticMeshTreeBaseSection[]? sections;
+		private hkcdStaticMeshTreeBaseSection?[]? sections;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 72, typeof(hkcdStaticMeshTreeBasePrimitive), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 72, typeof(hkcdStaticMeshTreeBasePrimitive), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkcdStaticMeshTreeBasePrimitive[]? primitives;
+		private hkcdStaticMeshTreeBasePrimitive?[]? primitives;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 84, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 84, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ushort[]? sharedVerticesIndex;

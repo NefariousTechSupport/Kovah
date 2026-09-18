@@ -10,6 +10,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private uint collisionFilterInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, typeof(hkpCharacterControllerCinfo), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpCharacterControllerCinfo characterControllerCinfo;
+		private hkpCharacterControllerCinfo? characterControllerCinfo;
 	}
 }

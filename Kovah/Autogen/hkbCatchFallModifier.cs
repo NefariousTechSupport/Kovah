@@ -18,13 +18,13 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 80, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Vector4 directionOfFallUpLS;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 96, typeof(hkbBoneIndexArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbBoneIndexArray spineIndices;
+		private hkbBoneIndexArray? spineIndices;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 100, typeof(hkbCatchFallModifierHand), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCatchFallModifierHand leftHand;
+		private hkbCatchFallModifierHand? leftHand;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 106, typeof(hkbCatchFallModifierHand), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCatchFallModifierHand rightHand;
+		private hkbCatchFallModifierHand? rightHand;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 112, typeof(hkbEventProperty), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbEventProperty catchFallDoneEvent;
+		private hkbEventProperty? catchFallDoneEvent;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 120, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float spreadHandsMultiplier;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 124, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

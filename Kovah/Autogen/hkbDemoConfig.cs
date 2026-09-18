@@ -6,7 +6,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkbDemoConfigCharacterInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbDemoConfigCharacterInfo?[]? characterInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkbDemoConfigTerrainInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbDemoConfigTerrainInfo[]? terrainInfo;
+		private hkbDemoConfigTerrainInfo?[]? terrainInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_INT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int[]? skinAttributeIndices;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 16, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -46,12 +46,12 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 211, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool forceLoad;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 212, typeof(hkbDemoConfigStickVariableInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbDemoConfigStickVariableInfo[]? stickVariables;
+		private hkbDemoConfigStickVariableInfo?[]? stickVariables;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 6, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int gamePadToRotateTerrainAboutItsAxisMap;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 248, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int gamePadToAddRemoveCharacterMap;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 256, typeof(hkpGroupFilter), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpGroupFilter filter;
+		private hkpGroupFilter? filter;
 	}
 }

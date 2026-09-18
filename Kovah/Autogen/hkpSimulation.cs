@@ -45,7 +45,7 @@ namespace Kovah
 		private uint determinismCheckFrameCounter;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 12, typeof(hkpWorld), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, typeof(hkpWorld), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpWorld world;
+		private hkpWorld? world;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 16, null, typeof(hkpSimulation.LastProcessingStep), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, typeof(hkpSimulation.LastProcessingStep), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpSimulation.LastProcessingStep lastProcessingStep;

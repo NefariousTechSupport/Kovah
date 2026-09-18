@@ -66,16 +66,16 @@ namespace Kovah
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 0, typeof(hkbStateMachineTimeInterval), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hkbStateMachineTimeInterval), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineTimeInterval triggerInterval;
+		private hkbStateMachineTimeInterval? triggerInterval;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkbStateMachineTimeInterval), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkbStateMachineTimeInterval), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineTimeInterval initiateInterval;
+		private hkbStateMachineTimeInterval? initiateInterval;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkbTransitionEffect), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, typeof(hkbTransitionEffect), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbTransitionEffect transition;
+		private hkbTransitionEffect? transition;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 36, typeof(hkbCondition), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, typeof(hkbCondition), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCondition condition;
+		private hkbCondition? condition;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int eventId;

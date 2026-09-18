@@ -279,7 +279,7 @@ def getCSType(type: hkClassMemberType, subtype: hkClassMemberType, clazz: hkClas
 		case hkClassMemberType.TYPE_ARRAY:            return getCSType(subtype, hkClassMemberType.TYPE_VOID, clazz, enum) + "[]?"
 		case hkClassMemberType.TYPE_INPLACEARRAY:     raise
 		case hkClassMemberType.TYPE_ENUM:             return getHkEnumIdentifier(enum) if enum != None else getCSType(subtype, hkClassMemberType.TYPE_VOID, None, None)
-		case hkClassMemberType.TYPE_STRUCT:           return clazz.name
+		case hkClassMemberType.TYPE_STRUCT:           return clazz.name + "?"
 		case hkClassMemberType.TYPE_SIMPLEARRAY:      return getCSType(subtype, hkClassMemberType.TYPE_VOID, clazz, enum) + "[]?"
 		case hkClassMemberType.TYPE_HOMOGENEOUSARRAY: raise
 		case hkClassMemberType.TYPE_VARIANT:          return "object? /* variant */"

@@ -44,7 +44,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 12, null, typeof(hknpMaterial.TriggerType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpMaterial.TriggerType triggerType;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 13, typeof(hkUFloat8), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkUFloat8 triggerManifoldTolerance;
+		private hkUFloat8? triggerManifoldTolerance;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 14, null, null, hkClassMember.Type.TYPE_HALF, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Half dynamicFriction;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_HALF, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -70,9 +70,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 38, null, null, hkClassMember.Type.TYPE_HALF, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Half softContactDampFactor;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 40, typeof(hkUFloat8), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkUFloat8 softContactSeperationVelocity;
+		private hkUFloat8? softContactSeperationVelocity;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 44, typeof(hknpSurfaceVelocity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpSurfaceVelocity surfaceVelocity;
+		private hknpSurfaceVelocity? surfaceVelocity;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_HALF, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Half disablingCollisionsBetweenCvxCvxDynamicObjectsDistance;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_UINT64, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_8)]
