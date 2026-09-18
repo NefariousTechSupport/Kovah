@@ -4,17 +4,17 @@ namespace Kovah
 	public partial class hkbCustomTestGeneratorNestedTypesBase : hkbCustomTestGeneratorComplexTypes
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 308, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator? nestedTypeHkbGeneratorPtr;
+		private hkbGenerator nestedTypeHkbGeneratorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 312, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGenerator? nestedTypeHkbGeneratorRefPtr;
+		private hkbGenerator nestedTypeHkbGeneratorRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 316, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier? nestedTypeHkbModifierPtr;
+		private hkbModifier nestedTypeHkbModifierPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 320, typeof(hkbModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbModifier? nestedTypeHkbModifierRefPtr;
+		private hkbModifier nestedTypeHkbModifierRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 324, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomIdSelector? nestedTypeHkbCustomIdSelectorPtr;
+		private hkbCustomIdSelector nestedTypeHkbCustomIdSelectorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 328, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomIdSelector? nestedTypeHkbCustomIdSelectorRefPtr;
+		private hkbCustomIdSelector nestedTypeHkbCustomIdSelectorRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 332, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_BOOL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool[]? nestedTypeArrayBool;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 344, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_BOOL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -38,16 +38,16 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 452, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_REAL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float[]? nestedTypeArrayHkReal;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 464, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? nestedTypeArrayHkbGeneratorPtr;
+		private hkbGenerator?[]? nestedTypeArrayHkbGeneratorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 476, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? nestedTypeArrayHkbGeneratorRefPtr;
+		private hkbGenerator?[]? nestedTypeArrayHkbGeneratorRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 488, typeof(hkbModifier), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? nestedTypeArrayHkbModifierPtr;
+		private hkbModifier?[]? nestedTypeArrayHkbModifierPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 500, typeof(hkbModifier), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? nestedTypeArrayHkbModifierRefPtr;
+		private hkbModifier?[]? nestedTypeArrayHkbModifierRefPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 512, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? nestedTypeArrayHkbCustomIdSelectorPtr;
+		private hkbCustomIdSelector?[]? nestedTypeArrayHkbCustomIdSelectorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 524, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? nestedTypeArrayHkbCustomIdSelectorRefPtr;
+		private hkbCustomIdSelector?[]? nestedTypeArrayHkbCustomIdSelectorRefPtr;
 	}
 }

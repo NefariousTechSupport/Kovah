@@ -4,7 +4,7 @@ namespace Kovah
 	public partial class hknpVehicleInstanceWheelInfo
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hkContactPoint), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkContactPoint? contactPoint;
+		private hkContactPoint contactPoint;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float contactFriction;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

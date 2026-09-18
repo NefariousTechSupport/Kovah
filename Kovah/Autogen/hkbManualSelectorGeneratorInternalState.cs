@@ -12,6 +12,6 @@ namespace Kovah
 		private short generatorIndexAtActivate;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, typeof(hkbStateMachineActiveTransitionInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 12, typeof(hkbStateMachineActiveTransitionInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbStateMachineActiveTransitionInfo?[]? activeTransitions;
+		private hkbStateMachineActiveTransitionInfo[]? activeTransitions;
 	}
 }

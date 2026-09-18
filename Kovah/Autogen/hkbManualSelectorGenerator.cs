@@ -6,7 +6,7 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 92, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? generators;
+		private hkbGenerator?[]? generators;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 104, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 104, null, null, hkClassMember.Type.TYPE_INT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private short selectedGeneratorIndex;
@@ -15,7 +15,7 @@ namespace Kovah
 		private bool selectedIndexCanChangeAfterActivate;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 108, typeof(hkbTransitionEffect), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 116, typeof(hkbTransitionEffect), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbTransitionEffect? generatorChangedTransitionEffect;
+		private hkbTransitionEffect generatorChangedTransitionEffect;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 112, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 120, null, null, hkClassMember.Type.TYPE_INT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private short currentGeneratorIndex;
@@ -24,8 +24,8 @@ namespace Kovah
 		private short generatorIndexAtActivate;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 116, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 124, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */[]? activeTransitions;
+		private object? /* void* */[]? activeTransitions;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 108, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCustomIdSelector? indexSelector;
+		private hkbCustomIdSelector indexSelector;
 	}
 }

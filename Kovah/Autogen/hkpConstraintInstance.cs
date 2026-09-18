@@ -115,22 +115,22 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 8, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 8, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ owner;
+		private object? /* void* */ owner;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 12, typeof(hkpConstraintData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 12, typeof(hkpConstraintData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, typeof(hkpConstraintData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 12, typeof(hkpConstraintData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpConstraintData? data;
+		private hkpConstraintData data;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 16, typeof(hkpModifierConstraintAtom), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 16, typeof(hkpModifierConstraintAtom), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpModifierConstraintAtom), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 16, typeof(hkpModifierConstraintAtom), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpModifierConstraintAtom? constraintModifiers;
+		private hkpModifierConstraintAtom constraintModifiers;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 20, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 20, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpEntity? entities;
+		private hkpEntity entities;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 28, null, typeof(hkpConstraintInstance.ConstraintPriority), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 28, null, typeof(hkpConstraintInstance.ConstraintPriority), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 28, null, typeof(hkpConstraintInstance.ConstraintPriority), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -150,7 +150,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 32, typeof(hkpConstraintInstanceSmallArraySerializeOverrideType), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpConstraintInstanceSmallArraySerializeOverrideType), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 32, typeof(hkpConstraintInstanceSmallArraySerializeOverrideType), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private hkpConstraintInstanceSmallArraySerializeOverrideType? listeners;
+		private hkpConstraintInstanceSmallArraySerializeOverrideType listeners;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 40, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -165,7 +165,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 48, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ @internal;
+		private object? /* void* */ @internal;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 52, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 52, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 52, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

@@ -12,7 +12,7 @@ namespace Kovah
 		[HavokMember(EVersion.Havok_7_1_0_r1, 24, typeof(hkReferencedObject), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 24, typeof(hkReferencedObject), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 24, typeof(hkReferencedObject), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkReferencedObject? @object;
+		private hkReferencedObject @object;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 28, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_MATRIX4, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 28, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_MATRIX4, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 28, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_MATRIX4, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -20,11 +20,11 @@ namespace Kovah
 		[HavokMember(EVersion.Havok_7_1_0_r1, 40, typeof(hkxNode), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 40, typeof(hkxNode), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 40, typeof(hkxNode), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? children;
+		private hkxNode?[]? children;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 52, typeof(hkxNodeAnnotationData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 52, typeof(hkxNodeAnnotationData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 52, typeof(hkxNodeAnnotationData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkxNodeAnnotationData?[]? annotations;
+		private hkxNodeAnnotationData[]? annotations;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 64, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

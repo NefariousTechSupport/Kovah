@@ -12,7 +12,7 @@ namespace Kovah
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 24, typeof(hkpListShapeChildInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpListShapeChildInfo?[]? childInfo;
+		private hkpListShapeChildInfo[]? childInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 36, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ushort flags;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 38, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

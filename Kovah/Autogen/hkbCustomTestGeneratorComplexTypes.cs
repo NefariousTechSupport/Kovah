@@ -29,7 +29,7 @@ namespace Kovah
 			
 		}
 		[HavokMember(EVersion.hk_2014_1_0_r1, 196, typeof(hkReferencedObject), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkReferencedObject? complexTypeHkObjectPtr;
+		private hkReferencedObject complexTypeHkObjectPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 200, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool complexHiddenTypeCopyStart;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 208, null, null, hkClassMember.Type.TYPE_QUATERNION, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

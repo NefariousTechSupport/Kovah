@@ -12,15 +12,15 @@ namespace Kovah
 		[HavokMember(EVersion.Havok_7_1_0_r1, 80, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 80, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 80, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private object? /* void */[]? children;
+		private hkLocalFrame?[]? children;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 92, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.NOT_OWNED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.NOT_OWNED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 92, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.NOT_OWNED)]
-		private hkLocalFrame? parentFrame;
+		private hkLocalFrame parentFrame;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 96, typeof(hkLocalFrameGroup), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 96, typeof(hkLocalFrameGroup), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 96, typeof(hkLocalFrameGroup), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkLocalFrameGroup? group;
+		private hkLocalFrameGroup group;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

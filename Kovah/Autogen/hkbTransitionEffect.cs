@@ -48,10 +48,10 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 95, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte pad;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ patchedBindingInfo;
+		private object? /* void* */ patchedBindingInfo;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ fromGenerator;
+		private object? /* void* */ fromGenerator;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 104, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ toGenerator;
+		private object? /* void* */ toGenerator;
 	}
 }

@@ -14,6 +14,6 @@ namespace Kovah
 			
 		}
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkpLinearClearanceConstraintDataAtoms), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
-		private hkpLinearClearanceConstraintDataAtoms? atoms;
+		private hkpLinearClearanceConstraintDataAtoms atoms;
 	}
 }

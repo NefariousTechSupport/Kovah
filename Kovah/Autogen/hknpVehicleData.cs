@@ -32,11 +32,11 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 136, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float maxFrictionSolverMassRatio;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 140, typeof(hknpVehicleDataWheelComponentParams), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hknpVehicleDataWheelComponentParams?[]? wheelParams;
+		private hknpVehicleDataWheelComponentParams[]? wheelParams;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 152, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private sbyte[]? numWheelsPerAxle;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 164, typeof(hkpVehicleFrictionDescription), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpVehicleFrictionDescription? frictionDescription;
+		private hkpVehicleFrictionDescription frictionDescription;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 384, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Vector4 chassisFrictionInertiaInvDiag;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 400, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

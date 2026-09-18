@@ -4,7 +4,7 @@ namespace Kovah
 	public partial class hknpBodyCinfo
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hknpShape), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.NOT_OWNED)]
-		private hknpShape? shape;
+		private hknpShape shape;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 4, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private uint reservedBodyId;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 8, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -30,6 +30,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 80, null, typeof(hknpBody.SpuFlagsEnum), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpBody.SpuFlagsEnum spuFlags;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 84, typeof(hkLocalFrame), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkLocalFrame? localFrame;
+		private hkLocalFrame localFrame;
 	}
 }

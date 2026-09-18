@@ -22,7 +22,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float comBiasX;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 80, typeof(hkbBalanceModifierStepInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbBalanceModifierStepInfo?[]? stepInfo;
+		private hkbBalanceModifierStepInfo[]? stepInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private float timeLapsed;
 	}

@@ -6,9 +6,9 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 24, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 24, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpEntity? entityA;
+		private hkpEntity entityA;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 28, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 28, typeof(hkpEntity), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpEntity? entityB;
+		private hkpEntity entityB;
 	}
 }

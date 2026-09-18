@@ -12,11 +12,11 @@ namespace Kovah
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, typeof(hkbReachTowardTargetModifierHand), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbReachTowardTargetModifierHand? leftHand;
+		private hkbReachTowardTargetModifierHand leftHand;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 52, typeof(hkbReachTowardTargetModifierHand), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbReachTowardTargetModifierHand? rightHand;
+		private hkbReachTowardTargetModifierHand rightHand;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 56, typeof(hkbTarget), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbTarget? targetIn;
+		private hkbTarget targetIn;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 60, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float distanceBetweenHands;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -36,7 +36,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 86, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool giveUpIfNoTarget;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ targetRB;
+		private object? /* void* */ targetRB;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private Vector4 prevTargetInMS;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 112, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

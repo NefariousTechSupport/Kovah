@@ -75,7 +75,7 @@ namespace Kovah
 		private Quaternion lastRot;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */[]? characterPoseAtBeginningOfTransition;
+		private object? /* void* */[]? characterPoseAtBeginningOfTransition;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 236, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 236, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private float timeRemaining;
@@ -94,9 +94,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 247, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private bool alignmentFinished;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 248, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ fromGenerator;
+		private object? /* void* */ fromGenerator;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 252, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */ toGenerator;
+		private object? /* void* */ toGenerator;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 244, null, null, hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte toGeneratorSelfTranstitionMode;
 	}

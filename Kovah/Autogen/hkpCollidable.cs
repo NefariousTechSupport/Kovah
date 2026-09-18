@@ -48,12 +48,12 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 20, typeof(hkpTypedBroadPhaseHandle), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpTypedBroadPhaseHandle? broadPhaseHandle;
+		private hkpTypedBroadPhaseHandle broadPhaseHandle;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 32, typeof(hkpCollidableBoundingVolumeData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private hkpCollidableBoundingVolumeData? boundingVolumeData;
+		private hkpCollidableBoundingVolumeData boundingVolumeData;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2011_2_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 76, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

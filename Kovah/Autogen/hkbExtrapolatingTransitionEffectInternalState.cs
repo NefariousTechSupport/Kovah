@@ -6,10 +6,10 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkbGeneratorSyncInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 8, typeof(hkbGeneratorSyncInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGeneratorSyncInfo? fromGeneratorSyncInfo;
+		private hkbGeneratorSyncInfo fromGeneratorSyncInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 172, typeof(hkbGeneratorPartitionInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 172, typeof(hkbGeneratorPartitionInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbGeneratorPartitionInfo? fromGeneratorPartitionInfo;
+		private hkbGeneratorPartitionInfo fromGeneratorPartitionInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_QSTRANSFORM, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_QSTRANSFORM, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Matrix3x4 worldFromModel;

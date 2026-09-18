@@ -22,24 +22,24 @@ namespace Kovah
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 0, typeof(hkpSetLocalTransformsConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hkpSetLocalTransformsConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpSetLocalTransformsConstraintAtom? suspensionBase;
+		private hkpSetLocalTransformsConstraintAtom suspensionBase;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 144, typeof(hkpLinLimitConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 144, typeof(hkpLinLimitConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpLinLimitConstraintAtom? lin0Limit;
+		private hkpLinLimitConstraintAtom lin0Limit;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 160, typeof(hkpLinSoftConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 160, typeof(hkpLinSoftConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpLinSoftConstraintAtom? lin0Soft;
+		private hkpLinSoftConstraintAtom lin0Soft;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 176, typeof(hkpLinConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 176, typeof(hkpLinConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpLinConstraintAtom? lin1;
+		private hkpLinConstraintAtom lin1;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 192, typeof(hkpLinConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 192, typeof(hkpLinConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpLinConstraintAtom? lin2;
+		private hkpLinConstraintAtom lin2;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 208, typeof(hkpSetLocalRotationsConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 208, typeof(hkpSetLocalRotationsConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkpSetLocalRotationsConstraintAtom? steeringBase;
+		private hkpSetLocalRotationsConstraintAtom steeringBase;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 320, typeof(hkp2dAngConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 320, typeof(hkp2dAngConstraintAtom), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkp2dAngConstraintAtom? _2dAng;
+		private hkp2dAngConstraintAtom _2dAng;
 	}
 }

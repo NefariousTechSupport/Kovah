@@ -64,6 +64,6 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, typeof(hkpFirstPersonGun.KeyboardKey), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpFirstPersonGun.KeyboardKey keyboardKey;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private object? /* void */[]? listeners;
+		private object? /* void* */[]? listeners;
 	}
 }

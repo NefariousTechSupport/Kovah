@@ -6,16 +6,16 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkbCharacterStringDataFileNameMeshNamePair), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 8, typeof(hkbCharacterStringDataFileNameMeshNamePair), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCharacterStringDataFileNameMeshNamePair?[]? skinNames;
+		private hkbCharacterStringDataFileNameMeshNamePair[]? skinNames;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkbCharacterStringDataFileNameMeshNamePair), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, typeof(hkbCharacterStringDataFileNameMeshNamePair), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbCharacterStringDataFileNameMeshNamePair?[]? boneAttachmentNames;
+		private hkbCharacterStringDataFileNameMeshNamePair[]? boneAttachmentNames;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkbAssetBundleStringData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, typeof(hkbAssetBundleStringData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbAssetBundleStringData?[]? animationBundleNameData;
+		private hkbAssetBundleStringData[]? animationBundleNameData;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkbAssetBundleStringData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 44, typeof(hkbAssetBundleStringData), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private hkbAssetBundleStringData?[]? animationBundleFilenameData;
+		private hkbAssetBundleStringData[]? animationBundleFilenameData;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRINGPTR, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 56, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRINGPTR, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private string?[]? characterPropertyNames;
