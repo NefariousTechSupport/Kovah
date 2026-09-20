@@ -238,10 +238,10 @@ namespace Kovah
 			{
 				HavokClassSerialization clazz = reader.classnameLookup[contentSection.virtuals[v].classnameOffset];
 
-				object? obj = Activator.CreateInstance(clazz.type);
+				object? obj = Activator.CreateInstance(clazz.DotNetType);
 				if (obj == null)
 				{
-					throw new NotSupportedException($"Failed to create an instance of type {clazz.type.Name}");
+					throw new NotSupportedException($"Failed to create an instance of type {clazz.DotNetType.Name}");
 				}
 
 				reader.objects.Add(contentSection.dataOffset + contentSection.virtuals[v].target, obj);
@@ -270,15 +270,18 @@ namespace Kovah
 
 		private void ParseObject(StreamHelper sh, object obj)
 		{
-			HavokClassSerialization clazz = file.classes.First(x => x.type == obj.GetType());
-
 			uint objOffset = sh.Tell();
-			for (int f = 0; f < clazz.members.Count; f++)
-			{
-				sh.Seek(objOffset + clazz.members[f].offset);
+			HavokClassSerialization clazz = file.classes.First(x => x.DotNetType == obj.GetType());
 
-				HavokMemberAttribute attr = clazz.members[f].attr;
-				clazz.members[f].field.SetValue(obj, ReadValue(sh, attr.Class, attr.Enum, attr.Type, attr.Subtype));
+			for (int f = 0; f < clazz.Members.Count; f++)
+			{
+				HavokMemberSerialization member = clazz.Members[f];
+
+				sh.Seek(objOffset + member.offset);
+
+				member.field.SetValue(obj, ReadValue(sh, member.Class, member.Enum, member.Type, member.Subtype));
+			}
+		}
 			}
 		}
 

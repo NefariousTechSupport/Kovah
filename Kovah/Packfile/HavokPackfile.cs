@@ -44,7 +44,7 @@ namespace Kovah.Packfile
 			HavokClassSerialization? classSerialization = null;
 			if (clazz != null)
 			{
-				classSerialization = classes.FirstOrDefault(x => x.type == clazz);
+				classSerialization = classes.FirstOrDefault(x => x.DotNetType == clazz);
 				if (classSerialization == null)
 				{
 					classSerialization = new HavokClassSerialization(this, clazz);

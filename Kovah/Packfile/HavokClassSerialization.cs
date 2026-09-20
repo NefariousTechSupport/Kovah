@@ -6,12 +6,20 @@ namespace Kovah
 {
 	public class HavokClassSerialization
 	{
-		public Type type;
-		public HavokClassSerialization? parent;
-		public uint objectSize;
-		public uint alignment;
-		public List<HavokMemberSerialization> members;
+		private Type type;
+		private HavokClassSerialization? parent;
+		private uint objectSize;
+		private uint alignment;
+		private List<HavokMemberSerialization> members;
+		private List<HavokMemberSerialization>? membersInclBase;
 		private bool computed;
+
+
+		public Type DotNetType => type;
+		public HavokClassSerialization? Parent => parent;
+		public uint ObjectSize => objectSize;
+		public uint Alignment => alignment;
+		public IReadOnlyList<HavokMemberSerialization> Members => GetMembers();
 
 
 		public HavokClassSerialization(HavokPackfile file, Type type)
@@ -33,10 +41,7 @@ namespace Kovah
 				{
 					if (attr.Version == file.metadataVersion)
 					{
-						HavokMemberSerialization member = new HavokMemberSerialization();
-						member.offset = 0;
-						member.attr = attr;
-						member.field = fields[f];
+						HavokMemberSerialization member = new HavokMemberSerialization(attr, fields[f]);
 						members.Add(member);
 
 						if (attr.Enum != null)
@@ -52,7 +57,7 @@ namespace Kovah
 			}
 
 
-			members = members.OrderBy(x => x.attr.Offset).ToList();
+			members = members.OrderBy(x => x.Ordinal).ToList();
 		}
 
 

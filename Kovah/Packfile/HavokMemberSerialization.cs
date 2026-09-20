@@ -5,8 +5,25 @@ namespace Kovah.Packfile
 	public struct HavokMemberSerialization
 	{
 		public uint offset;
-		public HavokMemberAttribute attr;
+		private readonly HavokMemberAttribute attr;
 		public FieldInfo field;
+
+		public EVersion Version               => attr.Version;
+		public ushort Ordinal                 => attr.Offset;
+		public Type? Class                    => attr.Class;
+		public Type? Enum                     => attr.Enum;
+		public hkClassMember.Type Type        => attr.Type;
+		public hkClassMember.Type Subtype     => attr.Subtype;
+		public ushort ArraySize               => attr.ArraySize;
+		public hkClassMember.FlagValues Flags => attr.Flags;
+
+
+		public HavokMemberSerialization(HavokMemberAttribute attr, FieldInfo field)
+		{
+			this.offset = 0;
+			this.attr = attr;
+			this.field = field;
+		}
 
 
 		public uint GetSize(HavokPackfile file)
@@ -70,7 +87,7 @@ namespace Kovah.Packfile
 				case hkClassMember.Type.TYPE_STRUCT:
 					if (clazz != null)
 					{
-						return clazz.objectSize;
+						return clazz.ObjectSize;
 					}
 					else
 					{
@@ -125,7 +142,7 @@ namespace Kovah.Packfile
 				case hkClassMember.Type.TYPE_STRUCT:
 					if (clazz != null)
 					{
-						return clazz.alignment;
+						return clazz.Alignment;
 					}
 					else
 					{
