@@ -15,6 +15,7 @@ namespace Kovah
 		private struct Section
 		{
 			public uint dataOffset;
+			public uint bufferSize;
 			public List<LocalFixup> locals;
 			public List<GlobalFixup> globals;
 			public List<VirtualFixup> virtuals;
@@ -56,9 +57,9 @@ namespace Kovah
 			for (int s = 0; s < sections.Count; s++)
 			{
 				Section section = sections[s];
-				if (section.dataOffset > offset)
+				if (section.dataOffset > offset || section.dataOffset + section.bufferSize < offset)
 				{
-					break;
+					continue;
 				}
 
 				for (int f = 0; f < section.locals.Count; f++)
@@ -223,6 +224,7 @@ namespace Kovah
 
 				Section section = new Section();
 				section.dataOffset = dataOffset;
+				section.bufferSize = bufferSize;
 				section.locals     = locals;
 				section.globals    = globals;
 				section.virtuals   = virtuals;
