@@ -278,6 +278,10 @@ namespace Kovah
 			for (int f = 0; f < clazz.Members.Count; f++)
 			{
 				HavokMemberSerialization member = clazz.Members[f];
+				if ((member.Flags & hkClassMember.FlagValues.SERIALIZE_IGNORED) != 0)
+				{
+					continue;
+				}
 
 				sh.Seek(objOffset + member.offset);
 
