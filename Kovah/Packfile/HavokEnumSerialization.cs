@@ -66,5 +66,37 @@ namespace Kovah.Packfile
 
 			return Enum.ToObject(type, intValue);
 		}
+
+
+		public int SerializeEnum(object value)
+		{
+			bool isFlags = type.GetCustomAttribute<FlagsAttribute>() != null;
+
+			int realValue = (int)Convert.ChangeType(value, typeof(int));
+			int serialValue = 0;
+
+			for (int i = 0; i < serialValues.Count; i++)
+			{
+				if (isFlags)
+				{
+					bool match = (realValue & realValues[i]) != 0;
+					if (match)
+					{
+						serialValue |= serialValues[i];
+					}
+				}
+				else
+				{
+					bool match = realValue == realValues[i];
+					if (match)
+					{
+						serialValue = serialValues[i];
+						break;
+					}
+				}
+			}
+
+			return serialValue;
+		}
 	}
 }
