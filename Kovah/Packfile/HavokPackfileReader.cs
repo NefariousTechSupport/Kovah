@@ -8,7 +8,8 @@ namespace Kovah
 	{
 		private List<Section> sections = new List<Section>();
 		private Dictionary<uint, HavokClassSerialization> classnameLookup = new Dictionary<uint, HavokClassSerialization>();
-		private Dictionary<uint, object> objects = new Dictionary<uint, object>();
+		private Dictionary<uint, object> virtualObjects = new Dictionary<uint, object>();
+		private Dictionary<uint, object> parsedObjects = new Dictionary<uint, object>();
 		private HavokPackfile file = new HavokPackfile();
 
 
@@ -235,7 +236,7 @@ namespace Kovah
 
 			Section contentSection = reader.sections[(int)reader.file.contentSectionIndex];
 
-			reader.objects = new Dictionary<uint, object>();
+			reader.virtualObjects = new Dictionary<uint, object>();
 			for (int v = 0; v < contentSection.virtuals.Count; v++)
 			{
 				HavokClassSerialization clazz = reader.classnameLookup[contentSection.virtuals[v].classnameOffset];
@@ -246,19 +247,14 @@ namespace Kovah
 					throw new NotSupportedException($"Failed to create an instance of type {clazz.DotNetType.Name}");
 				}
 
-				reader.objects.Add(contentSection.dataOffset + contentSection.virtuals[v].target, obj);
+				reader.virtualObjects.Add(contentSection.dataOffset + contentSection.virtuals[v].target, obj);
 			}
 
-			// clone the dictionary
-			Dictionary<uint, object> rootObjects = new Dictionary<uint, object>(reader.objects);
-			foreach (KeyValuePair<uint, object> kvp in rootObjects)
-			{
-				sh.Seek(kvp.Key);
-				reader.ParseObject(sh, kvp.Value);
-			}
+			sh.Seek(reader.virtualObjects.First().Key);
+			reader.ParseObject(sh, reader.virtualObjects.First().Value);
 
 			container = null;
-			foreach (object root in rootObjects.Values)
+			foreach (object root in reader.virtualObjects.Values)
 			{
 				if (root is hkRootLevelContainer)
 				{
@@ -273,6 +269,12 @@ namespace Kovah
 		private void ParseObject(StreamHelper sh, object obj)
 		{
 			uint objOffset = sh.Tell();
+
+			if (!parsedObjects.TryAdd(objOffset, obj))
+			{
+				return;
+			}
+
 			HavokClassSerialization clazz = file.classes.First(x => x.DotNetType == obj.GetType());
 
 			for (int f = 0; f < clazz.Members.Count; f++)
@@ -288,7 +290,18 @@ namespace Kovah
 				member.field.SetValue(obj, ReadValue(sh, member.Class, member.Enum, member.Type, member.Subtype));
 			}
 		}
+
+
+		private object? ReadObjectRef(StreamHelper sh, uint target, Type clazz)
+		{
+			sh.Seek(target);
+			if (!virtualObjects.TryGetValue(target, out object? obj))
+			{
+				obj = Activator.CreateInstance(clazz);
 			}
+			Debug.Assert(obj != null);
+			ParseObject(sh, obj);
+			return parsedObjects[target];
 		}
 
 
@@ -349,11 +362,12 @@ namespace Kovah
 					switch (subtype)
 					{
 						case hkClassMember.Type.TYPE_STRUCT:
-							return objects[fixupDest.Value];
+							Debug.Assert(clazz != null);
+							return ReadObjectRef(sh, fixupDest.Value, clazz);
 						case hkClassMember.Type.TYPE_VOID:
 							if (clazz != null)
 							{
-								return objects[fixupDest.Value];
+								return ReadObjectRef(sh, fixupDest.Value, clazz);
 							}
 							else
 							{
@@ -489,7 +503,7 @@ namespace Kovah
 					{
 						throw new Exception($"Failed to instantiate object of type {clazz.Name}");
 					}
-					objects.Add(sh.Tell(), obj);
+					virtualObjects.Add(sh.Tell(), obj);
 					ParseObject(sh, obj);
 					return obj;
 				case hkClassMember.Type.TYPE_STRINGPTR:
