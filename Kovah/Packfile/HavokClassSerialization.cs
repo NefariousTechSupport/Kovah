@@ -28,6 +28,7 @@ namespace Kovah
 			this.parent = file.GetClassSerialization(type.BaseType);
 			this.objectSize = 1;
 			this.members = new List<HavokMemberSerialization>();
+			this.membersInclBase = null;
 			this.computed = false;
 
 
@@ -118,6 +119,29 @@ namespace Kovah
 
 			objectSize = StreamHelper.Align(Math.Max(1, head), workingAlignment);
 			alignment = Math.Max(1, workingAlignment);
+		}
+
+
+		private void GetMembers(List<HavokMemberSerialization> list)
+		{
+			if (parent != null)
+			{
+				parent.GetMembers(list);
+			}
+
+			list.AddRange(members);
+		}
+
+
+		public List<HavokMemberSerialization> GetMembers()
+		{
+			if (membersInclBase == null)
+			{
+				membersInclBase = new List<HavokMemberSerialization>();
+				GetMembers(membersInclBase);
+			}
+
+			return membersInclBase;
 		}
 	}
 }
