@@ -363,15 +363,18 @@ namespace Kovah
 				{
 					uint arrayOffs = sh.Tell();
 					uint? fixupDest = GetFixupDestination(arrayOffs);
-					if (fixupDest == null)
+					sh.Seek(file.pointerSize, SeekOrigin.Current);
+					uint size             = sh.ReadUInt32();
+					uint capacityAndFlags = sh.ReadUInt32();
+
+					if ((capacityAndFlags & 0x80000000) == 0)
 					{
+						Debug.Assert((capacityAndFlags & ~0x80000000) == 0);
 						return null;
 					}
 					else
 					{
-						sh.Seek(file.pointerSize, SeekOrigin.Current);
-						uint size             = sh.ReadUInt32();
-						uint capacityAndFlags = sh.ReadUInt32();
+						Debug.Assert(size == (capacityAndFlags & ~0x80000000));
 						Type elementType;
 						switch (subtype)
 						{
@@ -464,6 +467,8 @@ namespace Kovah
 						uint elementSize = HavokMemberSerialization.GetSize(file, subtype, hkClassMember.Type.TYPE_VOID, file.GetClassSerialization(clazz));
 						for (int a = 0; a < size; a++)
 						{
+							Debug.Assert(fixupDest.HasValue);
+
 							sh.Seek(fixupDest.Value + a * elementSize);
 							arr.SetValue(ReadValue(sh, clazz, eenum, subtype, hkClassMember.Type.TYPE_VOID), a);
 						}
