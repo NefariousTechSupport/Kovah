@@ -85,6 +85,13 @@ namespace Kovah
 			}
 			computed = true;
 
+			if (type == typeof(hkBaseObject))
+			{
+				objectSize = file.pointerSize;
+				alignment  = file.pointerSize;
+				return;
+			}
+
 			uint head = 0;
 			uint workingAlignment = 0;
 
