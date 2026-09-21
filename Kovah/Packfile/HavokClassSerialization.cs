@@ -64,7 +64,7 @@ namespace Kovah
 
 		private uint GetNextFieldStart(HavokPackfile file)
 		{
-			if (members.Count > 0)
+			if (members.Count > 0 && computed)
 			{
 				return members.Last().offset + members.Last().GetSize(file);
 			}
@@ -72,6 +72,11 @@ namespace Kovah
 			if (parent != null)
 			{
 				return parent.GetNextFieldStart(file);
+			}
+
+			if (type == typeof(hkBaseObject))
+			{
+				return file.pointerSize;
 			}
 
 			return file.emptyBaseClassOptimisation ? 0u : 1u;
@@ -84,12 +89,12 @@ namespace Kovah
 			{
 				return;
 			}
-			computed = true;
 
 			if (type == typeof(hkBaseObject))
 			{
 				objectSize = file.pointerSize;
 				alignment  = file.pointerSize;
+				computed = true;
 				return;
 			}
 
@@ -119,6 +124,8 @@ namespace Kovah
 
 			objectSize = StreamHelper.Align(Math.Max(1, head), workingAlignment);
 			alignment = Math.Max(1, workingAlignment);
+
+			computed = true;
 		}
 
 
