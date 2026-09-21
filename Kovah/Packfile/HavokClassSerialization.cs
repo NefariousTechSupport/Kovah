@@ -113,7 +113,7 @@ namespace Kovah
 				HavokMemberSerialization member = members[m];
 				member.offset = StreamHelper.Align(head, member.GetAlignment(file));
 				workingAlignment = Math.Max(workingAlignment, member.GetAlignment(file));
-				head += member.GetSize(file);
+				head = member.offset + member.GetSize(file);
 				members[m] = member;
 			}
 
