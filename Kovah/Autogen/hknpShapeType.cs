@@ -51,5 +51,8 @@ namespace Kovah
 			INVALID,
 			
 		}
+		public hknpShapeType()
+		{
+		}
 	}
 }

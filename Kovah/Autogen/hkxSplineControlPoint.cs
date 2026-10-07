@@ -13,5 +13,8 @@ namespace Kovah
 		private hkxSpline.ControlType inType;
 		[HavokMember(EVersion.hk_2013_1_0_r1, 49, null, typeof(hkxSpline.ControlType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkxSpline.ControlType outType;
+		public hkxSplineControlPoint()
+		{
+		}
 	}
 }

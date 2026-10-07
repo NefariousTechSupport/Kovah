@@ -33,5 +33,8 @@ namespace Kovah
 			NUM_DISPATCH_TYPES,
 			
 		}
+		public hkcdShapeDispatchType()
+		{
+		}
 	}
 }

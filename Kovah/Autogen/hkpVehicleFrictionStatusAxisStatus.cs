@@ -21,5 +21,8 @@ namespace Kovah
 		private float relativeSideForce;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float relativeForwardForce;
+		public hkpVehicleFrictionStatusAxisStatus()
+		{
+		}
 	}
 }

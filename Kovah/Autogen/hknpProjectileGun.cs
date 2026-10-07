@@ -13,5 +13,8 @@ namespace Kovah
 		private object? /* void* */[]? projectiles;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 60, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ npWorld;
+		public hknpProjectileGun()
+		{
+		}
 	}
 }

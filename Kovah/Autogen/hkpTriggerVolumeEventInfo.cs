@@ -9,5 +9,8 @@ namespace Kovah
 		private hkpRigidBody? body;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, null, typeof(hkpTriggerVolume.Operation), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpTriggerVolume.Operation operation;
+		public hkpTriggerVolumeEventInfo()
+		{
+		}
 	}
 }

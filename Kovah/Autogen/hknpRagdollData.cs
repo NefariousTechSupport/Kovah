@@ -7,5 +7,8 @@ namespace Kovah
 		private hkaSkeleton? skeleton;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_INT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int[]? boneToBodyMap;
+		public hknpRagdollData()
+		{
+		}
 	}
 }

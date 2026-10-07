@@ -9,5 +9,8 @@ namespace Kovah
 		private float maxTyremarkEnergy;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hknpTyremarksWheel), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpTyremarksWheel?[]? tyremarksWheel;
+		public hknpTyremarksInfo()
+		{
+		}
 	}
 }

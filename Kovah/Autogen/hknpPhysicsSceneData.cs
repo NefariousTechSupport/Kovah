@@ -7,5 +7,8 @@ namespace Kovah
 		private hknpPhysicsSystemData?[]? systemDatas;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, typeof(hknpRefWorldCinfo), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpRefWorldCinfo? worldCinfo;
+		public hknpPhysicsSceneData()
+		{
+		}
 	}
 }

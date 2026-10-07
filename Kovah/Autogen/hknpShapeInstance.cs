@@ -33,5 +33,8 @@ namespace Kovah
 		private ushort destructionTag;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 30, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte padding;
+		public hknpShapeInstance()
+		{
+		}
 	}
 }

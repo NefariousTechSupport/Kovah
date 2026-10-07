@@ -9,5 +9,8 @@ namespace Kovah
 		private int yAxisMS;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 140, typeof(hkbCheckBalanceModifier), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbCheckBalanceModifier? checkBalanceModifier;
+		public hkbBalanceRadialSelectorGenerator()
+		{
+		}
 	}
 }

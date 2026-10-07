@@ -13,5 +13,8 @@ namespace Kovah
 		private object? /* void* */[]? modifiers;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 52, typeof(hkpConstraintMotor), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpConstraintMotor?[]? motors;
+		public hkpGenericConstraintDataScheme()
+		{
+		}
 	}
 }

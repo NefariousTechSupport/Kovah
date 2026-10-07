@@ -21,5 +21,8 @@ namespace Kovah
 		private hkpShapeKeyTable? disabledLargeShapeKeyTable;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 64, typeof(hkcdStaticTreeDefaultTreeStorage6), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
 		private hkcdStaticTreeDefaultTreeStorage6? tree;
+		public hkpStaticCompoundShape()
+		{
+		}
 	}
 }

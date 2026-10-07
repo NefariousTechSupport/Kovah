@@ -40,5 +40,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 44, null, typeof(hkpMoppCode.BuildType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpMoppCode.BuildType buildType;
+		public hkpMoppCode()
+		{
+		}
 	}
 }

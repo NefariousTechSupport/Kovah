@@ -248,6 +248,12 @@ def outputCS(outputDir: str):
 				memberenumname  = "typeof({}{})".format(member.enum.clazz.name + "." if member.enum.clazz != None else "", member.enum.name) if member.enum != None else "null"
 				cs.write("\t\t[HavokMember(EVersion.{}, {}, {}, {}, hkClassMember.Type.{}, hkClassMember.Type.{}, {}, {})]\n".format(version, member.offset, memberclassname, memberenumname, member.type.name, member.subtype.name, member.cArraySize, getCSFlagValues("hkClassMember.FlagValues.", member.flags)))
 			cs.write("\t\tprivate {} {};\n".format(getCSType(member.type, member.subtype, member.clazz, member.enum), getCSName(memberName)))
+
+		# Write a parameterless constructor
+		cs.write("\t\tpublic " + clazz.name + "()\n")
+		cs.write("\t\t{\n")
+		cs.write("\t\t}\n")
+
 		cs.write("\t}\n")
 		cs.write("}\n")
 		cs.close()

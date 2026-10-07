@@ -282,5 +282,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2013_1_0_r1, 0, null, typeof(hkpConstraintAtom.AtomType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, typeof(hkpConstraintAtom.AtomType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpConstraintAtom.AtomType type;
+		public hkpConstraintAtom()
+		{
+		}
 	}
 }

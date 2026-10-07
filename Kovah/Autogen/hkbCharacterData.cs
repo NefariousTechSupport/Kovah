@@ -55,5 +55,8 @@ namespace Kovah
 		private hkbCharacterControllerSetup? characterControllerSetup;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 132, typeof(hkReferencedObject), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkReferencedObject? aiControlDriverInfo;
+		public hkbCharacterData()
+		{
+		}
 	}
 }

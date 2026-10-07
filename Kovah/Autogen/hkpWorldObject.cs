@@ -83,5 +83,8 @@ namespace Kovah
 		private object? /* void* */ aiData;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 136, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ treeData;
+		public hkpWorldObject()
+		{
+		}
 	}
 }

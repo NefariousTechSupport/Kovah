@@ -25,5 +25,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 64, null, typeof(hkpWeldingUtility.WeldingType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 64, null, typeof(hkpWeldingUtility.WeldingType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpWeldingUtility.WeldingType weldingType;
+		public hkpSimpleMeshShape()
+		{
+		}
 	}
 }

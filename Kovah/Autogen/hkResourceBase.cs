@@ -23,5 +23,8 @@ namespace Kovah
 			TYPE_CONTAINER,
 			
 		}
+		public hkResourceBase()
+		{
+		}
 	}
 }

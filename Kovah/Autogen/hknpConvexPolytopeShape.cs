@@ -9,5 +9,8 @@ namespace Kovah
 		private object? /* relarray */ faces;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_RELARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private object? /* relarray */ indices;
+		public hknpConvexPolytopeShape()
+		{
+		}
 	}
 }

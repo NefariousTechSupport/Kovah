@@ -312,5 +312,8 @@ namespace Kovah
 		private hkxMaterial.Transparency transparency;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 164, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ulong userData;
+		public hkxMaterial()
+		{
+		}
 	}
 }

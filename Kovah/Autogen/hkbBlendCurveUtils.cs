@@ -20,5 +20,8 @@ namespace Kovah
 			BLEND_CURVE_SMOOTH_TO_LINEAR,
 			
 		}
+		public hkbBlendCurveUtils()
+		{
+		}
 	}
 }

@@ -61,5 +61,8 @@ namespace Kovah
 		private uint numFrames;
 		[HavokMember(EVersion.hk_2013_1_0_r1, 124, typeof(hkxSpline), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkxSpline?[]? splines;
+		public hkxScene()
+		{
+		}
 	}
 }

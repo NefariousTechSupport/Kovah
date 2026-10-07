@@ -21,5 +21,8 @@ namespace Kovah
 		private float cfmAngMul;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 68, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float maxErrorDistance;
+		public hkpPoweredChainData()
+		{
+		}
 	}
 }

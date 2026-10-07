@@ -7,5 +7,8 @@ namespace Kovah
 		private hkbCustomTestGeneratorNestedTypesBase? nestedTypeStruct;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1088, typeof(hkbCustomTestGeneratorNestedTypesBase), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbCustomTestGeneratorNestedTypesBase?[]? nestedTypeArrayStruct;
+		public hkbCustomTestGeneratorNestedTypes()
+		{
+		}
 	}
 }

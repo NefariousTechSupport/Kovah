@@ -15,5 +15,8 @@ namespace Kovah
 		private ushort weldingInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 14, null, null, hkClassMember.Type.TYPE_UINT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ushort transformIndex;
+		public hkpCompressedMeshShapeBigTriangle()
+		{
+		}
 	}
 }

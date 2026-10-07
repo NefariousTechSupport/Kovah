@@ -23,5 +23,8 @@ namespace Kovah
 		private int minMaxTreeCoarseness;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 212, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool includeShapeKeyInSdfContacts;
+		public hknpHeightFieldShape()
+		{
+		}
 	}
 }

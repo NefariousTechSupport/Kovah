@@ -21,5 +21,8 @@ namespace Kovah
 			MAX_NUM_CODECS,
 			
 		}
+		public hkcdShapeInfoCodecType()
+		{
+		}
 	}
 }

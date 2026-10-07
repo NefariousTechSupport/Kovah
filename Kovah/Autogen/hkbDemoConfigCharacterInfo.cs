@@ -15,5 +15,8 @@ namespace Kovah
 		private int modelUpAxis;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 52, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_INT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int[]? ragdollBoneLayers;
+		public hkbDemoConfigCharacterInfo()
+		{
+		}
 	}
 }

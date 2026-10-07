@@ -11,5 +11,8 @@ namespace Kovah
 		private float durationToBlend;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, typeof(hkbKeyFrameControlData), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.ALIGN_16)]
 		private hkbKeyFrameControlData? keyFrameControlData;
+		public hkbRigidBodyRagdollControlData()
+		{
+		}
 	}
 }

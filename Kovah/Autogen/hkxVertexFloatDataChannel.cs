@@ -17,5 +17,8 @@ namespace Kovah
 		private float[]? perVertexFloats;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 20, null, typeof(hkxVertexFloatDataChannel.VertexFloatDimensions), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkxVertexFloatDataChannel.VertexFloatDimensions dimensions;
+		public hkxVertexFloatDataChannel()
+		{
+		}
 	}
 }

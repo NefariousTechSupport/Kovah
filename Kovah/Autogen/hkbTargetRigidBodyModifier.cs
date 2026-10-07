@@ -111,5 +111,8 @@ namespace Kovah
 		private bool closeToTargetEventHasBeenSent;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 198, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private bool isActive;
+		public hkbTargetRigidBodyModifier()
+		{
+		}
 	}
 }

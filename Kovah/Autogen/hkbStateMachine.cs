@@ -118,5 +118,8 @@ namespace Kovah
 		private bool hasEventlessWildcardTransitions;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 104, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbCustomIdSelector? startStateIdSelector;
+		public hkbStateMachine()
+		{
+		}
 	}
 }

@@ -5,5 +5,8 @@ namespace Kovah
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_TRANSFORM, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Matrix4x4 /* transform */ transform;
+		public hkpSerializedDisplayMarker()
+		{
+		}
 	}
 }

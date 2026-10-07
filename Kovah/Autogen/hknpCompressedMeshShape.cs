@@ -13,5 +13,8 @@ namespace Kovah
 		private int numTriangles;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 112, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private int numConvexShapes;
+		public hknpCompressedMeshShape()
+		{
+		}
 	}
 }

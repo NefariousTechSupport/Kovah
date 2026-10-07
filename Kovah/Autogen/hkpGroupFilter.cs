@@ -13,5 +13,8 @@ namespace Kovah
 		[HavokMember(EVersion.Havok_7_1_0_r1, 192, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 192, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Vector4 pad256;
+		public hkpGroupFilter()
+		{
+		}
 	}
 }

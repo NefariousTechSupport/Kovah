@@ -51,5 +51,8 @@ namespace Kovah
 			NUM_ANGLES,
 			
 		}
+		public hkpWeldingUtility()
+		{
+		}
 	}
 }

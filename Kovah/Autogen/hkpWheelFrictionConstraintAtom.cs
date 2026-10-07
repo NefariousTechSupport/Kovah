@@ -21,5 +21,8 @@ namespace Kovah
 		private float slipImpulse;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, typeof(hkpWheelFrictionConstraintAtomAxle), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpWheelFrictionConstraintAtomAxle? axle;
+		public hkpWheelFrictionConstraintAtom()
+		{
+		}
 	}
 }

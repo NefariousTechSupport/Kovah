@@ -17,5 +17,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 92, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 92, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte[]? tfbProperties;
+		public tfbSimpleMeshShape()
+		{
+		}
 	}
 }

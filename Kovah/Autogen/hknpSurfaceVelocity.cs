@@ -11,5 +11,8 @@ namespace Kovah
 			USE_WORLD_SPACE,
 			
 		}
+		public hknpSurfaceVelocity()
+		{
+		}
 	}
 }

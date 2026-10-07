@@ -19,5 +19,8 @@ namespace Kovah
 		private Vector4 capturedObjectPosition;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 80, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Vector4 capturedObjectsOffset;
+		public hkpGravityGun()
+		{
+		}
 	}
 }

@@ -9,5 +9,8 @@ namespace Kovah
 		private ulong[]? sharedVertices;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 120, typeof(hkpBvCompressedMeshShapeTreeDataRun), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpBvCompressedMeshShapeTreeDataRun?[]? primitiveDataRuns;
+		public hkcdStaticMeshTreehkcdStaticMeshTreeCommonConfigunsignedintunsignedlonglong1121hkpBvCompressedMeshShapeTreeDataRun()
+		{
+		}
 	}
 }

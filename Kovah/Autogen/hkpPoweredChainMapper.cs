@@ -9,5 +9,8 @@ namespace Kovah
 		private hkpPoweredChainMapperTarget?[]? targets;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkpConstraintChainInstance), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpConstraintChainInstance?[]? chains;
+		public hkpPoweredChainMapper()
+		{
+		}
 	}
 }

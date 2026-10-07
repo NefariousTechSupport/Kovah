@@ -7,5 +7,8 @@ namespace Kovah
 		private hkpAgent1nSector?[]? sectors;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 12, typeof(hkpSerializedSubTrack1nInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpSerializedSubTrack1nInfo?[]? subTracks;
+		public hkpSerializedTrack1nInfo()
+		{
+		}
 	}
 }

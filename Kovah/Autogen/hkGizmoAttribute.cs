@@ -29,5 +29,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, null, typeof(hkGizmoAttribute.GizmoType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 8, null, typeof(hkGizmoAttribute.GizmoType), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkGizmoAttribute.GizmoType type;
+		public hkGizmoAttribute()
+		{
+		}
 	}
 }

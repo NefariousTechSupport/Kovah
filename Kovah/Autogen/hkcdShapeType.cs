@@ -125,5 +125,8 @@ namespace Kovah
 			ALL_SHAPE_TYPES,
 			
 		}
+		public hkcdShapeType()
+		{
+		}
 	}
 }

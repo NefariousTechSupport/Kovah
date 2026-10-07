@@ -64,5 +64,8 @@ namespace Kovah
 		private ulong userData;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 32, typeof(hkRefCountedProperties), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkRefCountedProperties? properties;
+		public hknpShape()
+		{
+		}
 	}
 }

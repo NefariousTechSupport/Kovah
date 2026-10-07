@@ -25,5 +25,8 @@ namespace Kovah
 		private hkbBalanceModifierStepInfo?[]? stepInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private float timeLapsed;
+		public hkbBalanceModifier()
+		{
+		}
 	}
 }

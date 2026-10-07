@@ -4,5 +4,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkcdDynamicTreeDefaultTreeInt16Storage : hkcdDynamicTreeTreehkcdDynamicTreeDynamicStorageInt16
 	{
+		public hkcdDynamicTreeDefaultTreeInt16Storage()
+		{
+		}
 	}
 }

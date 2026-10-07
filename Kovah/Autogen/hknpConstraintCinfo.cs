@@ -11,5 +11,8 @@ namespace Kovah
 		private uint bodyB;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 12, null, typeof(hknpConstraint.FlagsEnum), hkClassMember.Type.TYPE_FLAGS, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpConstraint.FlagsEnum flags;
+		public hknpConstraintCinfo()
+		{
+		}
 	}
 }

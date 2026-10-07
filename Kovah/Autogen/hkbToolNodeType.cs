@@ -35,5 +35,8 @@ namespace Kovah
 			NODE_TYPE_BEHAVIOR_FILE_REFERENCE,
 			
 		}
+		public hkbToolNodeType()
+		{
+		}
 	}
 }

@@ -17,5 +17,8 @@ namespace Kovah
 		private float contactRadius;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float data;
+		public hkpSimpleContactConstraintDataInfo()
+		{
+		}
 	}
 }

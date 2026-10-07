@@ -23,5 +23,8 @@ namespace Kovah
 		private float maxContactBodyAcceleration;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private sbyte axle;
+		public hknpVehicleDataWheelComponentParams()
+		{
+		}
 	}
 }

@@ -7,5 +7,8 @@ namespace Kovah
 		private object? /* void* */ qualityModifiedSignal;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hknpBodyQuality), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 32, hkClassMember.FlagValues.ALIGN_16)]
 		private hknpBodyQuality? qualities;
+		public hknpBodyQualityLibrary()
+		{
+		}
 	}
 }

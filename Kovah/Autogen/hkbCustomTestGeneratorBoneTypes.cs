@@ -31,5 +31,8 @@ namespace Kovah
 		private hkbBoneWeightArray? boneWeightArray;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1128, typeof(hkbBoneIndexArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbBoneIndexArray? boneIndexArray;
+		public hkbCustomTestGeneratorBoneTypes()
+		{
+		}
 	}
 }

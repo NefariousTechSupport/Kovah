@@ -4,5 +4,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2014_1_0_r1)]
 	public partial class hkcdDynamicTreeCodecInt16IntAabb : hkAabb16
 	{
+		public hkcdDynamicTreeCodecInt16IntAabb()
+		{
+		}
 	}
 }

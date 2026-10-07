@@ -17,5 +17,8 @@ namespace Kovah
 		private float[]? gearsRatio;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 40, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_REAL, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float[]? wheelsTorqueRatio;
+		public hknpVehicleDefaultTransmission()
+		{
+		}
 	}
 }

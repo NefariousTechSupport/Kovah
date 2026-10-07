@@ -7,5 +7,8 @@ namespace Kovah
 		private uint slots;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 252, typeof(hkpShapeKeyTableBlock), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpShapeKeyTableBlock? next;
+		public hkpShapeKeyTableBlock()
+		{
+		}
 	}
 }

@@ -13,5 +13,8 @@ namespace Kovah
 		private bool createDisplayObjects;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpRigidBody), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpRigidBody? terrainRigidBody;
+		public hkbDemoConfigTerrainInfo()
+		{
+		}
 	}
 }

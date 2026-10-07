@@ -57,5 +57,8 @@ namespace Kovah
 		private bool delayed;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 204, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float clutchDelayCountdown;
+		public hknpVehicleInstance()
+		{
+		}
 	}
 }

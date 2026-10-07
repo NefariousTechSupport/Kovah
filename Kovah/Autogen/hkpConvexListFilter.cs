@@ -25,5 +25,8 @@ namespace Kovah
 			TREAT_CONVEX_LIST_AS_CONVEX,
 			
 		}
+		public hkpConvexListFilter()
+		{
+		}
 	}
 }

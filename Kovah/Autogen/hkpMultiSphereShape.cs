@@ -7,5 +7,8 @@ namespace Kovah
 		private int numSpheres;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 8, hkClassMember.FlagValues.FLAGS_NONE)]
 		private Vector4 spheres;
+		public hkpMultiSphereShape()
+		{
+		}
 	}
 }

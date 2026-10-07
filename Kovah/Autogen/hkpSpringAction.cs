@@ -19,5 +19,8 @@ namespace Kovah
 		private bool onCompression;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 93, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool onExtension;
+		public hkpSpringAction()
+		{
+		}
 	}
 }

@@ -73,5 +73,8 @@ namespace Kovah
 		private bool catchFallEnd;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 230, null, null, hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte fadeState;
+		public hkbCatchFallModifier()
+		{
+		}
 	}
 }

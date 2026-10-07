@@ -456,5 +456,8 @@ namespace Kovah
 			SCRIPT,
 			
 		}
+		public hkColor()
+		{
+		}
 	}
 }

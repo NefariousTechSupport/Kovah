@@ -4,5 +4,8 @@ namespace Kovah
 	[HavokClass(EVersion.hk_2013_1_0_r1)]
 	public partial class hkpShapeBase : hkcdShape
 	{
+		public hkpShapeBase()
+		{
+		}
 	}
 }

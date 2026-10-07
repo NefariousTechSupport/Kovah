@@ -30,5 +30,8 @@ namespace Kovah
 			DO_NOT_ACCUMULATE_MOTION,
 			
 		}
+		public hkbWorldEnums()
+		{
+		}
 	}
 }

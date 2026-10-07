@@ -21,5 +21,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2011_2_0_r1, 28, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 28, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private string? originalFilename;
+		public hkxTextureInplace()
+		{
+		}
 	}
 }

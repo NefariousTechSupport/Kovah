@@ -13,5 +13,8 @@ namespace Kovah
 		private hknpMotion?[]? motions;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 244, typeof(hknpConstraintCinfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hknpConstraintCinfo?[]? constraints;
+		public hknpWorldSnapshot()
+		{
+		}
 	}
 }

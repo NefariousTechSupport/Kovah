@@ -10,5 +10,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 3, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 12, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 3, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 12, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private byte padding;
+		public hkp2dAngConstraintAtom()
+		{
+		}
 	}
 }

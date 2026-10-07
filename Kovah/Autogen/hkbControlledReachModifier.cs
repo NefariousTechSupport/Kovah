@@ -23,5 +23,8 @@ namespace Kovah
 		private short handIndex;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 84, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool isHandEnabled;
+		public hkbControlledReachModifier()
+		{
+		}
 	}
 }

@@ -32,5 +32,8 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 6, null, typeof(hkbWorldFromModelModeData.WorldFromModelMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 6, null, typeof(hkbWorldFromModelModeData.WorldFromModelMode), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbWorldFromModelModeData.WorldFromModelMode mode;
+		public hkbWorldFromModelModeData()
+		{
+		}
 	}
 }

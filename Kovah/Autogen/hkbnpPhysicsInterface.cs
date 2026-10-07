@@ -25,5 +25,8 @@ namespace Kovah
 		private object? /* void* */[]? referencedConstraintHandles;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 92, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */[]? referencedBodiesLocalFrames;
+		public hkbnpPhysicsInterface()
+		{
+		}
 	}
 }

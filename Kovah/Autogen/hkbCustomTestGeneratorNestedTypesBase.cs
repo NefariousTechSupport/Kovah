@@ -49,5 +49,8 @@ namespace Kovah
 		private hkbCustomIdSelector?[]? nestedTypeArrayHkbCustomIdSelectorPtr;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 524, typeof(hkbCustomIdSelector), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbCustomIdSelector?[]? nestedTypeArrayHkbCustomIdSelectorRefPtr;
+		public hkbCustomTestGeneratorNestedTypesBase()
+		{
+		}
 	}
 }

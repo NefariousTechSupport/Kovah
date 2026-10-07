@@ -47,5 +47,8 @@ namespace Kovah
 		private bool refreshManifoldInCheckSupport;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 157, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool presenceInWorld;
+		public hknpCharacterProxyCinfo()
+		{
+		}
 	}
 }

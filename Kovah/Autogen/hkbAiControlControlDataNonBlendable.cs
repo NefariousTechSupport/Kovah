@@ -7,5 +7,8 @@ namespace Kovah
 		private bool canControl;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 1, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 3, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private byte padding;
+		public hkbAiControlControlDataNonBlendable()
+		{
+		}
 	}
 }

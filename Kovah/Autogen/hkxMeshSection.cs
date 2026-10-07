@@ -40,5 +40,8 @@ namespace Kovah
 		private float[]? linearKeyFrameHints;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 64, typeof(hkMeshBoneIndexMapping), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkMeshBoneIndexMapping?[]? boneMatrixMap;
+		public hkxMeshSection()
+		{
+		}
 	}
 }

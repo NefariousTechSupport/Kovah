@@ -37,5 +37,8 @@ namespace Kovah
 		private float[]? linearKeyFrameHints;
 		[HavokMember(EVersion.hk_2013_1_0_r1, 81, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool bone;
+		public hkxNode()
+		{
+		}
 	}
 }

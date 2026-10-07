@@ -15,5 +15,8 @@ namespace Kovah
 		private bool hasOutputBinding;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 25, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private bool initializedOffsets;
+		public hkbVariableBindingSet()
+		{
+		}
 	}
 }

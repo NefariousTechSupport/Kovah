@@ -19,5 +19,8 @@ namespace Kovah
 			NUM_TYPES,
 			
 		}
+		public hknpCollisionDispatchType()
+		{
+		}
 	}
 }

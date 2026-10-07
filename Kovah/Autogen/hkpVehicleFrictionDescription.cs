@@ -9,5 +9,8 @@ namespace Kovah
 		private float chassisMassInv;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hkpVehicleFrictionDescriptionAxisDescription), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpVehicleFrictionDescriptionAxisDescription? axleDescr;
+		public hkpVehicleFrictionDescription()
+		{
+		}
 	}
 }
