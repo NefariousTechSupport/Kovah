@@ -266,11 +266,11 @@ namespace Kovah
 		}
 
 
-		private void ParseObject(StreamHelper sh, object obj)
+		private void ParseObject(StreamHelper sh, object obj, bool skipDedupe = false)
 		{
 			uint objOffset = sh.Tell();
 
-			if (!parsedObjects.TryAdd(objOffset, obj))
+			if (!skipDedupe && !parsedObjects.TryAdd(objOffset, obj))
 			{
 				return;
 			}
@@ -292,7 +292,7 @@ namespace Kovah
 		}
 
 
-		private object? ReadObjectRef(StreamHelper sh, uint target, Type clazz)
+		private object? ReadObjectRef(StreamHelper sh, uint target, Type clazz, bool skipDedupe = false)
 		{
 			sh.Seek(target);
 			if (!virtualObjects.TryGetValue(target, out object? obj))
@@ -300,8 +300,8 @@ namespace Kovah
 				obj = Activator.CreateInstance(clazz);
 			}
 			Debug.Assert(obj != null);
-			ParseObject(sh, obj);
-			return parsedObjects[target];
+			ParseObject(sh, obj, skipDedupe);
+			return skipDedupe ? obj : parsedObjects[target];
 		}
 
 
@@ -501,14 +501,7 @@ namespace Kovah
 					{
 						throw new InvalidDataException("TYPE_STRUCT with no class");
 					}
-					object? obj = Activator.CreateInstance(clazz);
-					if (obj == null)
-					{
-						throw new Exception($"Failed to instantiate object of type {clazz.Name}");
-					}
-					virtualObjects.Add(sh.Tell(), obj);
-					ParseObject(sh, obj);
-					return obj;
+					return ReadObjectRef(sh, sh.Tell(), clazz, true);
 				case hkClassMember.Type.TYPE_STRINGPTR:
 				case hkClassMember.Type.TYPE_CSTRING:
 				{
