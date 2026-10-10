@@ -28,12 +28,25 @@ namespace Kovah.Packfile
 
 		public uint GetSize(HavokPackfile file)
 		{
-			return GetSize(file, attr.Type, attr.Subtype, file.GetClassSerialization(attr.Class));
+			return Math.Max(1u, ArraySize) * GetSize(file, attr.Type, attr.Subtype, file.GetClassSerialization(attr.Class));
 		}
 
 
 		public uint GetAlignment(HavokPackfile file)
 		{
+			if ((attr.Flags & hkClassMember.FlagValues.ALIGN_8) != 0)
+			{
+				return 8;
+			}
+			else if ((attr.Flags & hkClassMember.FlagValues.ALIGN_16) != 0)
+			{
+				return 16;
+			}
+			else if ((attr.Flags & hkClassMember.FlagValues.ALIGN_32) != 0)
+			{
+				return 32;
+			}
+
 			return GetAlignment(file, attr.Type, attr.Subtype, file.GetClassSerialization(attr.Class));
 		}
 
