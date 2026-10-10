@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbModifier))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkbModifier))]
 	public partial class hkbEvaluateExpressionModifier : hkbModifier
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, typeof(hkbExpressionDataArray), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]

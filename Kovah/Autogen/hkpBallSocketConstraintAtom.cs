@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpConstraintAtom))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkpConstraintAtom))]
 	public partial class hkpBallSocketConstraintAtom : hkpConstraintAtom
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 2, null, typeof(hkpConstraintAtom.SolvingMethod), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]

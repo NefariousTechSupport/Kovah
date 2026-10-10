@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbEventPayload))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkbEventPayload))]
 	public partial class hkbParticleSystemEventPayload : hkbEventPayload
 	{
 		public enum SystemType : int

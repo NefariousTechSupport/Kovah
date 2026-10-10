@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkReferencedObject))]
 	public partial class hkbDemoConfig : hkReferencedObject
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 8, typeof(hkbDemoConfigCharacterInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]

@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbNode))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkbNode))]
 	public partial class hkbGenerator : hkbNode
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, typeof(hkbGeneratorPartitionInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

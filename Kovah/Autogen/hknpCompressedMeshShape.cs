@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hknpCompositeShape))]
 	public partial class hknpCompressedMeshShape : hknpCompositeShape
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 72, typeof(hknpCompressedMeshShapeData), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]

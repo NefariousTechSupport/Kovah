@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpSphereRepShape))]
 	public partial class hkpMultiSphereShape : hkpSphereRepShape
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

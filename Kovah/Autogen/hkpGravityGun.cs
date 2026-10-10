@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpFirstPersonGun))]
 	public partial class hkpGravityGun : hkpFirstPersonGun
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

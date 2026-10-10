@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbModifier))]
 	public partial class hkbCheckRagdollSpeedModifier : hkbModifier
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, typeof(hkbEventProperty), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

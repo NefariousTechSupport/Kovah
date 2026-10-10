@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpFirstPersonGun))]
 	public partial class hkpBallGun : hkpFirstPersonGun
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

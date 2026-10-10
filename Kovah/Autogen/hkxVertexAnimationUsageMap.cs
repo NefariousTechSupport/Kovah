@@ -1,8 +1,8 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2013_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, null)]
+	[HavokClass(EVersion.hk_2013_1_0_r1, null)]
+	[HavokClass(EVersion.hk_2014_1_0_r1, null)]
 	public partial class hkxVertexAnimationUsageMap
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 0, null, typeof(hkxVertexDescription.DataUsage), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_UINT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]

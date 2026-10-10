@@ -38,7 +38,7 @@ class hkClass:
 	def __init__(self):
 		self.name = ""
 		self.versions: list[str] = []
-		self.parents: set[hkClass] = set()
+		self.parents: dict[str, hkClass] = {}
 		self.bestParent: hkClass = None
 		self.bestParentSet: bool = False
 		self.numImplementedInterfaces: dict[str, int] = {}
@@ -115,7 +115,7 @@ def readHkClass(version: str, classnode: XmlTree.Element) -> hkClass:
 	if "flags" in classnode.attrib:
 		clazz.flags[version] = classnode.attrib["flags"]
 	if "parent" in classnode.attrib:
-		clazz.parents.add(findHkClass(classnode.attrib["parent"]))
+		clazz.parents[version] = findHkClass(classnode.attrib["parent"])
 
 	#clazz.objectSize = int(classnode.attrib["objectSize"])
 	clazz.describedVersion[version] = int(classnode.attrib["describedVersion"])
@@ -193,7 +193,7 @@ def resolveParent(clazz: hkClass) -> hkClass:
 	if clazz.bestParentSet:
 		return clazz.bestParent
 	bestOne = None
-	for parent in clazz.parents:
+	for parent in clazz.parents.values():
 		if bestOne == None:
 			bestOne = parent
 			continue
@@ -235,11 +235,12 @@ def outputEnum(cs: TextIO, indentNum: int, enum: hkClassEnum):
 
 def outputCS(outputDir: str):
 	for clazz in classes.values():
+		print("writing class " + clazz.name)
 		cs = open(outputDir + "/" + clazz.name + ".cs", "wt", newline="\n")
 		cs.write("namespace Kovah\n")
 		cs.write("{\n")
 		for version in clazz.versions:
-			cs.write("\t[HavokClass(EVersion.{})]\n".format(version))
+			cs.write("\t[HavokClass(EVersion.{}, {})]\n".format(version, ("typeof(" + clazz.parents[version].name + ")") if version in clazz.parents else "null"))
 		parent = resolveParent(clazz)
 		cs.write("\tpublic partial class " + clazz.name + ((" : " + parent.name) if parent != None else "") + "\n")
 		cs.write("\t{\n")

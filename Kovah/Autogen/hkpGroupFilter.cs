@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkpCollisionFilter))]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpCollisionFilter))]
 	public partial class hkpGroupFilter : hkpCollisionFilter
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

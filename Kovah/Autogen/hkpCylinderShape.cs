@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkpConvexShape))]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpConvexShape))]
 	public partial class hkpCylinderShape : hkpConvexShape
 	{
 		public enum VertexIdEncoding : int

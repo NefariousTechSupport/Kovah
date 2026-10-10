@@ -1,8 +1,8 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2011_2_0_r1)]
-	[HavokClass(EVersion.hk_2013_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkxAttributeHolder))]
+	[HavokClass(EVersion.hk_2011_2_0_r1, typeof(hkxAttributeHolder))]
+	[HavokClass(EVersion.hk_2013_1_0_r1, typeof(hkxAttributeHolder))]
 	public partial class hkxNodeSelectionSet : hkxAttributeHolder
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkxNode), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]

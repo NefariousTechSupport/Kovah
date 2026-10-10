@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hknpCompoundShapeKeyMask))]
 	public partial class hknpCompoundShapeInternalsKeyMask : hknpCompoundShapeKeyMask
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 4, typeof(hknpCompoundShape), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.NOT_OWNED)]

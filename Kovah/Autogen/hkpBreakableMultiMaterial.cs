@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpBreakableMaterial))]
 	public partial class hkpBreakableMultiMaterial : hkpBreakableMaterial
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 20, typeof(hkpBreakableMaterial), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]

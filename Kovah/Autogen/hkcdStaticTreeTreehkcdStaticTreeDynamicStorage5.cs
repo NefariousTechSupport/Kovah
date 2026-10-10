@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkcdStaticTreeDynamicStorage5))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkcdStaticTreeDynamicStorage5))]
 	public partial class hkcdStaticTreeTreehkcdStaticTreeDynamicStorage5 : hkcdStaticTreeDynamicStorage5
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkAabb), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

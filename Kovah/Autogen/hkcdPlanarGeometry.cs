@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkcdPlanarEntity))]
 	public partial class hkcdPlanarGeometry : hkcdPlanarEntity
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 12, typeof(hkcdPlanarGeometryPlanesCollection), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]

@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbModifier))]
 	public partial class hkbMoveBoneTowardTargetModifier : hkbModifier
 	{
 		public enum TargetModeMBTT : int

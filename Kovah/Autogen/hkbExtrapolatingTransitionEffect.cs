@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbBlendingTransitionEffect))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkbBlendingTransitionEffect))]
 	public partial class hkbExtrapolatingTransitionEffect : hkbBlendingTransitionEffect
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 256, typeof(hkbGeneratorSyncInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

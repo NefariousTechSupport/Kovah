@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, null)]
 	public partial class hkpMeshShapeSubpart
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 0, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

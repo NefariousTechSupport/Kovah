@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkbBindable))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkbBindable))]
 	public partial class hkbLayer : hkbBindable
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, typeof(hkbGenerator), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.ALIGN_16)]

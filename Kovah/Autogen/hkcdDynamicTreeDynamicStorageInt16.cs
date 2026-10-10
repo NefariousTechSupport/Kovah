@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkcdDynamicTreeDefaultDynamicStoragehkcdDynamicTreeCodecInt16))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkcdDynamicTreeDefaultDynamicStoragehkcdDynamicTreeCodecInt16))]
 	public partial class hkcdDynamicTreeDynamicStorageInt16 : hkcdDynamicTreeDefaultDynamicStoragehkcdDynamicTreeCodecInt16
 	{
 		public hkcdDynamicTreeDynamicStorageInt16()

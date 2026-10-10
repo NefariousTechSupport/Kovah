@@ -1,8 +1,8 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2011_2_0_r1)]
-	[HavokClass(EVersion.hk_2013_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkpShapeCollection))]
+	[HavokClass(EVersion.hk_2011_2_0_r1, typeof(hkpShapeCollection))]
+	[HavokClass(EVersion.hk_2013_1_0_r1, typeof(hkpShapeCollection))]
 	public partial class hkpSimpleMeshShape : hkpShapeCollection
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 24, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VECTOR4, 0, hkClassMember.FlagValues.FLAGS_NONE)]

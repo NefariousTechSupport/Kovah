@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpShapePhantom))]
 	public partial class hkpCachingShapePhantom : hkpShapePhantom
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 336, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

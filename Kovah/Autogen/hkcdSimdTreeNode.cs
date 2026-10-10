@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkcdFourAabb))]
 	public partial class hkcdSimdTreeNode : hkcdFourAabb
 	{
 		public enum Flags : int

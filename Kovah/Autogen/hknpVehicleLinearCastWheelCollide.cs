@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hknpVehicleWheelCollide))]
 	public partial class hknpVehicleLinearCastWheelCollide : hknpVehicleWheelCollide
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, typeof(hknpVehicleLinearCastWheelCollideWheelState), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]

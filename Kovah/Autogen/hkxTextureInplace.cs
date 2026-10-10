@@ -1,8 +1,8 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2011_2_0_r1)]
-	[HavokClass(EVersion.hk_2013_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkReferencedObject))]
+	[HavokClass(EVersion.hk_2011_2_0_r1, typeof(hkReferencedObject))]
+	[HavokClass(EVersion.hk_2013_1_0_r1, typeof(hkReferencedObject))]
 	public partial class hkxTextureInplace : hkReferencedObject
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 8, null, null, hkClassMember.Type.TYPE_CHAR, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]

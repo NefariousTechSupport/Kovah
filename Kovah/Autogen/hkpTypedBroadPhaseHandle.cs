@@ -1,9 +1,9 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2011_2_0_r1)]
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2013_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkpBroadPhaseHandle))]
+	[HavokClass(EVersion.hk_2011_2_0_r1, typeof(hkpBroadPhaseHandle))]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpBroadPhaseHandle))]
+	[HavokClass(EVersion.hk_2013_1_0_r1, typeof(hkpBroadPhaseHandle))]
 	public partial class hkpTypedBroadPhaseHandle : hkpBroadPhaseHandle
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 4, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

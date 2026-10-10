@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkpShapePhantom))]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpShapePhantom))]
 	public partial class hkpSimpleShapePhantom : hkpShapePhantom
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 352, typeof(hkpSimpleShapePhantomCollisionDetail), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

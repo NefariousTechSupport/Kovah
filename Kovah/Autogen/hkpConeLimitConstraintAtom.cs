@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpConstraintAtom))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkpConstraintAtom))]
 	public partial class hkpConeLimitConstraintAtom : hkpConstraintAtom
 	{
 		public enum MeasurementMode : int

@@ -1,8 +1,8 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2013_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkaAnimation))]
+	[HavokClass(EVersion.hk_2013_1_0_r1, typeof(hkaAnimation))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkaAnimation))]
 	public partial class hkaPredictiveCompressedAnimation : hkaAnimation
 	{
 		public enum StorageClass : int

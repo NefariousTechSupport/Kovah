@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkReferencedObject))]
 	public partial class hkxVertexFloatDataChannel : hkReferencedObject
 	{
 		public enum VertexFloatDimensions : int

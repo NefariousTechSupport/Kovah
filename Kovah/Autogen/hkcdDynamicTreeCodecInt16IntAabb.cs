@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkAabb16))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkAabb16))]
 	public partial class hkcdDynamicTreeCodecInt16IntAabb : hkAabb16
 	{
 		public hkcdDynamicTreeCodecInt16IntAabb()

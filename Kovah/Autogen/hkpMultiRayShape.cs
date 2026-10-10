@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpShape))]
 	public partial class hkpMultiRayShape : hkpShape
 	{
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, typeof(hkpMultiRayShapeRay), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]

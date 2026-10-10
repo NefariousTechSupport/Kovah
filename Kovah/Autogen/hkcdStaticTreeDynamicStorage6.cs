@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
-	[HavokClass(EVersion.hk_2014_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkcdStaticTreeDynamicStoragehkcdStaticTreeCodec3Axis6))]
+	[HavokClass(EVersion.hk_2014_1_0_r1, typeof(hkcdStaticTreeDynamicStoragehkcdStaticTreeCodec3Axis6))]
 	public partial class hkcdStaticTreeDynamicStorage6 : hkcdStaticTreeDynamicStoragehkcdStaticTreeCodec3Axis6
 	{
 		public hkcdStaticTreeDynamicStorage6()

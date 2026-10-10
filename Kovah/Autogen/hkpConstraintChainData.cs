@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpConstraintData))]
 	public partial class hkpConstraintChainData : hkpConstraintData
 	{
 		public hkpConstraintChainData()

@@ -1,7 +1,7 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.Havok_7_1_0_r1)]
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.Havok_7_1_0_r1, typeof(hkpConvexShape))]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpConvexShape))]
 	public partial class hkpConvexTransformShapeBase : hkpConvexShape
 	{
 		[HavokMember(EVersion.Havok_7_1_0_r1, 20, typeof(hkpSingleShapeContainer), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

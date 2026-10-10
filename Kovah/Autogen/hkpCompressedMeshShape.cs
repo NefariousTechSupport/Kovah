@@ -1,6 +1,6 @@
 namespace Kovah
 {
-	[HavokClass(EVersion.hk_2012_1_0_r1)]
+	[HavokClass(EVersion.hk_2012_1_0_r1, typeof(hkpShapeCollection))]
 	public partial class hkpCompressedMeshShape : hkpShapeCollection
 	{
 		public enum MaterialType : int
