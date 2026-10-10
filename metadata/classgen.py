@@ -312,12 +312,17 @@ csKeywords: set[str] = {
 	"class",
 	"enum",
 	"operator",
+	"value"
 }
 def getCSName(name: str) -> str:
 	if name in csKeywords:
-		return "@" + name
-	if name[0].isdigit():
+		# Prepending an _ is preferrable to an @ since an @ doesn't seem to
+		# actually change the name of the symbol in the metadata
 		return "_" + name
+	if name[0].isdigit():
+		# Prepending a n_ is easier cos it shows that this is a dumb name
+		# and it makes it neater for declaring properties
+		return "n_" + name
 	return name
 
 def getCSFlagValues(enumName: str, flags: str) -> str:

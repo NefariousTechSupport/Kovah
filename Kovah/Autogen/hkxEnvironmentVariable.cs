@@ -9,7 +9,7 @@ namespace Kovah
 		private string? name;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 4, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2013_1_0_r1, 4, null, null, hkClassMember.Type.TYPE_STRINGPTR, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
-		private string? value;
+		private string? _value;
 		public hkxEnvironmentVariable()
 		{
 		}

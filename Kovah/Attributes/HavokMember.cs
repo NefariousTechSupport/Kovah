@@ -11,6 +11,8 @@ namespace Kovah
 		private hkClassMember.Type subtype;
 		private ushort cArraySize;
 		private hkClassMember.FlagValues flags;
+
+		// If updated, you MUST update KovahPropertyGenerator
 		public HavokMemberAttribute(EVersion version, ushort offset, Type? clazz, Type? eenum, hkClassMember.Type type, hkClassMember.Type subtype, ushort cArraySize, hkClassMember.FlagValues flags)
 		{
 			this.version    = version;
