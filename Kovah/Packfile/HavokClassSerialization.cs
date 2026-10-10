@@ -24,8 +24,20 @@ namespace Kovah
 
 		public HavokClassSerialization(HavokPackfile file, Type type)
 		{
+			IEnumerable<HavokClassAttribute> classAttrs = type.GetCustomAttributes<HavokClassAttribute>();
+
+			Type? parent = null;
+			foreach(HavokClassAttribute classAttr in classAttrs)
+			{
+				if  (classAttr.Version == file.metadataVersion)
+				{
+					parent = classAttr.Parent;
+				}
+			}
+
+
 			this.type = type;
-			this.parent = file.GetClassSerialization(type.BaseType);
+			this.parent = file.GetClassSerialization(parent);
 			this.objectSize = 1;
 			this.members = new List<HavokMemberSerialization>();
 			this.membersInclBase = null;
