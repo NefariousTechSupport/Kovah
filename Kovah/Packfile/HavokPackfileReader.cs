@@ -327,6 +327,9 @@ namespace Kovah
 					return sh.ReadUInt32();
 				case hkClassMember.Type.TYPE_INT64:
 					return sh.ReadInt64();
+				case hkClassMember.Type.TYPE_ULONG:
+					// akin to a size_t, not a ulong
+					return file.pointerSize == 4 ? sh.ReadUInt32() : sh.ReadUInt64();
 				case hkClassMember.Type.TYPE_UINT64:
 					return sh.ReadUInt64();
 				case hkClassMember.Type.TYPE_REAL:

@@ -57,8 +57,10 @@ namespace Kovah.Packfile
 					return 4;
 				case hkClassMember.Type.TYPE_INT64:
 				case hkClassMember.Type.TYPE_UINT64:
-				case hkClassMember.Type.TYPE_ULONG:
 					return 8;
+				case hkClassMember.Type.TYPE_ULONG:
+					// Akin to size_t
+					return file.pointerSize;
 				case hkClassMember.Type.TYPE_VECTOR4:
 				case hkClassMember.Type.TYPE_QUATERNION:
 				case hkClassMember.Type.TYPE_ROTATION:
@@ -118,8 +120,10 @@ namespace Kovah.Packfile
 					return 4;
 				case hkClassMember.Type.TYPE_INT64:
 				case hkClassMember.Type.TYPE_UINT64:
-				case hkClassMember.Type.TYPE_ULONG:
 					return 8;
+				case hkClassMember.Type.TYPE_ULONG:
+					// Akin to size_t
+					return file.pointerSize;
 				case hkClassMember.Type.TYPE_VECTOR4:
 				case hkClassMember.Type.TYPE_QUATERNION:
 				case hkClassMember.Type.TYPE_ROTATION:

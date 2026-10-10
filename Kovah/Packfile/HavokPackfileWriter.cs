@@ -383,6 +383,18 @@ namespace Kovah
 					Debug.Assert(value != null);
 					scn.sh.WriteInt64((long)value);
 					break;
+				case hkClassMember.Type.TYPE_ULONG:
+					Debug.Assert(value != null);
+					// akin to a size_t, not a ulong
+					if (file.pointerSize == 4)
+					{
+						scn.sh.WriteUInt32((uint)(ulong)value);
+					}
+					else
+					{
+						scn.sh.WriteUInt64((ulong)value);
+					}
+					break;
 				case hkClassMember.Type.TYPE_UINT64:
 					Debug.Assert(value != null);
 					scn.sh.WriteUInt64((ulong)value);
