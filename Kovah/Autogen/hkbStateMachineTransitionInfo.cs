@@ -9,49 +9,49 @@ namespace Kovah
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FLAG_USE_TRIGGER_INTERVAL,
+			FLAG_USE_TRIGGER_INTERVAL = 1,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			FLAG_USE_INITIATE_INTERVAL,
+			FLAG_USE_INITIATE_INTERVAL = 2,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 4)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4)]
-			FLAG_UNINTERRUPTIBLE_WHILE_PLAYING,
+			FLAG_UNINTERRUPTIBLE_WHILE_PLAYING = 4,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 8)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 8)]
-			FLAG_UNINTERRUPTIBLE_WHILE_DELAYED,
+			FLAG_UNINTERRUPTIBLE_WHILE_DELAYED = 8,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 16)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 16)]
-			FLAG_DELAY_STATE_CHANGE,
+			FLAG_DELAY_STATE_CHANGE = 16,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 32)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 32)]
-			FLAG_DISABLED,
+			FLAG_DISABLED = 32,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 64)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 64)]
-			FLAG_DISALLOW_RETURN_TO_PREVIOUS_STATE,
+			FLAG_DISALLOW_RETURN_TO_PREVIOUS_STATE = 64,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 128)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 128)]
-			FLAG_DISALLOW_RANDOM_TRANSITION,
+			FLAG_DISALLOW_RANDOM_TRANSITION = 128,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 256)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 256)]
-			FLAG_DISABLE_CONDITION,
+			FLAG_DISABLE_CONDITION = 256,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 512)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 512)]
-			FLAG_ALLOW_SELF_TRANSITION_BY_TRANSITION_FROM_ANY_STATE,
+			FLAG_ALLOW_SELF_TRANSITION_BY_TRANSITION_FROM_ANY_STATE = 512,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1024)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1024)]
-			FLAG_IS_GLOBAL_WILDCARD,
+			FLAG_IS_GLOBAL_WILDCARD = 1024,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2048)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2048)]
-			FLAG_IS_LOCAL_WILDCARD,
+			FLAG_IS_LOCAL_WILDCARD = 2048,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 4096)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4096)]
-			FLAG_FROM_NESTED_STATE_ID_IS_VALID,
+			FLAG_FROM_NESTED_STATE_ID_IS_VALID = 4096,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 8192)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 8192)]
-			FLAG_TO_NESTED_STATE_ID_IS_VALID,
+			FLAG_TO_NESTED_STATE_ID_IS_VALID = 8192,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 16384)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 16384)]
-			FLAG_ABUT_AT_END_OF_FROM_GENERATOR,
+			FLAG_ABUT_AT_END_OF_FROM_GENERATOR = 16384,
 			
 		}
 		public enum InternalFlagBits : int

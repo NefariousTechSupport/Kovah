@@ -56,9 +56,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 170, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private bool orientHands;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 176, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private Vector4 catchFallPosInBS;
+		private Vector4[] catchFallPosInBS = new Vector4[2];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 208, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private float currentReachGain;
+		private float[] currentReachGain = new float[2];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 216, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float timeSinceLastModify;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 220, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -66,7 +66,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_INT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private short currentTwistDirection;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 226, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private bool catchFallPosIsValid;
+		private bool[] catchFallPosIsValid = new bool[2];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 228, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private bool catchFallBegin;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 229, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

@@ -17,7 +17,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 12, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float maxAngle;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 3, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 1, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private byte padding;
+		private byte[] padding = new byte[1];
 		public hkpSetupStabilizationAtom()
 		{
 		}

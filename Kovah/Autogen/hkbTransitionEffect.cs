@@ -46,7 +46,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 94, null, null, hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT8, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private sbyte defaultEventMode;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 95, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private sbyte pad;
+		private sbyte[] pad = new sbyte[4];
 		[HavokMember(EVersion.hk_2014_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		private object? /* void* */ patchedBindingInfo;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 100, null, null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.SERIALIZE_IGNORED)]

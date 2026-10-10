@@ -196,35 +196,35 @@ namespace Kovah
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			FLAGS_NONE,
+			FLAGS_NONE = 0,
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 128)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 128)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 128)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 128)]
-			ALIGN_8,
+			ALIGN_8 = 128,
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 256)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 256)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 256)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 256)]
-			ALIGN_16,
+			ALIGN_16 = 256,
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 512)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 512)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 512)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 512)]
-			NOT_OWNED,
+			NOT_OWNED = 512,
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 1024)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1024)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 1024)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1024)]
-			SERIALIZE_IGNORED,
+			SERIALIZE_IGNORED = 1024,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2048)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 2048)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2048)]
-			ALIGN_32,
+			ALIGN_32 = 2048,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 256)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 256)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 256)]
-			ALIGN_REAL,
+			ALIGN_REAL = 256,
 			
 		}
 		public enum DeprecatedFlagValues : int

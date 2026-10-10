@@ -13,12 +13,12 @@ namespace Kovah
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			FLAGS_NONE,
+			FLAGS_NONE = 0,
 			[HavokEnumItem(EVersion.Havok_7_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2013_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FLAGS_NOT_SERIALIZABLE,
+			FLAGS_NOT_SERIALIZABLE = 1,
 			
 		}
 		public enum SignatureFlags : int

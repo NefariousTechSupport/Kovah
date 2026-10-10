@@ -7,7 +7,7 @@ namespace Kovah
 		public enum SpuFlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FORCE_NARROW_PHASE_PPU,
+			FORCE_NARROW_PHASE_PPU = 1,
 			
 		}
 		public enum Flags : int
@@ -59,7 +59,7 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 127, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte shapeSizeDiv16;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 128, null, null, hkClassMember.Type.TYPE_INT16, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]
-		private short motionToBodyRotation;
+		private short[] motionToBodyRotation = new short[4];
 		[HavokMember(EVersion.hk_2014_1_0_r1, 136, null, null, hkClassMember.Type.TYPE_UINT64, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private ulong userData;
 		public hknpBody()

@@ -18,7 +18,7 @@ namespace Kovah
 		private uint pad2;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 496, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 496, hkClassMember.FlagValues.FLAGS_NONE)]
-		private byte data;
+		private byte[] data = new byte[496];
 		public hkpAgent1nSector()
 		{
 		}

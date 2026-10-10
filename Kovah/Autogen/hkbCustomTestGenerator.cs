@@ -18,13 +18,13 @@ namespace Kovah
 		public enum StrangeFlags : int
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
-			FLAG_UNO,
+			FLAG_UNO = 1,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2)]
-			FLAG_ZWEI,
+			FLAG_ZWEI = 2,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 4)]
-			FLAG_SHI_OR_YON,
+			FLAG_SHI_OR_YON = 4,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 240)]
-			FLAG_LOTS_O_BITS,
+			FLAG_LOTS_O_BITS = 240,
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 96, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

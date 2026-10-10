@@ -45,27 +45,27 @@ namespace Kovah
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			FLAG_NONE,
+			FLAG_NONE = 0,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FLAG_RAGDOLL,
+			FLAG_RAGDOLL = 1,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			FLAG_NORMALIZED,
+			FLAG_NORMALIZED = 2,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 4)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4)]
-			FLAG_NOT_VARIABLE,
+			FLAG_NOT_VARIABLE = 4,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 8)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 8)]
-			FLAG_HIDDEN,
+			FLAG_HIDDEN = 8,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 16)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 16)]
-			FLAG_OUTPUT,
+			FLAG_OUTPUT = 16,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 32)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 32)]
-			FLAG_NOT_CHARACTER_PROPERTY,
+			FLAG_NOT_CHARACTER_PROPERTY = 32,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 64)]
-			FLAG_CHAIN,
+			FLAG_CHAIN = 64,
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 0, null, typeof(hkbRoleAttribute.Role), hkClassMember.Type.TYPE_ENUM, hkClassMember.Type.TYPE_INT16, 0, hkClassMember.FlagValues.FLAGS_NONE)]

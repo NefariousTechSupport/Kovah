@@ -48,11 +48,11 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 104, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_UINT8, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private byte[]? cpIdMgr;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 116, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 192, hkClassMember.FlagValues.FLAGS_NONE)]
-		private byte nnEntryData;
+		private byte[] nnEntryData = new byte[192];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 308, typeof(hkpSerializedTrack1nInfo), null, hkClassMember.Type.TYPE_STRUCT, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpSerializedTrack1nInfo? trackInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 332, null, null, hkClassMember.Type.TYPE_UINT8, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.FLAGS_NONE)]
-		private byte endianCheckBuffer;
+		private byte[] endianCheckBuffer = new byte[4];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 336, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private uint version;
 		public hkpSerializedAgentNnEntry()

@@ -16,9 +16,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 16, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float radius;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private float frictionImpulse;
+		private float[] frictionImpulse = new float[2];
 		[HavokMember(EVersion.hk_2014_1_0_r1, 28, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private float slipImpulse;
+		private float[] slipImpulse = new float[2];
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, typeof(hkpWheelFrictionConstraintAtomAxle), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpWheelFrictionConstraintAtomAxle? axle;
 		public hkpWheelFrictionConstraintAtom()

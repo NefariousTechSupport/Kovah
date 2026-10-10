@@ -8,9 +8,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2014_1_0_r1, 20, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private uint primaryBitmap;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 24, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 26, hkClassMember.FlagValues.FLAGS_NONE)]
-		private uint secondaryBitmaps;
+		private uint[] secondaryBitmaps = new uint[26];
 		[HavokMember(EVersion.hk_2014_1_0_r1, 128, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 832, hkClassMember.FlagValues.FLAGS_NONE)]
-		private uint freeBlocks;
+		private uint[] freeBlocks = new uint[832];
 		public hkcdPlanarGeometryPrimitivesCollection28()
 		{
 		}

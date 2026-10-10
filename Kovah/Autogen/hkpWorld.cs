@@ -268,7 +268,7 @@ namespace Kovah
 		private object? /* void* */ destructionWorld;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 784, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 880, null, null, hkClassMember.Type.TYPE_VECTOR4, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private Vector4 broadPhaseExtents;
+		private Vector4[] broadPhaseExtents = new Vector4[2];
 		[HavokMember(EVersion.Havok_7_1_0_r1, 816, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2012_1_0_r1, 912, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int broadPhaseNumMarkers;

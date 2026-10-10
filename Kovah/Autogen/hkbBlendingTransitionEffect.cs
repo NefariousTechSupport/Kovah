@@ -9,19 +9,19 @@ namespace Kovah
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			FLAG_NONE,
+			FLAG_NONE = 0,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FLAG_IGNORE_FROM_WORLD_FROM_MODEL,
+			FLAG_IGNORE_FROM_WORLD_FROM_MODEL = 1,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			FLAG_SYNC,
+			FLAG_SYNC = 2,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 4)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4)]
-			FLAG_IGNORE_TO_WORLD_FROM_MODEL,
+			FLAG_IGNORE_TO_WORLD_FROM_MODEL = 4,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 8)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 8)]
-			FLAG_IGNORE_TO_WORLD_FROM_MODEL_ROTATION,
+			FLAG_IGNORE_TO_WORLD_FROM_MODEL_ROTATION = 8,
 			
 		}
 		public enum EndMode : int

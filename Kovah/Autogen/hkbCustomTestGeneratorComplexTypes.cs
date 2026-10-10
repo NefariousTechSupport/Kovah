@@ -17,15 +17,15 @@ namespace Kovah
 		public enum CustomFlag : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			CUSTOM_FLAG_NONE,
+			CUSTOM_FLAG_NONE = 0,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			CUSTOM_FLAG_UNO,
+			CUSTOM_FLAG_UNO = 1,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			CUSTOM_FLAG_ZWEI,
+			CUSTOM_FLAG_ZWEI = 2,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4)]
-			CUSTOM_FLAG_SHI_OR_YON,
+			CUSTOM_FLAG_SHI_OR_YON = 4,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 240)]
-			CUSTOM_FLAG_LOTS_O_BITS,
+			CUSTOM_FLAG_LOTS_O_BITS = 240,
 			
 		}
 		[HavokMember(EVersion.hk_2014_1_0_r1, 196, typeof(hkReferencedObject), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]

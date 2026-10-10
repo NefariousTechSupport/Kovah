@@ -19,13 +19,13 @@ namespace Kovah
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 0)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			FLAG_NONE,
+			FLAG_NONE = 0,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FLAG_DOCK_TO_FUTURE_POSITION,
+			FLAG_DOCK_TO_FUTURE_POSITION = 1,
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 2)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			FLAG_OVERRIDE_MOTION,
+			FLAG_OVERRIDE_MOTION = 2,
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, null, null, hkClassMember.Type.TYPE_INT16, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

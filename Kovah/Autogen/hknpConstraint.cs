@@ -7,23 +7,23 @@ namespace Kovah
 		public enum FlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 0)]
-			NO_FLAGS,
+			NO_FLAGS = 0,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			IS_EXPORTABLE,
+			IS_EXPORTABLE = 1,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			IS_IMMEDIATE,
+			IS_IMMEDIATE = 2,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4)]
-			IS_DISABLED,
+			IS_DISABLED = 4,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 8)]
-			IS_DESTRUCTION_INTERNAL,
+			IS_DESTRUCTION_INTERNAL = 8,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 16)]
-			AUTO_REMOVE_ON_DESTRUCTION_RESET,
+			AUTO_REMOVE_ON_DESTRUCTION_RESET = 16,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 32)]
-			AUTO_REMOVE_ON_DESTRUCTION,
+			AUTO_REMOVE_ON_DESTRUCTION = 32,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 64)]
-			RAISE_CONSTRAINT_FORCE_EVENTS,
+			RAISE_CONSTRAINT_FORCE_EVENTS = 64,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 128)]
-			RAISE_CONSTRAINT_FORCE_EXCEEDED_EVENTS,
+			RAISE_CONSTRAINT_FORCE_EXCEEDED_EVENTS = 128,
 			
 		}
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, null, hkClassMember.Type.TYPE_UINT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

@@ -7,31 +7,31 @@ namespace Kovah
 		public enum FlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			IS_CONVEX_SHAPE,
+			IS_CONVEX_SHAPE = 1,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			IS_CONVEX_POLYTOPE_SHAPE,
+			IS_CONVEX_POLYTOPE_SHAPE = 2,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4)]
-			IS_COMPOSITE_SHAPE,
+			IS_COMPOSITE_SHAPE = 4,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 8)]
-			IS_HEIGHT_FIELD_SHAPE,
+			IS_HEIGHT_FIELD_SHAPE = 8,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 16)]
-			USE_SINGLE_POINT_MANIFOLD,
+			USE_SINGLE_POINT_MANIFOLD = 16,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 32)]
-			IS_INTERIOR_TRIANGLE,
+			IS_INTERIOR_TRIANGLE = 32,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 64)]
-			SUPPORTS_COLLISIONS_WITH_INTERIOR_TRIANGLES,
+			SUPPORTS_COLLISIONS_WITH_INTERIOR_TRIANGLES = 64,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 128)]
-			USE_NORMAL_TO_FIND_SUPPORT_PLANE,
+			USE_NORMAL_TO_FIND_SUPPORT_PLANE = 128,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 256)]
-			USE_SMALL_FACE_INDICES,
+			USE_SMALL_FACE_INDICES = 256,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 512)]
-			NO_GET_SHAPE_KEYS_ON_SPU,
+			NO_GET_SHAPE_KEYS_ON_SPU = 512,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1024)]
-			SHAPE_NOT_SUPPORTED_ON_SPU,
+			SHAPE_NOT_SUPPORTED_ON_SPU = 1024,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2048)]
-			IS_TRIANGLE_OR_QUAD_SHAPE,
+			IS_TRIANGLE_OR_QUAD_SHAPE = 2048,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 4096)]
-			IS_QUAD_SHAPE,
+			IS_QUAD_SHAPE = 4096,
 			
 		}
 		public enum ScaleMode : int

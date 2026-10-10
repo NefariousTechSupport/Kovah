@@ -10,9 +10,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 32, null, null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_INT32, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int[]? skinAttributeIndices;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 44, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 16, hkClassMember.FlagValues.FLAGS_NONE)]
-		private int buttonPressToEventMap;
+		private int[] buttonPressToEventMap = new int[16];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 108, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 16, hkClassMember.FlagValues.FLAGS_NONE)]
-		private int buttonReleaseToEventMap;
+		private int[] buttonReleaseToEventMap = new int[16];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 172, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private int worldUpAxis;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 176, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
@@ -48,9 +48,9 @@ namespace Kovah
 		[HavokMember(EVersion.hk_2012_1_0_r1, 212, typeof(hkbDemoConfigStickVariableInfo), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkbDemoConfigStickVariableInfo?[]? stickVariables;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 224, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 6, hkClassMember.FlagValues.FLAGS_NONE)]
-		private int gamePadToRotateTerrainAboutItsAxisMap;
+		private int[] gamePadToRotateTerrainAboutItsAxisMap = new int[6];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 248, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private int gamePadToAddRemoveCharacterMap;
+		private int[] gamePadToAddRemoveCharacterMap = new int[2];
 		[HavokMember(EVersion.hk_2012_1_0_r1, 256, typeof(hkpGroupFilter), null, hkClassMember.Type.TYPE_POINTER, hkClassMember.Type.TYPE_STRUCT, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private hkpGroupFilter? filter;
 		public hkbDemoConfig()

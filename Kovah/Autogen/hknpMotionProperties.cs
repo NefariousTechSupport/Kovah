@@ -7,15 +7,15 @@ namespace Kovah
 		public enum FlagsEnum : int
 		{
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 2)]
-			NEVER_REBUILD_MASS_PROPERTIES,
+			NEVER_REBUILD_MASS_PROPERTIES = 2,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 536870912)]
-			ENABLE_GRAVITY_MODIFICATION,
+			ENABLE_GRAVITY_MODIFICATION = 536870912,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1073741824)]
-			ENABLE_TIME_FACTOR,
+			ENABLE_TIME_FACTOR = 1073741824,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, -536870912)]
-			FLAGS_MASK,
+			FLAGS_MASK = -536870912,
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 66060288)]
-			AUTO_FLAGS_MASK,
+			AUTO_FLAGS_MASK = 66060288,
 			
 		}
 		public enum SolverStabilizationType : int

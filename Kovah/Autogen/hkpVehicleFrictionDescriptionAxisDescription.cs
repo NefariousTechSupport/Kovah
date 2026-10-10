@@ -4,7 +4,7 @@ namespace Kovah
 	public partial class hkpVehicleFrictionDescriptionAxisDescription
 	{
 		[HavokMember(EVersion.hk_2014_1_0_r1, 0, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 16, hkClassMember.FlagValues.FLAGS_NONE)]
-		private float frictionCircleYtab;
+		private float[] frictionCircleYtab = new float[16];
 		[HavokMember(EVersion.hk_2014_1_0_r1, 64, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float xStep;
 		[HavokMember(EVersion.hk_2014_1_0_r1, 68, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]

@@ -33,7 +33,7 @@ namespace Kovah
 		private bool rotateBonesForSkinning;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 55, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 5, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 55, null, null, hkClassMember.Type.TYPE_BOOL, hkClassMember.Type.TYPE_VOID, 5, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private bool pad;
+		private bool[] pad = new bool[5];
 		public hkbJigglerGroup()
 		{
 		}

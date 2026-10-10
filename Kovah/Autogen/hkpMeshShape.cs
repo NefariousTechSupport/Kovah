@@ -40,7 +40,7 @@ namespace Kovah
 		[HavokMember(EVersion.Havok_7_1_0_r1, 80, null, null, hkClassMember.Type.TYPE_REAL, hkClassMember.Type.TYPE_VOID, 0, hkClassMember.FlagValues.FLAGS_NONE)]
 		private float radius;
 		[HavokMember(EVersion.Havok_7_1_0_r1, 84, null, null, hkClassMember.Type.TYPE_INT32, hkClassMember.Type.TYPE_VOID, 3, hkClassMember.FlagValues.FLAGS_NONE)]
-		private int pad;
+		private int[] pad = new int[3];
 		public hkpMeshShape()
 		{
 		}

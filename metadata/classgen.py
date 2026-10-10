@@ -223,9 +223,12 @@ def outputEnum(cs: TextIO, indentNum: int, enum: hkClassEnum):
 	cs.write(indent + "public enum " + enum.name.removeprefix("$loose.") + " : int\n")
 	cs.write(indent + "{\n")
 	for itemName, versionInfo in enum.items.items():
+		numericValue = None
 		for version, value in versionInfo.items():
+			numericValue = ctypes.c_int32(value).value
 			cs.write(indent + "\t[HavokEnumItem(EVersion.{}, {})]\n".format(version, ctypes.c_int32(value).value))
-		cs.write(indent + "\t{},\n".format(itemName))
+		assert numericValue != None, "enum " + enum.name + " has goofed up"
+		cs.write(indent + "\t{},\n".format(itemName + (" = " + str(numericValue) if enum.isFlags else "")))
 
 	cs.write(indent + "\t\n")
 	cs.write(indent + "}\n")
@@ -247,7 +250,9 @@ def outputCS(outputDir: str):
 				memberclassname = "typeof({})".format(member.clazz.name) if member.clazz != None else "null"
 				memberenumname  = "typeof({}{})".format(member.enum.clazz.name + "." if member.enum.clazz != None else "", member.enum.name) if member.enum != None else "null"
 				cs.write("\t\t[HavokMember(EVersion.{}, {}, {}, {}, hkClassMember.Type.{}, hkClassMember.Type.{}, {}, {})]\n".format(version, member.offset, memberclassname, memberenumname, member.type.name, member.subtype.name, member.cArraySize, getCSFlagValues("hkClassMember.FlagValues.", member.flags)))
-			cs.write("\t\tprivate {} {};\n".format(getCSType(member.type, member.subtype, member.clazz, member.enum), getCSName(memberName)))
+			csType = getCSType(member.type, member.subtype, member.clazz, member.enum)
+			arrayDefault = " = new " + csType + "[" + str(member.cArraySize) + "]"
+			cs.write("\t\tprivate {} {};\n".format(csType + ("[]" if member.cArraySize > 0 else ""), getCSName(memberName) + (arrayDefault if member.cArraySize > 0 else "")))
 
 		# Write a parameterless constructor
 		cs.write("\t\tpublic " + clazz.name + "()\n")

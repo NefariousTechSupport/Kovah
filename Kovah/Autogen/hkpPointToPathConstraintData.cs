@@ -37,7 +37,7 @@ namespace Kovah
 		private hkpPointToPathConstraintData.OrientationConstraintType angularConstrainedDOF;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_TRANSFORM, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 48, null, null, hkClassMember.Type.TYPE_TRANSFORM, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private Matrix4x4 /* transform */ transform_OS_KS;
+		private Matrix4x4 /* transform */[] transform_OS_KS = new Matrix4x4 /* transform */[2];
 		public hkpPointToPathConstraintData()
 		{
 		}

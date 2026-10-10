@@ -9,7 +9,7 @@ namespace Kovah
 		{
 			[HavokEnumItem(EVersion.hk_2012_1_0_r1, 1)]
 			[HavokEnumItem(EVersion.hk_2014_1_0_r1, 1)]
-			FLAG_SYNC,
+			FLAG_SYNC = 1,
 			
 		}
 		[HavokMember(EVersion.hk_2012_1_0_r1, 92, typeof(hkbLayer), null, hkClassMember.Type.TYPE_ARRAY, hkClassMember.Type.TYPE_POINTER, 0, hkClassMember.FlagValues.FLAGS_NONE)]

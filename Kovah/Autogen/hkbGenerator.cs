@@ -12,7 +12,7 @@ namespace Kovah
 		private object? /* void* */ syncInfo;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 88, null, null, hkClassMember.Type.TYPE_INT8, hkClassMember.Type.TYPE_VOID, 4, hkClassMember.FlagValues.SERIALIZE_IGNORED)]
-		private sbyte pad;
+		private sbyte[] pad = new sbyte[4];
 		public hkbGenerator()
 		{
 		}

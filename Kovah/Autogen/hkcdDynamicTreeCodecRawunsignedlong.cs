@@ -12,7 +12,7 @@ namespace Kovah
 		private ulong parent;
 		[HavokMember(EVersion.hk_2012_1_0_r1, 36, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
 		[HavokMember(EVersion.hk_2014_1_0_r1, 36, null, null, hkClassMember.Type.TYPE_ULONG, hkClassMember.Type.TYPE_VOID, 2, hkClassMember.FlagValues.FLAGS_NONE)]
-		private ulong children;
+		private ulong[] children = new ulong[2];
 		public hkcdDynamicTreeCodecRawunsignedlong()
 		{
 		}
