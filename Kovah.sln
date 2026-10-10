@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kovah", "Kovah\Kovah.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sapphire", "Sapphire\Sapphire.csproj", "{02BC30CC-3ECB-4DD0-A686-45513B6240B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kovah.CodeGen", "Kovah.CodeGen\Kovah.CodeGen.csproj", "{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x64.Build.0 = Release|Any CPU
 		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x86.ActiveCfg = Release|Any CPU
 		{02BC30CC-3ECB-4DD0-A686-45513B6240B9}.Release|x86.Build.0 = Release|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Debug|x64.Build.0 = Debug|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Debug|x86.Build.0 = Debug|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Release|x64.ActiveCfg = Release|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Release|x64.Build.0 = Release|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Release|x86.ActiveCfg = Release|Any CPU
+		{169A62BD-EEEE-4B28-87CE-3E3943AF27D2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
