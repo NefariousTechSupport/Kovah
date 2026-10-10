@@ -7,7 +7,6 @@ namespace Kovah
 	public class HavokPackfileReader
 	{
 		private List<Section> sections = new List<Section>();
-		private Dictionary<uint, HavokClassSerialization> classnameLookup = new Dictionary<uint, HavokClassSerialization>();
 		private Dictionary<uint, object> virtualObjects = new Dictionary<uint, object>();
 		private Dictionary<uint, object> parsedObjects = new Dictionary<uint, object>();
 		private HavokPackfile file = new HavokPackfile();
@@ -194,23 +193,7 @@ namespace Kovah
 				switch (sectionName)
 				{
 					case "__classnames__":
-						while (sh.Tell() + 5 - dataOffset < bufferSize)
-						{
-							uint hash = sh.ReadUInt32();
-							byte unk  = sh.ReadByte();
-							uint classnameOffset = sh.Tell() - dataOffset;
-							string classname = sh.ReadString();
-							Type? type = hkClass.LookupClass(reader.file.metadataVersion, classname);
-							if (type == null)
-							{
-								container = null;
-								return false;
-							}
-							HavokClassSerialization classSerial = new HavokClassSerialization(reader.file, type);
-							reader.classnameLookup.Add(classnameOffset, classSerial);
-							reader.file.classes.Add(classSerial);
-							classSerial.ComputeOffsets(reader.file);
-						}
+						// Read lazily
 						break;
 					case "__types__":
 						// there's nothing here...
@@ -237,9 +220,26 @@ namespace Kovah
 			Section contentSection = reader.sections[(int)reader.file.contentSectionIndex];
 
 			reader.virtualObjects = new Dictionary<uint, object>();
+			Dictionary<uint, HavokClassSerialization> classnameLookup = new Dictionary<uint, HavokClassSerialization>();
+			uint classnamesStart = reader.sections[(int)reader.file.contentClassNameSectionIndex].dataOffset;
 			for (int v = 0; v < contentSection.virtuals.Count; v++)
 			{
-				HavokClassSerialization clazz = reader.classnameLookup[contentSection.virtuals[v].classnameOffset];
+				uint classnameOffset = contentSection.virtuals[v].classnameOffset;
+				if (!classnameLookup.TryGetValue(classnameOffset, out HavokClassSerialization? clazz))
+				{
+					string classname = sh.ReadString(classnamesStart + classnameOffset);
+					Type? type = hkClass.LookupClass(reader.file.metadataVersion, classname);
+					if (type == null)
+					{
+						container = null;
+						return false;
+					}
+					clazz = new HavokClassSerialization(reader.file, type);
+					classnameLookup.Add(classnameOffset, clazz);
+					reader.file.classes.Add(clazz);
+					clazz.ComputeOffsets(reader.file);
+					
+				}
 
 				object? obj = Activator.CreateInstance(clazz.DotNetType);
 				if (obj == null)
