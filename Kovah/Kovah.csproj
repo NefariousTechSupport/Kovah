@@ -1,7 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+	<PropertyGroup>
+		<!-- Defaults, you can override these -->
+
+		<!-- Assume it's a git submodule -->
+		<Sapphire_LocalDirectory Condition="'$(Sapphire_LocalDirectory)' == ''">../Dependencies/Sapphire</Sapphire_LocalDirectory>
+	</PropertyGroup>
+
 	<ItemGroup>
-	  <ProjectReference Include="..\Sapphire\Sapphire.csproj" />
+		<ProjectReference Include="$(Sapphire_LocalDirectory)/Sapphire.csproj" />
+
 		<ProjectReference Include="../Kovah.CodeGen/Kovah.CodeGen.csproj"
 		                  OutputItemType="Analyzer"
 		                  ReferenceOutputAssembly="false" />
